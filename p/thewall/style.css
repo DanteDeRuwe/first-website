@@ -55,12 +55,12 @@ button:hover{
 
 
 #inputbox{
-    text-align:center;
+    text-align:left;
     padding: 50px;
     background-color: #f2f2f2;
     z-index: 1000;
     position: absolute;
-    width: 70%;
+    width: 60%;
     height: 50%;
     margin-left:15%;
     margin-top: 10%;
@@ -104,12 +104,13 @@ table, th, td {
     font-size: 10px;
 }
 
-.numberCircle {
-    width: 50px;
-    line-height: 50px;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 28px;
-    color: white;
-    background-color: darkred;
+#overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    background:black;
+    background:rgba(0,0,0,0.8);
 }

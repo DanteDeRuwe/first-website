@@ -88,6 +88,7 @@ function gameLoop(){
 function roundOneInit(){
     if(players.length !== 0) {
         players[0].turn = true;
+        for(let i = 1; i<players.length; i++){players[i].turn = false;}
     }
     wallscores = [1, 50, 100, 2000, 10, 1000, 1, 2500, 1, 1000, 10, 2000, 100, 500, 1];
     round = 1;
@@ -104,6 +105,7 @@ function roundOneInit(){
 function roundTwoInit(){
     if(players.length !== 0) {
         players[0].turn = true;
+        for(let i = 1; i<players.length; i++){players[i].turn = false;}
     }
     wallscores = [1, 500, 100, 1000, 10, 2500, 1, 5000, 1, 10000, 10, 12500, 100, 25000, 1];
     round = 2;
@@ -120,6 +122,7 @@ function roundTwoInit(){
 function roundThreeInit(){
     if(players.length !== 0) {
         players[0].turn = true;
+        for(let i = 1; i<players.length; i++){players[i].turn = false;}
     }
     round = 3;
     // set the beginning color to the position of the slider
@@ -261,6 +264,7 @@ function formSubmitted() {
             makeNewPlayer(form.elements[i].value);
             //hide the overlaying div
             document.getElementById('inputbox').classList.add('hidden');
+            document.getElementById('overlay').classList.add('hidden');
         }
     }else{
         //create a warning

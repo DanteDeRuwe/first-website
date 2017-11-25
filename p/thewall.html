@@ -64,18 +64,7 @@
         </button>
         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="formSubmitted()">Go!</button>
     </div>
-
-
-    <script>
-        //Dev mode ************************************************
-        document.getElementById("inputbox").className += 'hidden';
-        makeNewPlayer('Dante');
-        makeNewPlayer('Luna');
-        makeNewPlayer('Nico');
-        makeNewPlayer('Jana');
-        // *******************************************************
-    </script>
-
+    
     <div class="container">
         <div id="canvasandinfodisplay">
             <div id="canvas"></div>
@@ -112,6 +101,22 @@
             </div>
         </div>
     </div>
+    <div id="overlay"></div>
+
+
+    <!--
+   <script>
+       //Dev mode ************************************************
+       document.getElementById('inputbox').classList.add('hidden');
+       document.getElementById('overlay').classList.add('hidden');
+       makeNewPlayer('Alice');
+       makeNewPlayer('Bob');
+       makeNewPlayer('John');
+       makeNewPlayer('Sarah');
+       // *******************************************************
+   </script>
+   -->
+
 </div>
 
 
