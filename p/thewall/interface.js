@@ -253,19 +253,23 @@ function formSubmitted() {
 
     //create a set and an array of form elements to check for duplicates
     for (let i = 0; i < form.length ;i++) {
+        if(form.elements[i].value !== ""){
         // Add the players from the form
         set.add(form.elements[i].value);
         arr.push(form.elements[i].value);
+        }
     }
 
     if(set.size === arr.length){
         for (let i = 0; i < form.length ;i++) {
-            // Add the players from the form
-            makeNewPlayer(form.elements[i].value);
-            //hide the overlaying div
-            document.getElementById('inputbox').classList.add('hidden');
-            document.getElementById('overlay').classList.add('hidden');
+            if(form.elements[i].value !== ""){
+                // Add the players from the form
+                makeNewPlayer(form.elements[i].value);
+            }
         }
+        //hide the overlaying div
+        document.getElementById('inputbox').classList.add('hidden');
+        document.getElementById('overlay').classList.add('hidden');
     }else{
         //create a warning
         let p = document.createElement("P");

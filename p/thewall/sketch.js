@@ -79,7 +79,7 @@ function setup() {
 
     //define some radii
     pin_r = 0.15*spacer;
-    ball_r = 0.35 * (spacer*2 - 2* pin_r);
+    ball_r = 0.80 * (spacer - pin_r);
 
     // define some boundary conditions
     xmargin = Math.floor(width/2 - 15*spacer);
