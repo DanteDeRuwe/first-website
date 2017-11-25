@@ -131,6 +131,9 @@ function draw() {
     //Run the engine
     Engine.update(engine, 1000 / 30);
 
+    //start game logic
+    gameLoop();
+
 }
 
 window.onresize = function () {
@@ -292,6 +295,17 @@ function drawBuckets(){
         let x = bucketx[i];
         strokeWeight(2);
         line(x, ymargin+28*spacer, x, floory);
+        if (wallscores){
+            strokeWeight(0);
+            if(String(wallscores[i]).length === 1){x+=0.7*spacer}else if(String(wallscores[i]).length === 2){x+= 0.3*spacer};
+            text(wallscores[i], x-2*spacer, floory + spacer * ( 2+ (3/2)*(i % 2)));
+        }
+    }
+    if (wallscores){
+        let i = bucketx.length;
+        let x = bucketx[i-1];
+        if(String(wallscores[i]).length === 1){x+=0.7*spacer;}else if(String(wallscores[i]).length === 2){x+= 0.3*spacer};
+        text(wallscores[i], x, floory + spacer * ( 2+ 2*(i % 2)));
     }
 }
 
