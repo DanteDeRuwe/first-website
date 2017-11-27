@@ -17,10 +17,12 @@
       <file leaf-file-name="thewall.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/thewall.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="55" lean-forward="false" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
+            <state relative-caret-position="116">
+              <caret line="40" column="30" lean-forward="true" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
               <folding>
+                <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -29,9 +31,23 @@
       <file leaf-file-name="sketch.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/thewall/sketch.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1377">
-              <caret line="81" column="17" lean-forward="false" selection-start-line="81" selection-start-column="17" selection-end-line="81" selection-end-column="17" />
-              <folding />
+            <state relative-caret-position="714">
+              <caret line="42" column="56" lean-forward="true" selection-start-line="42" selection-start-column="56" selection-end-line="42" selection-end-column="56" />
+              <folding>
+                <element signature="n#!!block;n#preload#0" expanded="false" />
+                <element signature="n#!!block;n#setup#0" expanded="false" />
+                <element signature="n#!!block;n#draw#0" expanded="false" />
+                <element signature="e#3340#3356#0" expanded="false" />
+                <element signature="n#!!block;n#mousePressed#0" expanded="false" />
+                <element signature="n#!!block;n#newBall#0" expanded="false" />
+                <element signature="n#!!block;n#newBallOnSpot#0" expanded="false" />
+                <element signature="n#!!block;n#showBalls#0" expanded="false" />
+                <element signature="n#!!block;n#removeAllBalls#0" expanded="false" />
+                <element signature="n#!!block;n#makeWall#0" expanded="false" />
+                <element signature="n#!!block;n#showParabola#0" expanded="false" />
+                <element signature="n#!!block;n#drawBuckets#0" expanded="false" />
+                <element signature="n#!!block;n#createBounds#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -39,12 +55,27 @@
       <file leaf-file-name="interface.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/thewall/interface.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4029">
-              <caret line="257" column="40" lean-forward="true" selection-start-line="257" selection-start-column="40" selection-end-line="257" selection-end-column="40" />
+            <state relative-caret-position="136">
+              <caret line="8" column="25" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <marker date="1511618240323" expanded="true" signature="4307:4316" ph="..." />
-                <marker date="1511618240323" expanded="true" signature="4437:4446" ph="..." />
+                <element signature="n#!!block;n#Player#0" expanded="false" />
+                <element signature="n#!!block;n#makeNewPlayer#0" expanded="false" />
+                <element signature="n#!!block;n#gameLoop#0" expanded="false" />
+                <element signature="n#!!block;n#roundOneInit#0" expanded="false" />
+                <element signature="n#!!block;n#roundTwoInit#0" expanded="false" />
+                <element signature="n#!!block;n#roundThreeInit#0" expanded="false" />
+                <element signature="n#!!block;n#nextPlayer#0" expanded="false" />
+                <element signature="n#!!block;n#storeScore#0" expanded="false" />
+                <element signature="n#!!block;n#displayScores#0" expanded="false" />
+                <element signature="n#!!block;n#displayBallscores#0" expanded="false" />
+                <element signature="n#!!block;n#loadSpotButtons#0" expanded="false" />
+                <element signature="n#!!block;n#updateSpotButtons#0" expanded="false" />
+                <element signature="n#!!block;n#addInput#0" expanded="false" />
+                <element signature="n#!!block;n#formSubmitted#0" expanded="false" />
+                <element signature="n#!!block;n#colorSlide#0" expanded="false" />
+                <element signature="e#8290#8584#0" expanded="false" />
+                <marker date="1511801751467" expanded="true" signature="4339:4348" ph="..." />
+                <marker date="1511801751467" expanded="true" signature="4469:4478" ph="..." />
               </folding>
             </state>
           </provider>
@@ -62,16 +93,23 @@
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>updatesp</find>
+      <find>spot</find>
+      <find>update</find>
+    </findStrings>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/solar-system/scripts/sketch.js" />
         <option value="$PROJECT_DIR$/solar-system.html" />
         <option value="$PROJECT_DIR$/solar-system/css/style.css" />
-        <option value="$PROJECT_DIR$/thewall/interface.js" />
-        <option value="$PROJECT_DIR$/thewall/sketch.js" />
         <option value="$PROJECT_DIR$/thewall/style.css" />
         <option value="$PROJECT_DIR$/thewall.html" />
+        <option value="$PROJECT_DIR$/thewall/interface.js" />
+        <option value="$PROJECT_DIR$/thewall/sketch.js" />
       </list>
     </option>
   </component>
@@ -82,8 +120,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="237" />
-    <option name="y" value="-11" />
+    <option name="x" value="493" />
+    <option name="y" value="-21" />
     <option name="width" value="814" />
     <option name="height" value="877" />
   </component>
@@ -162,20 +200,21 @@
       <workItem from="1509463891212" duration="10415000" />
       <workItem from="1509480823746" duration="13000" />
       <workItem from="1511615449481" duration="4501000" />
-      <workItem from="1511716239890" duration="112000" />
+      <workItem from="1511716239890" duration="712000" />
+      <workItem from="1511786476943" duration="2670000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17820000" />
+    <option name="totallyTimeSpent" value="21090000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.156875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07604167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07891332" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07869884" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -199,17 +238,19 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/thewall.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -218,6 +259,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1377">
           <caret line="81" column="17" lean-forward="false" selection-start-line="81" selection-start-column="17" selection-end-line="81" selection-end-column="17" />
+          <folding>
+            <element signature="n#!!block;n#preload#0" expanded="false" />
+            <element signature="n#!!block;n#setup#0" expanded="false" />
+            <element signature="n#!!block;n#draw#0" expanded="false" />
+            <element signature="e#3340#3356#0" expanded="false" />
+            <element signature="n#!!block;n#mousePressed#0" expanded="false" />
+            <element signature="n#!!block;n#newBall#0" expanded="false" />
+            <element signature="n#!!block;n#newBallOnSpot#0" expanded="false" />
+            <element signature="n#!!block;n#showBalls#0" expanded="false" />
+            <element signature="n#!!block;n#removeAllBalls#0" expanded="false" />
+            <element signature="n#!!block;n#makeWall#0" expanded="false" />
+            <element signature="n#!!block;n#showParabola#0" expanded="false" />
+            <element signature="n#!!block;n#drawBuckets#0" expanded="false" />
+            <element signature="n#!!block;n#createBounds#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thewall/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="54" lean-forward="false" selection-start-line="0" selection-start-column="54" selection-end-line="0" selection-end-column="54" />
           <folding />
         </state>
       </provider>
@@ -227,9 +290,85 @@
         <state relative-caret-position="4029">
           <caret line="257" column="40" lean-forward="true" selection-start-line="257" selection-start-column="40" selection-end-line="257" selection-end-column="40" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1511618240323" expanded="true" signature="4307:4316" ph="..." />
-            <marker date="1511618240323" expanded="true" signature="4437:4446" ph="..." />
+            <element signature="n#!!block;n#Player#0" expanded="false" />
+            <element signature="n#!!block;n#makeNewPlayer#0" expanded="false" />
+            <element signature="n#!!block;n#gameLoop#0" expanded="false" />
+            <element signature="n#!!block;n#roundOneInit#0" expanded="false" />
+            <element signature="n#!!block;n#roundTwoInit#0" expanded="false" />
+            <element signature="n#!!block;n#roundThreeInit#0" expanded="false" />
+            <element signature="n#!!block;n#nextPlayer#0" expanded="false" />
+            <element signature="n#!!block;n#storeScore#0" expanded="false" />
+            <element signature="n#!!block;n#displayScores#0" expanded="false" />
+            <element signature="n#!!block;n#displayBallscores#0" expanded="false" />
+            <element signature="n#!!block;n#loadSpotButtons#0" expanded="false" />
+            <element signature="n#!!block;n#updateSpotButtons#0" expanded="false" />
+            <element signature="n#!!block;n#addInput#0" expanded="false" />
+            <element signature="n#!!block;n#formSubmitted#0" expanded="false" />
+            <element signature="n#!!block;n#colorSlide#0" expanded="false" />
+            <element signature="e#8290#8584#0" expanded="false" />
+            <marker date="1511801751467" expanded="true" signature="4339:4348" ph="..." />
+            <marker date="1511801751467" expanded="true" signature="4469:4478" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thewall.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1037">
+          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thewall/sketch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1377">
+          <caret line="81" column="17" lean-forward="false" selection-start-line="81" selection-start-column="17" selection-end-line="81" selection-end-column="17" />
+          <folding>
+            <element signature="n#!!block;n#preload#0" expanded="false" />
+            <element signature="n#!!block;n#setup#0" expanded="false" />
+            <element signature="n#!!block;n#draw#0" expanded="false" />
+            <element signature="e#3340#3356#0" expanded="false" />
+            <element signature="n#!!block;n#mousePressed#0" expanded="false" />
+            <element signature="n#!!block;n#newBall#0" expanded="false" />
+            <element signature="n#!!block;n#newBallOnSpot#0" expanded="false" />
+            <element signature="n#!!block;n#showBalls#0" expanded="false" />
+            <element signature="n#!!block;n#removeAllBalls#0" expanded="false" />
+            <element signature="n#!!block;n#makeWall#0" expanded="false" />
+            <element signature="n#!!block;n#showParabola#0" expanded="false" />
+            <element signature="n#!!block;n#drawBuckets#0" expanded="false" />
+            <element signature="n#!!block;n#createBounds#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thewall/interface.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4029">
+          <caret line="257" column="40" lean-forward="true" selection-start-line="257" selection-start-column="40" selection-end-line="257" selection-end-column="40" />
+          <folding>
+            <element signature="n#!!block;n#Player#0" expanded="false" />
+            <element signature="n#!!block;n#makeNewPlayer#0" expanded="false" />
+            <element signature="n#!!block;n#gameLoop#0" expanded="false" />
+            <element signature="n#!!block;n#roundOneInit#0" expanded="false" />
+            <element signature="n#!!block;n#roundTwoInit#0" expanded="false" />
+            <element signature="n#!!block;n#roundThreeInit#0" expanded="false" />
+            <element signature="n#!!block;n#nextPlayer#0" expanded="false" />
+            <element signature="n#!!block;n#storeScore#0" expanded="false" />
+            <element signature="n#!!block;n#displayScores#0" expanded="false" />
+            <element signature="n#!!block;n#displayBallscores#0" expanded="false" />
+            <element signature="n#!!block;n#loadSpotButtons#0" expanded="false" />
+            <element signature="n#!!block;n#updateSpotButtons#0" expanded="false" />
+            <element signature="n#!!block;n#addInput#0" expanded="false" />
+            <element signature="n#!!block;n#formSubmitted#0" expanded="false" />
+            <element signature="n#!!block;n#colorSlide#0" expanded="false" />
+            <element signature="e#8290#8584#0" expanded="false" />
+            <marker date="1511801751467" expanded="true" signature="4339:4348" ph="..." />
+            <marker date="1511801751467" expanded="true" signature="4469:4478" ph="..." />
           </folding>
         </state>
       </provider>
@@ -319,26 +458,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/thewall/interface.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4029">
-          <caret line="257" column="40" lean-forward="true" selection-start-line="257" selection-start-column="40" selection-end-line="257" selection-end-column="40" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1511618240323" expanded="true" signature="4307:4316" ph="..." />
-            <marker date="1511618240323" expanded="true" signature="4437:4446" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thewall/sketch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1377">
-          <caret line="81" column="17" lean-forward="false" selection-start-line="81" selection-start-column="17" selection-end-line="81" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/thewall/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -347,12 +466,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/thewall/interface.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="25" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+          <folding>
+            <element signature="n#!!block;n#Player#0" expanded="false" />
+            <element signature="n#!!block;n#makeNewPlayer#0" expanded="false" />
+            <element signature="n#!!block;n#gameLoop#0" expanded="false" />
+            <element signature="n#!!block;n#roundOneInit#0" expanded="false" />
+            <element signature="n#!!block;n#roundTwoInit#0" expanded="false" />
+            <element signature="n#!!block;n#roundThreeInit#0" expanded="false" />
+            <element signature="n#!!block;n#nextPlayer#0" expanded="false" />
+            <element signature="n#!!block;n#storeScore#0" expanded="false" />
+            <element signature="n#!!block;n#displayScores#0" expanded="false" />
+            <element signature="n#!!block;n#displayBallscores#0" expanded="false" />
+            <element signature="n#!!block;n#loadSpotButtons#0" expanded="false" />
+            <element signature="n#!!block;n#updateSpotButtons#0" expanded="false" />
+            <element signature="n#!!block;n#addInput#0" expanded="false" />
+            <element signature="n#!!block;n#formSubmitted#0" expanded="false" />
+            <element signature="n#!!block;n#colorSlide#0" expanded="false" />
+            <element signature="e#8290#8584#0" expanded="false" />
+            <marker date="1511801751467" expanded="true" signature="4339:4348" ph="..." />
+            <marker date="1511801751467" expanded="true" signature="4469:4478" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thewall/sketch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="56" lean-forward="true" selection-start-line="42" selection-start-column="56" selection-end-line="42" selection-end-column="56" />
+          <folding>
+            <element signature="n#!!block;n#preload#0" expanded="false" />
+            <element signature="n#!!block;n#setup#0" expanded="false" />
+            <element signature="n#!!block;n#draw#0" expanded="false" />
+            <element signature="e#3340#3356#0" expanded="false" />
+            <element signature="n#!!block;n#mousePressed#0" expanded="false" />
+            <element signature="n#!!block;n#newBall#0" expanded="false" />
+            <element signature="n#!!block;n#newBallOnSpot#0" expanded="false" />
+            <element signature="n#!!block;n#showBalls#0" expanded="false" />
+            <element signature="n#!!block;n#removeAllBalls#0" expanded="false" />
+            <element signature="n#!!block;n#makeWall#0" expanded="false" />
+            <element signature="n#!!block;n#showParabola#0" expanded="false" />
+            <element signature="n#!!block;n#drawBuckets#0" expanded="false" />
+            <element signature="n#!!block;n#createBounds#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/thewall.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="55" lean-forward="false" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
+        <state relative-caret-position="116">
+          <caret line="40" column="30" lean-forward="true" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
           <folding>
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>

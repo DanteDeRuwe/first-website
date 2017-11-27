@@ -15,8 +15,6 @@
 // ---------------------
 
 
-// ----------------------------------------------------------------------------------------------------
-
 // matter.js module aliases
 let Engine = Matter.Engine,
     World = Matter.World,
@@ -42,8 +40,9 @@ const rows = 14, cols = 15;
 // An array to store all x coordinates of the buckets to display
 let bucketx = [];
 
-// An object that shows which ball-id is in which bucket (just as a backup)
+// An object that shows which ball-id is in which bucket
 let bucketnumbers = {};
+
 
 // ----------------------------------------------------------------------------------------------------
 

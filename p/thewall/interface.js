@@ -20,11 +20,28 @@ obvious...
 
 */
 
+
+
+// ---------------------
+// VARIABLE DECLARATIONS
+// ---------------------
+
+// Obvious variables
 let wallscores;
 let players = [];
 let round = 0;
 
+//There is in the beginning 1 input present, the next input is by default 2
+let inputcounter = 2;
 
+
+
+
+// ------------
+// PLAYER SETUP
+// ------------
+
+//I use a constructor in stead of an object because I want to... Don't judge me.
 function Player(name) {
     this.name = name;
     this.score = 0;
@@ -43,34 +60,15 @@ function makeNewPlayer(name) {
 
 
 
-// game
-// ----
+
+// --------------------------------
+// GAMELOOP + ROUND INITIALISATIONS
+// --------------------------------
 
 
-// Init functions get called once by the button event, these 'flip a switch' namely the 'round' variable
-// Loop functions keep getting called by the gameLoop() function inside of the actual draw()-loop until the round variable changes
+// Init functions get called once by the button event
+// The gameLoop() keeps getting called by the actual draw()-loop
 
-
-
-// Simple switch case for game logic + some basic things for the whole game
-/*function gameLoop(){
-    switch(round){
-
-        case 1:
-            roundOneLoop();
-            break;
-        case 2:
-            roundTwoLoop();
-            break;
-        case 3:
-            roundThreeLoop();
-            break;
-
-        default:
-            displayScores();
-            break;
-    }
-}*/
 
 function gameLoop(){
 
@@ -99,7 +97,6 @@ function roundOneInit(){
     loadSpotButtons();
 }
 
-
 //ROUND 2 -------------------------------------------------------------------------------------
 
 function roundTwoInit(){
@@ -116,14 +113,13 @@ function roundTwoInit(){
     loadSpotButtons();
 }
 
-
-
 //ROUND 3 -------------------------------------------------------------------------------------
 function roundThreeInit(){
     if(players.length !== 0) {
         players[0].turn = true;
         for(let i = 1; i<players.length; i++){players[i].turn = false;}
     }
+    wallscores = [1, 5000, 100, 10000, 10, 20000, 1, 30000, 1, 40000, 10, 50000, 100, 100000, 1];
     round = 3;
     // set the beginning color to the position of the slider
     colorSlide();
@@ -135,8 +131,11 @@ function roundThreeInit(){
 
 
 
-// FUNCTIONS
-// --------
+
+// ----------
+//  FUNCTIONS
+// ----------
+
 function nextPlayer(){
     for (let i = 0; i < players.length; i++){
         if(players[i].turn){
@@ -194,10 +193,6 @@ function displayBallscores(){
     }
 }
 
-
-// HTML HANDLING
-// -------------
-
 function loadSpotButtons(){
     //Only if the buttons were not already generated
     if (!document.getElementById('spotbuttons').innerHTML){
@@ -223,8 +218,6 @@ function updateSpotButtons() {
     }
 }
 
-
-let inputcounter = 2;
 function addInput(){
     //create a new div
     let newdiv = document.createElement('div');
