@@ -14,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="thewall.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="thewall.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/thewall.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="116">
-              <caret line="40" column="30" lean-forward="true" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+              <caret line="40" column="30" lean-forward="false" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -28,25 +28,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sketch.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="sketch.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/thewall/sketch.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="42" column="56" lean-forward="true" selection-start-line="42" selection-start-column="56" selection-end-line="42" selection-end-column="56" />
+            <state relative-caret-position="429">
+              <caret line="126" column="6" lean-forward="false" selection-start-line="126" selection-start-column="6" selection-end-line="126" selection-end-column="6" />
               <folding>
                 <element signature="n#!!block;n#preload#0" expanded="false" />
                 <element signature="n#!!block;n#setup#0" expanded="false" />
-                <element signature="n#!!block;n#draw#0" expanded="false" />
-                <element signature="e#3340#3356#0" expanded="false" />
-                <element signature="n#!!block;n#mousePressed#0" expanded="false" />
-                <element signature="n#!!block;n#newBall#0" expanded="false" />
-                <element signature="n#!!block;n#newBallOnSpot#0" expanded="false" />
-                <element signature="n#!!block;n#showBalls#0" expanded="false" />
-                <element signature="n#!!block;n#removeAllBalls#0" expanded="false" />
-                <element signature="n#!!block;n#makeWall#0" expanded="false" />
-                <element signature="n#!!block;n#showParabola#0" expanded="false" />
-                <element signature="n#!!block;n#drawBuckets#0" expanded="false" />
-                <element signature="n#!!block;n#createBounds#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -61,21 +50,7 @@
                 <element signature="n#!!block;n#Player#0" expanded="false" />
                 <element signature="n#!!block;n#makeNewPlayer#0" expanded="false" />
                 <element signature="n#!!block;n#gameLoop#0" expanded="false" />
-                <element signature="n#!!block;n#roundOneInit#0" expanded="false" />
-                <element signature="n#!!block;n#roundTwoInit#0" expanded="false" />
-                <element signature="n#!!block;n#roundThreeInit#0" expanded="false" />
-                <element signature="n#!!block;n#nextPlayer#0" expanded="false" />
-                <element signature="n#!!block;n#storeScore#0" expanded="false" />
-                <element signature="n#!!block;n#displayScores#0" expanded="false" />
-                <element signature="n#!!block;n#displayBallscores#0" expanded="false" />
-                <element signature="n#!!block;n#loadSpotButtons#0" expanded="false" />
-                <element signature="n#!!block;n#updateSpotButtons#0" expanded="false" />
-                <element signature="n#!!block;n#addInput#0" expanded="false" />
-                <element signature="n#!!block;n#formSubmitted#0" expanded="false" />
-                <element signature="n#!!block;n#colorSlide#0" expanded="false" />
-                <element signature="e#8290#8584#0" expanded="false" />
-                <marker date="1511801751467" expanded="true" signature="4339:4348" ph="..." />
-                <marker date="1511801751467" expanded="true" signature="4469:4478" ph="..." />
+                <marker date="1512169866934" expanded="false" signature="1664:1811" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -141,6 +116,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -157,7 +133,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -202,11 +177,12 @@
       <workItem from="1511615449481" duration="4501000" />
       <workItem from="1511716239890" duration="712000" />
       <workItem from="1511786476943" duration="2670000" />
+      <workItem from="1512170806935" duration="220000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21090000" />
+    <option name="totallyTimeSpent" value="21310000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -257,22 +233,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/thewall/sketch.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="56" lean-forward="true" selection-start-line="42" selection-start-column="56" selection-end-line="42" selection-end-column="56" />
+          <folding>
+            <element signature="n#!!block;n#preload#0" expanded="false" />
+            <element signature="n#!!block;n#setup#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thewall/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="54" lean-forward="false" selection-start-line="0" selection-start-column="54" selection-end-line="0" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thewall/interface.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="25" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+          <folding>
+            <element signature="n#!!block;n#Player#0" expanded="false" />
+            <element signature="n#!!block;n#makeNewPlayer#0" expanded="false" />
+            <element signature="n#!!block;n#gameLoop#0" expanded="false" />
+            <marker date="1512169866934" expanded="false" signature="1664:1811" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thewall.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thewall/sketch.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1377">
           <caret line="81" column="17" lean-forward="false" selection-start-line="81" selection-start-column="17" selection-end-line="81" selection-end-column="17" />
           <folding>
             <element signature="n#!!block;n#preload#0" expanded="false" />
             <element signature="n#!!block;n#setup#0" expanded="false" />
-            <element signature="n#!!block;n#draw#0" expanded="false" />
-            <element signature="e#3340#3356#0" expanded="false" />
-            <element signature="n#!!block;n#mousePressed#0" expanded="false" />
-            <element signature="n#!!block;n#newBall#0" expanded="false" />
-            <element signature="n#!!block;n#newBallOnSpot#0" expanded="false" />
-            <element signature="n#!!block;n#showBalls#0" expanded="false" />
-            <element signature="n#!!block;n#removeAllBalls#0" expanded="false" />
-            <element signature="n#!!block;n#makeWall#0" expanded="false" />
-            <element signature="n#!!block;n#showParabola#0" expanded="false" />
-            <element signature="n#!!block;n#drawBuckets#0" expanded="false" />
-            <element signature="n#!!block;n#createBounds#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -293,21 +302,7 @@
             <element signature="n#!!block;n#Player#0" expanded="false" />
             <element signature="n#!!block;n#makeNewPlayer#0" expanded="false" />
             <element signature="n#!!block;n#gameLoop#0" expanded="false" />
-            <element signature="n#!!block;n#roundOneInit#0" expanded="false" />
-            <element signature="n#!!block;n#roundTwoInit#0" expanded="false" />
-            <element signature="n#!!block;n#roundThreeInit#0" expanded="false" />
-            <element signature="n#!!block;n#nextPlayer#0" expanded="false" />
-            <element signature="n#!!block;n#storeScore#0" expanded="false" />
-            <element signature="n#!!block;n#displayScores#0" expanded="false" />
-            <element signature="n#!!block;n#displayBallscores#0" expanded="false" />
-            <element signature="n#!!block;n#loadSpotButtons#0" expanded="false" />
-            <element signature="n#!!block;n#updateSpotButtons#0" expanded="false" />
-            <element signature="n#!!block;n#addInput#0" expanded="false" />
-            <element signature="n#!!block;n#formSubmitted#0" expanded="false" />
-            <element signature="n#!!block;n#colorSlide#0" expanded="false" />
-            <element signature="e#8290#8584#0" expanded="false" />
-            <marker date="1511801751467" expanded="true" signature="4339:4348" ph="..." />
-            <marker date="1511801751467" expanded="true" signature="4469:4478" ph="..." />
+            <marker date="1512169866934" expanded="false" signature="1664:1811" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -331,17 +326,6 @@
           <folding>
             <element signature="n#!!block;n#preload#0" expanded="false" />
             <element signature="n#!!block;n#setup#0" expanded="false" />
-            <element signature="n#!!block;n#draw#0" expanded="false" />
-            <element signature="e#3340#3356#0" expanded="false" />
-            <element signature="n#!!block;n#mousePressed#0" expanded="false" />
-            <element signature="n#!!block;n#newBall#0" expanded="false" />
-            <element signature="n#!!block;n#newBallOnSpot#0" expanded="false" />
-            <element signature="n#!!block;n#showBalls#0" expanded="false" />
-            <element signature="n#!!block;n#removeAllBalls#0" expanded="false" />
-            <element signature="n#!!block;n#makeWall#0" expanded="false" />
-            <element signature="n#!!block;n#showParabola#0" expanded="false" />
-            <element signature="n#!!block;n#drawBuckets#0" expanded="false" />
-            <element signature="n#!!block;n#createBounds#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -354,21 +338,7 @@
             <element signature="n#!!block;n#Player#0" expanded="false" />
             <element signature="n#!!block;n#makeNewPlayer#0" expanded="false" />
             <element signature="n#!!block;n#gameLoop#0" expanded="false" />
-            <element signature="n#!!block;n#roundOneInit#0" expanded="false" />
-            <element signature="n#!!block;n#roundTwoInit#0" expanded="false" />
-            <element signature="n#!!block;n#roundThreeInit#0" expanded="false" />
-            <element signature="n#!!block;n#nextPlayer#0" expanded="false" />
-            <element signature="n#!!block;n#storeScore#0" expanded="false" />
-            <element signature="n#!!block;n#displayScores#0" expanded="false" />
-            <element signature="n#!!block;n#displayBallscores#0" expanded="false" />
-            <element signature="n#!!block;n#loadSpotButtons#0" expanded="false" />
-            <element signature="n#!!block;n#updateSpotButtons#0" expanded="false" />
-            <element signature="n#!!block;n#addInput#0" expanded="false" />
-            <element signature="n#!!block;n#formSubmitted#0" expanded="false" />
-            <element signature="n#!!block;n#colorSlide#0" expanded="false" />
-            <element signature="e#8290#8584#0" expanded="false" />
-            <marker date="1511801751467" expanded="true" signature="4339:4348" ph="..." />
-            <marker date="1511801751467" expanded="true" signature="4469:4478" ph="..." />
+            <marker date="1512169866934" expanded="false" signature="1664:1811" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -474,43 +444,7 @@
             <element signature="n#!!block;n#Player#0" expanded="false" />
             <element signature="n#!!block;n#makeNewPlayer#0" expanded="false" />
             <element signature="n#!!block;n#gameLoop#0" expanded="false" />
-            <element signature="n#!!block;n#roundOneInit#0" expanded="false" />
-            <element signature="n#!!block;n#roundTwoInit#0" expanded="false" />
-            <element signature="n#!!block;n#roundThreeInit#0" expanded="false" />
-            <element signature="n#!!block;n#nextPlayer#0" expanded="false" />
-            <element signature="n#!!block;n#storeScore#0" expanded="false" />
-            <element signature="n#!!block;n#displayScores#0" expanded="false" />
-            <element signature="n#!!block;n#displayBallscores#0" expanded="false" />
-            <element signature="n#!!block;n#loadSpotButtons#0" expanded="false" />
-            <element signature="n#!!block;n#updateSpotButtons#0" expanded="false" />
-            <element signature="n#!!block;n#addInput#0" expanded="false" />
-            <element signature="n#!!block;n#formSubmitted#0" expanded="false" />
-            <element signature="n#!!block;n#colorSlide#0" expanded="false" />
-            <element signature="e#8290#8584#0" expanded="false" />
-            <marker date="1511801751467" expanded="true" signature="4339:4348" ph="..." />
-            <marker date="1511801751467" expanded="true" signature="4469:4478" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thewall/sketch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="56" lean-forward="true" selection-start-line="42" selection-start-column="56" selection-end-line="42" selection-end-column="56" />
-          <folding>
-            <element signature="n#!!block;n#preload#0" expanded="false" />
-            <element signature="n#!!block;n#setup#0" expanded="false" />
-            <element signature="n#!!block;n#draw#0" expanded="false" />
-            <element signature="e#3340#3356#0" expanded="false" />
-            <element signature="n#!!block;n#mousePressed#0" expanded="false" />
-            <element signature="n#!!block;n#newBall#0" expanded="false" />
-            <element signature="n#!!block;n#newBallOnSpot#0" expanded="false" />
-            <element signature="n#!!block;n#showBalls#0" expanded="false" />
-            <element signature="n#!!block;n#removeAllBalls#0" expanded="false" />
-            <element signature="n#!!block;n#makeWall#0" expanded="false" />
-            <element signature="n#!!block;n#showParabola#0" expanded="false" />
-            <element signature="n#!!block;n#drawBuckets#0" expanded="false" />
-            <element signature="n#!!block;n#createBounds#0" expanded="false" />
+            <marker date="1512169866934" expanded="false" signature="1664:1811" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -518,11 +452,22 @@
     <entry file="file://$PROJECT_DIR$/thewall.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
-          <caret line="40" column="30" lean-forward="true" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+          <caret line="40" column="30" lean-forward="false" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
           <folding>
             <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thewall/sketch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="126" column="6" lean-forward="false" selection-start-line="126" selection-start-column="6" selection-end-line="126" selection-end-column="6" />
+          <folding>
+            <element signature="n#!!block;n#preload#0" expanded="false" />
+            <element signature="n#!!block;n#setup#0" expanded="false" />
           </folding>
         </state>
       </provider>

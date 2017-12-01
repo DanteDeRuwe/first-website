@@ -345,7 +345,7 @@ function createBounds(){
 
     for(let i = 1; i<= 14; i++){
 
-        let w = 0.2*spacer;
+        let w = 0.1*spacer;
         let h = 8*spacer;
 
         let x = xmargin + 2*i*spacer - (w/2);
