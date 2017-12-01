@@ -88,7 +88,8 @@ function roundOneInit(){
         players[0].turn = true;
         for(let i = 1; i<players.length; i++){players[i].turn = false;}
     }
-    wallscores = [1, 50, 100, 2000, 10, 1000, 1, 2500, 1, 1000, 10, 2000, 100, 500, 1];
+    //wallscores = [1, 50, 100, 2000, 10, 1000, 1, 2500, 1, 1000, 10, 2000, 100, 500, 1];
+    wallscores = [1, 5, 10, 20, 10, 30, 1, 15, 5, 10, 10, 20, 50, 5, 1];
     round = 1;
 
     // set the beginning color to the position of the slider
@@ -104,7 +105,8 @@ function roundTwoInit(){
         players[0].turn = true;
         for(let i = 1; i<players.length; i++){players[i].turn = false;}
     }
-    wallscores = [1, 500, 100, 1000, 10, 2500, 1, 5000, 1, 10000, 10, 12500, 100, 25000, 1];
+    //wallscores = [1, 500, 100, 1000, 10, 2500, 1, 5000, 1, 10000, 10, 12500, 100, 25000, 1];
+    wallscores = [1, 20, 10, 50, 10, 25, 1, 50, 5, 100, 10, 200, 50, 150, 1];
     round = 2;
 
     // set the beginning color to the position of the slider
@@ -119,7 +121,8 @@ function roundThreeInit(){
         players[0].turn = true;
         for(let i = 1; i<players.length; i++){players[i].turn = false;}
     }
-    wallscores = [1, 5000, 100, 10000, 10, 20000, 1, 30000, 1, 40000, 10, 50000, 100, 100000, 1];
+    //wallscores = [1, 5000, 100, 10000, 10, 20000, 1, 30000, 1, 40000, 10, 50000, 100, 100000, 1];
+    wallscores = [1, 20, 10, 30, 10, 40, 1, 50, 5, 100, 10, 200, 50, 300, 1];
     round = 3;
     // set the beginning color to the position of the slider
     colorSlide();
