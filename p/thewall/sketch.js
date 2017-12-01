@@ -115,7 +115,9 @@ function draw() {
     line(rightx, topy, rightx, floory);
     line(leftx, floory, rightx, floory);
     drawBuckets();
-    for(let i =1; i <= 7; i++){
+    fill('#2980b9');
+    stroke('#2980b9');
+    for(let i =1; i <= 7; i++){ //the 7 spotnumbers
         strokeWeight(1);
         text(i, bucketx[i+2]+0.8*spacer, ymargin-1.5*spacer);
     }
