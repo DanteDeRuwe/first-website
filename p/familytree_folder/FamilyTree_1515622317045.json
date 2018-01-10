@@ -1,4 +1,4 @@
-{
+﻿{
   "people": {
     "Dante_De_Ruwe": {
       "sex": "male",
@@ -19,6 +19,26 @@
       "sex": "female",
       "born": "26-02-1968",
       "died": ""
+    },
+    "Diana_Verbeke": {
+      "sex": "female",
+      "born": "",
+      "died": ""
+    },
+    "g": {
+      "sex": "male",
+      "born": "",
+      "died": ""
+    },
+    "hg": {
+      "sex": "male",
+      "born": "",
+      "died": ""
+    },
+    "ghsd": {
+      "sex": "female",
+      "born": "",
+      "died": ""
     }
   },
   "relationships": {
@@ -28,6 +48,18 @@
       "siblings": [
         "Luna_De_Ruwe"
       ]
+    },
+    "Conny_Herpoel": {
+      "mother": "Diana_Verbeke"
+    },
+    "Nico_De_Ruwe": {
+      "father": "g"
+    },
+    "g": {
+      "father": "hg"
+    },
+    "hg": {
+      "father": "ghsd"
     }
   }
 }

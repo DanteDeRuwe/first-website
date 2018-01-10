@@ -7,67 +7,114 @@ body {
     user-select: none;
 }
 
+h3 {
+    font-size: 28px;
+    font-weight: 300;
+}
 
-.container-fluid{
-    margin-left:-20px;
+h1 {
+    font-size: 50px;
+    font-variant: small-caps;
+    font-weight: 100;
+    width: 100%;
+    color: white;
+}
+
+.container-fluid {
+    margin-left: -20px;
     /*margin-right:-20px;*/
 }
 
 #treeholder {
     position: absolute;
-    width: 70%;
-    height : 100%;
-    padding:0;
+    width: 82%;
+    height: 100%;
+    padding: 0;
     background: #fafafa;
-    overflow:  hidden;
+    overflow: hidden;
     z-index: 2;
     display: block;
 }
 
-#tree{
+#tree {
     position: relative;
-    z-index:1;
+    z-index: 1;
+    top: 25%;
+    left: 25%;
 }
 
 #UI {
     position: absolute;
-    margin-left: 70%;
-    width: 30%;
-    height : 100%;
-    background-color: rgba(26, 145, 255, 0.19);
+    margin-left: 81%;
+    width: 20%;
+    height: 100%;
+    background-color: rgb(180, 206, 255);
     box-sizing: border-box;
     padding: 20px;
+    padding-right: 50px;
     z-index: 100000;
+    text-align: right;
 }
 
 label.input-custom-file input[type=file] {
     display: none;
 }
 
-li{
+li {
     margin: 5px 0;
 }
 
-.node {
-    background-color: grey;
-    border-style: solid;
-    border-width: 1px;
-}
-.man {
-    background-color: lightblue;
-}
-
-
-.woman {
-    background-color: pink;
-}
-
-.nodeText{
+.nodeText {
     text-align: left;
+    width: 100%;
+    float: left;
 }
 
-.collapsibleList li{
+.collapsibleList li {
     list-style-type: none;
 }
 
+.Sex {
+    float: right;
+    text-align: left;
+    width:300px;
+}
+
+.Sex table{
+    width:100%;
+    text-align: right;
+}
+
+.upload {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.personbox{
+    min-width:100px;
+}
+
+/* ------------------- WIP ----------------*/
+/*ul.collapsibleList ul {*/
+/*list-style-type: none;*/
+/*background: url(vline.png) repeat-y;*/
+/*margin: 0;*/
+/*padding: 0;*/
+/*margin-left: 10px;*/
+/*}*/
+
+/*ul.collapsibleList li {*/
+/*padding: 0 12px;*/
+/*line-height: 20px;*/
+/*background: url(node.png) no-repeat;*/
+/*}*/
+
+/*ul[class$='sublist'] li:last-child{*/
+/*background: url(lastnode.png) no-repeat;*/
+
+/*}*/
 

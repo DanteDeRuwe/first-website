@@ -14,7 +14,7 @@ filebutton.onchange = function() {
 
     // --- While waiting for 'onload' ---
     // Remove the upload button
-    let elem = filebutton.parentElement;
+    let elem = filebutton.parentElement.parentElement;
     elem.parentNode.removeChild(elem);
 
     // Display a lovely spinner
@@ -67,22 +67,117 @@ function OnMouseUp(event){
 
 // Make the tree collapsible -------------------------------------------------
 function toggleCollapse(event) {
-    let vis, tohide;
+    let disp, tohide;
 
     //Check where the button is, and get all underlaying buttons in tohide
     for(e of event.path){
         if (e.tagName === "BUTTON"){
             tohide = e.parentElement.children[1];
-            vis = tohide.style.visibility;
+            disp = tohide.style.display;
         }
     }
 
     //flip the switch
-    if (vis === 'hidden' && tohide) {
-        tohide.style.visibility = '';
-    } else if (vis === '' && tohide) {
-        tohide.style.visibility = 'hidden';
+    if (disp === 'none' && tohide) {
+        tohide.style.display = '';
+    } else if (disp === '' && tohide) {
+        tohide.style.display = 'none';
     }
 
 }
             
+// New person inputs ----------------------------------------------------------------------
+function createTextInputs(params){
+    for (let param of params) {
+        let parentdiv = document.getElementById("textInputs");
+        //create a new div
+        let newdiv = document.createElement('div');
+        //set its class
+        newdiv.setAttribute("class", "mdl-textfield mdl-js-textfield mdl-textfield--floating-label");
+        // set the elements
+        newdiv.innerHTML = '' +
+            '<input class="mdl-textfield__input" type="text" id="' + param.toLowerCase() +'">' +
+            '<label class="mdl-textfield__label" for="' + param.toLowerCase() + '">' + param + '</label></div>';
+        // Add it
+        componentHandler.upgradeElement(newdiv);
+        parentdiv.appendChild(newdiv);
+    }
+}
+
+function createRadioInputs(paramswithoptions){ //paramswithoptions: [ [sex, [male,female]] , [alive, [yes,no]] ]
+    for(pwo of paramswithoptions){
+        let param = pwo[0];
+        let options = pwo[1];
+
+        let radioinputs = document.createElement('div');
+        radioinputs.className = param;
+        let table = '<table><tr>';
+
+        let label;
+        for (opt of options) {
+            label = '<label class = "mdl-radio mdl-js-radio" for = "' + opt.toLowerCase() + '">'+
+                '<input type = "radio" id = "' + opt.toLowerCase() + '" name = "' + param.toLowerCase() + '" class = "mdl-radio__button">'+
+                '<span class = "mdl-radio__label">' + opt + '</span>'+
+                '</label>';
+
+            table += '<td>' + label+ '</td>'
+        }
+
+        table += '</tr></table>';
+
+        //Add it
+        radioinputs.innerHTML = table;
+        let parentdiv = document.getElementById("textInputs");
+        parentdiv.appendChild(radioinputs);
+
+    }
+}
+
+
+function createDropdownInputs(params){
+
+    //generate dropdown options once
+    let options = '<option value=""></option>';
+    for(let person of Object.keys(ppl)){
+        options += '<option value="'+ person + '">' + ppl[person].name + '</option>'
+    }
+
+    for (let param of params) {
+        let parentdiv = document.getElementById("dropdownInputs");
+        //create a new div
+        let newdiv = document.createElement('div');
+        //set its class
+        newdiv.setAttribute("class", "mdl-textfield mdl-js-textfield mdl-textfield--floating-label");
+        // set the elements
+        newdiv.innerHTML = '<select class="mdl-textfield__input" id="' + param.replace(' ', '_').toLowerCase()  + '" name="'+param+'">' + options +
+            '</select><label class="mdl-textfield__label" for="' + param + '">' + param + '</label>';
+
+        // Add it
+        componentHandler.upgradeElement(newdiv);
+        parentdiv.appendChild(newdiv);
+    }
+}
+
+
+function radiobuttonid(radionodelist){
+    for (r of radionodelist){
+        if(r.checked){return r.id;}
+    }
+}
+
+function saveDataToJSON() {
+    //delete name and gender tags in people, user shouldn't see these
+    for (p of Object.keys(ppl)){
+        delete ppl[p].gender;
+        delete ppl[p].name;
+    }
+
+    let textToSave = JSON.stringify(data, null, 2),
+        filename = 'FamilyTree_' + Date.now() +'.json',
+        blob = new Blob([textToSave], {type: "text/json;charset=utf-8"});
+
+    saveAs(blob, filename);
+}
+
+
+

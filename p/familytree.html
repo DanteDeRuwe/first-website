@@ -42,37 +42,48 @@
 <body>
 
 
-    <div class="container-fluid" id="treeandUIholder">
-        <div id="treeholder">
+<div class="container-fluid" id="treeandUIholder">
+    <div id="treeholder">
         <div id="tree">
             <ul class="collapsibleList"></ul>
         </div>
-        </div>
-        <div id ="UI">
-            <h3>Family Tree Manager</h3>
-            <!-- Upload the json file -->
-            <label class="input-custom-file mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
-                <span id="btnText"> <i class="material-icons">file_upload</i> UPLOAD A JSON FILE</span>
-                <input type="file" id="selectFiles">
-            </label>
-        </div>
-        <div class="mdl-snackbar mdl-js-snackbar">
-            <div style="text-align: center;" class="mdl-snackbar__text"></div>
-            <button hidden type="button" class="mdl-snackbar__action"></button>
-        </div>
+
+
     </div>
+    <div id ="UI">
+        <!-- Upload the json file -->
+        <div class="upload">
+        <label class="input-custom-file mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+            <span id="btnText"> <i class="material-icons">file_upload</i> UPLOAD A JSON FILE</span>
+            <input type="file" id="selectFiles">
+        </label>
+        </div>
 
+        <!--To add a new person-->
+        <form id="addpersonform" action="#" style="visibility: hidden;">
+            <h1>add a person</h1>
+            <h3>Person Details</h3>
+            <div id = "textInputs"></div>
+            <h3>Relationships</h3>
+            <div id = "dropdownInputs"></div>
+        </form>
+        <br>
+        <button style="visibility: hidden;" id="addpersonformsubmit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" onclick="addPersonFormSubmit()"><i class="material-icons">add_box</i>  add this person</button>
 
-
+    </div>
+    <div class="mdl-snackbar mdl-js-snackbar">
+        <div style="text-align: center;" class="mdl-snackbar__text"></div>
+        <button hidden type="button" class="mdl-snackbar__action"></button>
+    </div>
 
     <!-- libraries-->
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-
+    <script src="https://rawgit.com/eligrey/FileSaver.js/master/FileSaver.js"></script>
     <!-- scripts -->
     <script src="familytree_folder/htmlhandling.js"></script>
     <script src="familytree_folder/script.js"></script>
 
-</body>
 
+</body>
 
 </html>
