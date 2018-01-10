@@ -125,7 +125,7 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="HbShouldOpenHtmlAsHb" value="" />
   </component>
   <component name="RunDashboard">
@@ -153,12 +153,12 @@
       <workItem from="1515576360519" duration="2595000" />
       <workItem from="1515578996051" duration="139000" />
       <workItem from="1515579183598" duration="443000" />
-      <workItem from="1515580851340" duration="1989000" />
+      <workItem from="1515580851340" duration="2197000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5166000" />
+    <option name="totallyTimeSpent" value="5374000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
