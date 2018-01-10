@@ -1,0 +1,73 @@
+body {
+    overflow: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+.container-fluid{
+    margin-left:-20px;
+    /*margin-right:-20px;*/
+}
+
+#treeholder {
+    position: absolute;
+    width: 70%;
+    height : 100%;
+    padding:0;
+    background: #fafafa;
+    overflow:  hidden;
+    z-index: 2;
+    display: block;
+}
+
+#tree{
+    position: relative;
+    z-index:1;
+}
+
+#UI {
+    position: absolute;
+    margin-left: 70%;
+    width: 30%;
+    height : 100%;
+    background-color: rgba(26, 145, 255, 0.19);
+    box-sizing: border-box;
+    padding: 20px;
+    z-index: 100000;
+}
+
+label.input-custom-file input[type=file] {
+    display: none;
+}
+
+li{
+    margin: 5px 0;
+}
+
+.node {
+    background-color: grey;
+    border-style: solid;
+    border-width: 1px;
+}
+.man {
+    background-color: lightblue;
+}
+
+
+.woman {
+    background-color: pink;
+}
+
+.nodeText{
+    text-align: left;
+}
+
+.collapsibleList li{
+    list-style-type: none;
+}
+
+
