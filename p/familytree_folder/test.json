@@ -10,11 +10,6 @@
       "born": "21-01-1970",
       "died": ""
     },
-    "Luna_De_Ruwe": {
-      "sex": "female",
-      "born": "16-07-2000",
-      "died": ""
-    },
     "Conny_Herpoel": {
       "sex": "female",
       "born": "26-02-1968",
@@ -24,10 +19,7 @@
   "relationships": {
     "Dante_De_Ruwe": {
       "father": "Nico_De_Ruwe",
-      "mother": "Conny_Herpoel",
-      "siblings": [
-        "Luna_De_Ruwe"
-      ]
+      "mother": "Conny_Herpoel"
     }
   }
 }

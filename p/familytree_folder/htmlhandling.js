@@ -134,13 +134,20 @@ function createRadioInputs(paramswithoptions){ //paramswithoptions: [ [sex, [mal
 }
 
 
-function createDropdownInputs(params){
+function createDropdownInputs(params, target){ //target specifies rl[person].target, so 'mother' or 'father'
 
     //generate dropdown options once
     let options = '<option value=""></option>';
-    for(let person of Object.keys(ppl)){
-        options += '<option value="'+ person + '">' + ppl[person].name + '</option>'
+    for (let person of Object.keys(ppl)) {
+        if (rl[person]) {
+            if (!rl[person][target]) {
+                options += '<option value="' + person + '">' + ppl[person].name + '</option>'
+            }
+        }else{
+            options += '<option value="' + person + '">' + ppl[person].name + '</option>'
+        }
     }
+    console.log(target + '.........' + options);
 
     for (let param of params) {
         let parentdiv = document.getElementById("dropdownInputs");

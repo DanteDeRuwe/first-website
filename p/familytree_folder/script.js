@@ -1,7 +1,7 @@
 let data;
 let ppl,rl;
 
-// What happens when the JSO data has been loaded: -------------------------------------------------------------------
+// What happens when the JSON data has been loaded: -------------------------------------------------------------------
 function afterDataLoad(){
     // Get rid of the spinner
     let elem = document.getElementsByClassName("mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active")[0];
@@ -36,7 +36,8 @@ function afterDataLoad(){
     createTextInputs(['Name']);
     createRadioInputs([ ['Sex', ['Male', 'Female']], ]);
     createTextInputs(['Born', 'Died']);
-    createDropdownInputs(['Father of', 'Mother of']);
+    createDropdownInputs(['Father of'], 'father');
+    createDropdownInputs(['Mother of'], 'mother');
     componentHandler.upgradeDom();
 }
 
@@ -130,7 +131,8 @@ function addPersonFormSubmit(){
 
     //Make sure to reset dropdowns!
     document.getElementById('dropdownInputs').innerHTML = "";
-    createDropdownInputs(['Father of', 'Mother of']);
+    createDropdownInputs(['Father of'], 'father');
+    createDropdownInputs(['Mother of'], 'mother');
 
 }
 
@@ -162,7 +164,7 @@ function personBox(key) {
     btnclass += " personbox";
 
     let newdivcontents = '' +
-        '<button onclick="nodeOnClick('+key+')" class="' + btnclass + ' ">' +
+        '<button onmouseleave="nodeOnMouseleave('+key+')" onmouseover="nodeOnMouseover('+key+')" onclick="nodeOnClick('+key+')" class="' + btnclass + ' ">' +
         `<table class="nodeText">
                 <tr>
                 <th>` + info["name"] + `</th>
@@ -176,6 +178,7 @@ function personBox(key) {
     if(typeof info["died"] !== 'undefined' ){if (info["died"].length > 0){newdivcontents += '<tr><td>&#8224 ' + info["died"] + '</td>'}}
 
     newdivcontents += '</tr></table></button>';
+    newdivcontents += '   <i style = "display: none; color: gray;" class="material-icons" id="more_' + key + '">more_horiz</i>';
     return newdivcontents;
 }
 
@@ -192,6 +195,31 @@ function nodeOnClick(parentelement){
             {message: 'No parents in database'}
         );
     }
+}
+
+function nodeOnMouseover(parentelement){
+    console.log('you hovered' + parentelement.id);
+    let node = parentelement.id;
+    document.getElementById('more_' + node).style.display = '';
+}
+
+function isHover(e) {
+    return (e.parentElement.querySelector(':hover') === e);
+}
+
+function nodeOnMouseleave(parentelement) {
+    let node = parentelement.id;
+    setTimeout(function () {
+        if (!isHover(document.getElementById('more_' + node))) {
+            document.getElementById('more_' + node).style.display = 'none';
+        }else{
+            moreOnHover('more_' + node);
+        }
+    }, 500);
+}
+
+function moreOnHover(moreId) {
+    document.getElementById(moreId).setAttribute('onmouseleave', "document.getElementById('"+moreId+"').style.display = 'none'");
 }
 
 function AddNamesAndGendersToPeople() {
