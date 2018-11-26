@@ -26,6 +26,8 @@ function onLoadorResize() {
   let bottom = (1.2 / ratio + 0.8) * fontSize;
   bottom = vw < 230 ? (1 / 2) * vh : bottom;
   name_element.style.bottom = bottom + "px";
+
+  name_element.style.visibility = "visible";
 }
 
 window.onload = onLoadorResize;

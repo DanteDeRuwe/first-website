@@ -142,6 +142,7 @@ a {
   font-size: 40px;
   line-height: 36px;
   bottom: 0;
+  visibility: hidden;
   background: #cc7a61;
   background: linear-gradient(-37deg, #cc7a61 0%, #f2925a 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc7a61', endColorstr='#f2925a',GradientType=1 );
@@ -157,6 +158,9 @@ a {
 }
 
 @media only screen and (max-width: 576px) {
+  #bg {
+    background-image: url(../img/bg-tiny.jpg);
+  }
   #hamburger {
     display: inline-block;
   }
