@@ -1,196 +1,169 @@
-/*------------------------------------------------*/
-/* Basic styles */ 
-/* Designed and coded by HeroWP.com*/
-/* Don't forget to visit us daily for tons of freebies:
-	-PSD Templates
-	-Wordpress Plugins
-	-Wordpess Themes
-	-HTML Designs
-	-& many more!
-*/
-/*------------------------------------------------*/
-
-html{
-	background:url(../images/bg.jpg?ver=002) no-repeat center center fixed;
-	background-size: cover;
-	min-height:100%;
+/* Coolors Exported Palette - coolors.co/ea8a4e-b66450-ededef-515657-466e99 */
+/* RGB */
+@font-face {
+  font-family: "Code-Light";
+  src: url("../fonts/Code Light/Code-Light.eot");
+  src: url("../fonts/Code Light/Code-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Code Light/Code-Light.woff") format("woff"), url("../fonts/Code Light/Code-Light.ttf") format("truetype"), url("../fonts/Code Light/Code-Light.svg#aller") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
-body{
-	min-height:100%;
-	font-family:'Oswald', Arial;
-	color:#fff;
-    	overflow: hidden;
+@font-face {
+  font-family: "Pier-Sans-Bold";
+  src: url("../fonts/Pier Sans Bold/PierSans-Bold.eot");
+  src: url("../fonts/Pier Sans Bold/PierSans-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Pier Sans Bold/PierSans-Bold.woff") format("woff"), url("../fonts/Pier Sans Bold/PierSans-Bold.ttf") format("truetype"), url("../fonts/Pier Sans Bold/PierSans-Bold.svg#aller") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
-.overlay{
-	background:rgba(0,0,0,.6);
-	position:absolute;
-	left:0;
-	top:0;
-	bottom:0;
-	right:0;
-	width:100%;
-	height:100%;
-	z-index:1;
-	overflow:hidden;
+@font-face {
+  font-family: "Nexa-Light";
+  src: url("../fonts/Nexa Light/NexaLight.eot");
+  src: url("../fonts/Nexa Light/NexaLight.eot?#iefix") format("embedded-opentype"), url("../fonts/Nexa Light/NexaLight.woff") format("woff"), url("../fonts/Nexa Light/NexaLight.ttf") format("truetype"), url("../fonts/Nexa Light/NexaLight.svg#aller") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
-@media (min-width: 1200px){
-	.container {
-		width:1170px;
-	}
+li {
+  list-style: none;
 }
 
-#wrap{
-	width:100%;
-	height:100%;
-	display:table;
-	position:relative;
-	z-index:10000;
+a {
+  text-decoration: none !important;
 }
 
-#defaultCountdown{
-	z-index:2;
-	margin:0 auto;
-	display:table;
-	position:relative;
+#bodycontainer {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
 }
 
-.countdown-row {
-	margin:0 auto;
-	width:100%;
-	display:table;
-	text-align:center;
+#bg {
+  background-image: url(../img/bg.jpg);
+  background-color: #ededef;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right bottom;
+  position: absolute;
+  z-index: -999;
+  height: 100vh;
+  width: 100vw;
 }
 
-.countdown-section {
-	display: block;
-	float: left;
-	text-align: center;
-	width:120px;
-	height:120px;
-	border-radius:50%;
-	-webkit-border-radius:50%;
-	-moz-border-radius:50%;
-	border:solid 1px #fff;
-	text-align:center;
-	margin:40px 20px;
+#hamburger {
+  display: none;
+  margin: 15px;
+  margin-top: 35px;
+  cursor: pointer;
 }
 
-.countdown-amount {
-    font-size: 60px;
-	font-weight:700;
-	line-height:120px;
-}
-.countdown-period {
-    display: block;
-	line-height:60px;
-	color:#ff9c00;
-	font-size:18px;
-	font-weight:100;
+.hamburger-bar {
+  width: 30px;
+  height: 1px;
+  background-color: black;
+  margin-bottom: 7px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  display: block;
 }
 
-.image-align{
-	margin:0 auto;
-	text-align:center;
-	display:block;
-	padding-top: 100px;
+.rotate_hamburger_bar#hamburger-bar1 {
+  -webkit-transform: rotate(-45deg) translate(-7px, 5px);
+          transform: rotate(-45deg) translate(-7px, 5px);
 }
 
-h1{
-	font-size:56px;
-	font-weight:300;
-	text-align:center;
+.rotate_hamburger_bar#hamburger-bar2 {
+  opacity: 0;
 }
 
-h1 span{
-	font-size:32px;
+.rotate_hamburger_bar#hamburger-bar3 {
+  -webkit-transform: rotate(45deg) translate(-7px, -5px);
+          transform: rotate(45deg) translate(-7px, -5px);
 }
 
-.yellow{
-	color:#ff9c00;
-	font-size:56px;
+#nav li {
+  display: inline-block;
+  padding: 10px;
+  margin-top: 15px;
+  font-family: Nexa-Light, "Segoe UI Light", Arial, sans-serif;
+  color: black;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  font-size: 22px;
 }
 
-p{
-	font-size:16px;
-	line-height:30px;
-	text-align:center;
-	font-weight:100;
-	margin-top: -20px;
-	margin-bottom: 30px;
+#nav li a {
+  color: black;
 }
 
-
-a{
-color:#fff;
-text-decoration:underline;
+#nav li a:hover {
+  color: #ea8a4e;
+  font-weight: bold;
 }
 
-
-
-/*------------------------------------------------*/
-/* Responsive styles */
-/*------------------------------------------------*/
-
-@media (min-width: 561px) and (max-width: 720px) {
-	
-	.countdown-section {
-		margin:5px;
-	}
-
+#nav ul {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-@media (max-width: 600px){
-	
-	.countdown-section {
-		display: block;
-		float: left;
-		text-align: center;
-		width:75px;
-		height:75px;
-		margin:6px;
-	}
-	
-	.countdown-amount {
-		font-size: 32px;
-		font-weight:700;
-		line-height:74px;
-	}
-	
+#icons {
+  float: right;
+  margin: 25px 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-@media (max-width: 420px){
-	
-	.countdown-section {
-		display: block;
-		float: left;
-		text-align: center;
-		width:56px;
-		height:56px;
-		margin:2px;
-	}
-	
-	.countdown-amount {
-		font-size: 24px;
-		font-weight:700;
-		line-height:58px;
-	}
-	
-	.image-align{
-		padding-top: 20px;
-		width:30%;
-	}
-	
-	h1,.yellow{
-		font-size:32px;
-	}	
-	
-	h1 span{
-	font-size:18px;
-	}
-
-	
-	
+#icons i {
+  color: black;
 }
+
+#icons i:hover {
+  color: #ea8a4e !important;
+  cursor: pointer;
+}
+
+#icons #tw-icon {
+  vertical-align: -3px;
+}
+
+#name {
+  font-family: Pier-Sans-Bold, "Segoe UI", Arial, sans-serif;
+  font-weight: bold;
+  position: fixed;
+  left: 45px;
+  font-size: 40px;
+  line-height: 36px;
+  bottom: 0;
+  background: #cc7a61;
+  background: linear-gradient(-37deg, #cc7a61 0%, #f2925a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc7a61', endColorstr='#f2925a',GradientType=1 );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media only screen and (max-width: 230px) {
+  #icons {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #hamburger {
+    display: inline-block;
+  }
+  #nav ul {
+    display: none;
+  }
+  #name {
+    left: 15px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
