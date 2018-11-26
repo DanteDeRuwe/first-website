@@ -2,9 +2,13 @@
 
 $color1: rgba(234, 138, 78, 1);
 $color2: rgba(182, 100, 80, 1);
-$color3: rgba(237, 237, 239, 1);
+$color3: #e2e3e5;
 $color4: #515657;
 $color5: rgba(70, 110, 153, 1);
+$color6: #d45839;
+$color7: #bebbb4;
+
+$shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 
 // Bootstrap Size Guide
 $xs_min: 0;
@@ -36,6 +40,22 @@ $xl_min: 1200px;
 @include font("Code-Light", "../fonts/Code Light/Code-Light");
 @include font("Pier-Sans-Bold", "../fonts/Pier Sans Bold/PierSans-Bold");
 @include font("Nexa-Light", "../fonts/Nexa Light/NexaLight");
+
+@mixin title_text() {
+  font-family: Pier-Sans-Bold, "Segoe UI", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 36px;
+
+  background: $color6;
+  background: -moz-linear-gradient(127deg, $color6 0%, #f2925a 100%);
+  background: -webkit-linear-gradient(127deg, $color6 0%, #f2925a 100%);
+  background: linear-gradient(-37deg, $color6 0%, #f2925a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d45839', endColorstr='#f2925a',GradientType=1 );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 // General
 li {
@@ -104,7 +124,7 @@ a {
   }
 }
 
-#nav {
+.nav {
   & li {
     display: inline-block;
     padding: 10px;
@@ -131,8 +151,9 @@ a {
   }
 }
 
-#icons {
-  float: right;
+.icons {
+  position: fixed;
+  right: 10px;
   margin: 25px 20px;
 
   @include unselect();
@@ -153,25 +174,13 @@ a {
 
 #name {
   @include unselect();
-  font-family: Pier-Sans-Bold, "Segoe UI", Arial, sans-serif;
-  font-weight: bold;
+  @include title_text();
   position: fixed;
   left: 45px;
 
-  //Will be overwritten by js
-  font-size: 40px;
-  line-height: 36px;
+  //Will be overwritten by js, along with fontsze and lineheight
   bottom: 0;
   visibility: hidden;
-
-  background: #cc7a61;
-  background: -moz-linear-gradient(127deg, #cc7a61 0%, #f2925a 100%);
-  background: -webkit-linear-gradient(127deg, #cc7a61 0%, #f2925a 100%);
-  background: linear-gradient(-37deg, #cc7a61 0%, #f2925a 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc7a61', endColorstr='#f2925a',GradientType=1 );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 #description {
@@ -187,7 +196,7 @@ a {
 
 //TOO TINY
 @media only screen and (max-width: 230px) {
-  #icons {
+  .icons {
     display: none;
   }
 }
@@ -197,7 +206,7 @@ a {
   #hamburger {
     display: inline-block;
   }
-  #nav ul {
+  .nav ul {
     display: none;
   }
   #name {
@@ -206,4 +215,9 @@ a {
   #description {
     left: 25px;
   }
+}
+
+// ABOUT
+#about-page {
+  @import "about";
 }

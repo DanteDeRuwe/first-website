@@ -1,0 +1,60 @@
+/*
+SCSS STYLES FOR THE ABOUT PAGE
+all styles relative to body tag 
+*/
+
+//body itself
+& {
+  background-color: whitesmoke;
+}
+
+.nav {
+  width: 100vw;
+  height: 80px;
+  background-color: $color3;
+  position: fixed;
+  top: 0;
+  margin-bottom: 10px;
+  box-shadow: $shadow;
+  z-index: 999;
+}
+
+.undernav {
+  margin-top: 80px;
+}
+
+#banner {
+  // TODO: hardcoded height values resolve!!!!
+}
+
+#pic1 {
+  background-image: url(../img/main-img.jpg);
+  width: 30vw;
+  height: 40vh;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 53% 33%;
+}
+
+#about-me-text {
+  display: block;
+  margin-left: 30vw;
+
+  width: 70vw;
+  height: 40vh;
+
+  padding: 5vh 2vw 1vh 4vw;
+  background-color: white;
+  overflow: hidden;
+  overflow-y: scroll;
+  .title {
+    @include title_text();
+    margin-bottom: 25px;
+    white-space: nowrap;
+  }
+  .text {
+    color: $color4;
+    font-size: 1rem;
+  }
+}

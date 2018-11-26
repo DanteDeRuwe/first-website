@@ -1,7 +1,9 @@
 @font-face {
   font-family: "Code-Light";
   src: url("../fonts/Code Light/Code-Light.eot");
-  src: url("../fonts/Code Light/Code-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Code Light/Code-Light.woff") format("woff"), url("../fonts/Code Light/Code-Light.ttf") format("truetype"), url("../fonts/Code Light/Code-Light.svg#aller") format("svg");
+  src: url("../fonts/Code Light/Code-Light.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Code Light/Code-Light.woff") format("woff"), url("../fonts/Code Light/Code-Light.ttf") format("truetype"),
+    url("../fonts/Code Light/Code-Light.svg#aller") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -9,7 +11,10 @@
 @font-face {
   font-family: "Pier-Sans-Bold";
   src: url("../fonts/Pier Sans Bold/PierSans-Bold.eot");
-  src: url("../fonts/Pier Sans Bold/PierSans-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Pier Sans Bold/PierSans-Bold.woff") format("woff"), url("../fonts/Pier Sans Bold/PierSans-Bold.ttf") format("truetype"), url("../fonts/Pier Sans Bold/PierSans-Bold.svg#aller") format("svg");
+  src: url("../fonts/Pier Sans Bold/PierSans-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Pier Sans Bold/PierSans-Bold.woff") format("woff"),
+    url("../fonts/Pier Sans Bold/PierSans-Bold.ttf") format("truetype"),
+    url("../fonts/Pier Sans Bold/PierSans-Bold.svg#aller") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -17,7 +22,9 @@
 @font-face {
   font-family: "Nexa-Light";
   src: url("../fonts/Nexa Light/NexaLight.eot");
-  src: url("../fonts/Nexa Light/NexaLight.eot?#iefix") format("embedded-opentype"), url("../fonts/Nexa Light/NexaLight.woff") format("woff"), url("../fonts/Nexa Light/NexaLight.ttf") format("truetype"), url("../fonts/Nexa Light/NexaLight.svg#aller") format("svg");
+  src: url("../fonts/Nexa Light/NexaLight.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Nexa Light/NexaLight.woff") format("woff"), url("../fonts/Nexa Light/NexaLight.ttf") format("truetype"),
+    url("../fonts/Nexa Light/NexaLight.svg#aller") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -42,7 +49,7 @@ a {
 
 #bg {
   background-image: url(../img/bg-small.jpg);
-  background-color: #ededef;
+  background-color: #e2e3e5;
   background-repeat: no-repeat;
   background-size: cover;
   background-size: cover;
@@ -84,7 +91,7 @@ a {
   transform: rotate(45deg) translate(-7px, -5px);
 }
 
-#nav li {
+.nav li {
   display: inline-block;
   padding: 10px;
   margin-top: 15px;
@@ -95,16 +102,16 @@ a {
   font-size: 22px;
 }
 
-#nav li a {
+.nav li a {
   color: black;
 }
 
-#nav li a:hover {
+.nav li a:hover {
   color: #ea8a4e;
   font-weight: bold;
 }
 
-#nav ul {
+.nav ul {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -115,8 +122,9 @@ a {
   user-select: none;
 }
 
-#icons {
-  float: right;
+.icons {
+  position: fixed;
+  right: 10px;
   margin: 25px 20px;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -124,16 +132,16 @@ a {
   user-select: none;
 }
 
-#icons i {
+.icons i {
   color: black;
 }
 
-#icons i:hover {
+.icons i:hover {
   color: #ea8a4e !important;
   cursor: pointer;
 }
 
-#icons #tw-icon {
+.icons #tw-icon {
   vertical-align: -3px;
 }
 
@@ -144,18 +152,18 @@ a {
   user-select: none;
   font-family: Pier-Sans-Bold, "Segoe UI", Arial, sans-serif;
   font-weight: bold;
-  position: fixed;
-  left: 45px;
   font-size: 40px;
   line-height: 36px;
-  bottom: 0;
-  visibility: hidden;
-  background: #cc7a61;
-  background: linear-gradient(-37deg, #cc7a61 0%, #f2925a 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc7a61', endColorstr='#f2925a',GradientType=1 );
+  background: #d45839;
+  background: linear-gradient(-37deg, #d45839 0%, #f2925a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d45839', endColorstr='#f2925a',GradientType=1 );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  position: fixed;
+  left: 45px;
+  bottom: 0;
+  visibility: hidden;
 }
 
 #description {
@@ -170,7 +178,7 @@ a {
 }
 
 @media only screen and (max-width: 230px) {
-  #icons {
+  .icons {
     display: none;
   }
 }
@@ -179,7 +187,7 @@ a {
   #hamburger {
     display: inline-block;
   }
-  #nav ul {
+  .nav ul {
     display: none;
   }
   #name {
@@ -188,5 +196,73 @@ a {
   #description {
     left: 25px;
   }
+}
+
+#about-page {
+  /*
+SCSS STYLES FOR THE ABOUT PAGE
+all styles relative to body tag 
+*/
+}
+
+#about-page {
+  background-color: whitesmoke;
+}
+
+#about-page .nav {
+  width: 100vw;
+  height: 80px;
+  background-color: #e2e3e5;
+  position: fixed;
+  top: 0;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+#about-page .undernav {
+  margin-top: 80px;
+}
+
+#about-page #pic1 {
+  background-image: url(../img/main-img.jpg);
+  width: 30vw;
+  height: 40vh;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 53% 33%;
+}
+
+#about-page #about-me-text {
+  display: block;
+  margin-left: 30vw;
+  width: 70vw;
+  height: 40vh;
+  padding: 5vh 2vw 1vh 4vw;
+  background-color: white;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+#about-page #about-me-text .title {
+  font-family: Pier-Sans-Bold, "Segoe UI", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 36px;
+  background: #d45839;
+  background: linear-gradient(-37deg, #d45839 0%, #f2925a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d45839', endColorstr='#f2925a',GradientType=1 );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 25px;
+  white-space: nowrap;
+}
+
+#about-page #about-me-text .text {
+  color: #515657;
+  font-size: 1rem;
 }
 /*# sourceMappingURL=style.css.map */
