@@ -3,7 +3,7 @@
 $color1: rgba(234, 138, 78, 1);
 $color2: rgba(182, 100, 80, 1);
 $color3: rgba(237, 237, 239, 1);
-$color4: rgba(81, 86, 87, 1);
+$color4: #515657;
 $color5: rgba(70, 110, 153, 1);
 
 // Bootstrap Size Guide
@@ -44,6 +44,10 @@ li {
 
 a {
   text-decoration: none !important;
+}
+
+.orange {
+  color: $color1 !important;
 }
 
 //Homepage
@@ -151,7 +155,6 @@ a {
   @include unselect();
   font-family: Pier-Sans-Bold, "Segoe UI", Arial, sans-serif;
   font-weight: bold;
-
   position: fixed;
   left: 45px;
 
@@ -171,6 +174,17 @@ a {
   -webkit-text-fill-color: transparent;
 }
 
+#description {
+  font-family: Nexa-Light, "Segoe UI Light", Arial, sans-serif;
+  color: $color4;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  font-size: 36px;
+  position: fixed;
+  left: 55px;
+  visibility: hidden;
+}
+
 //TOO TINY
 @media only screen and (max-width: 230px) {
   #icons {
@@ -180,9 +194,6 @@ a {
 
 //SMALL
 @media only screen and (max-width: $sm-min) {
-  // #bg {
-  //   background-image: url(../img/bg-tiny.jpg);
-  // }
   #hamburger {
     display: inline-block;
   }
@@ -191,5 +202,8 @@ a {
   }
   #name {
     left: 15px;
+  }
+  #description {
+    left: 25px;
   }
 }

@@ -23,11 +23,16 @@ function onLoadorResize() {
   ratio = ratio > 2.35 ? 2.35 : ratio;
   ratio = ratio < 1 / 2.35 ? 1 / 2.35 : ratio;
 
-  let bottom = (1.2 / ratio + 0.8) * fontSize;
+  let bottom = (1.2 / ratio + 1.3) * fontSize;
   bottom = vw < 230 ? (1 / 2) * vh : bottom;
   name_element.style.bottom = bottom + "px";
 
   name_element.style.visibility = "visible";
+
+  let desc_element = document.getElementById("description");
+  desc_element.style.bottom = bottom - 0.6 * fontSize + "px";
+  desc_element.style.fontSize = 0.25 * fontSize + "px";
+  desc_element.style.visibility = "visible";
 }
 
 window.onload = onLoadorResize;

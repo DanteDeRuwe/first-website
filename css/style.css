@@ -30,6 +30,10 @@ a {
   text-decoration: none !important;
 }
 
+.orange {
+  color: #ea8a4e !important;
+}
+
 #bodycontainer {
   width: 100vw;
   height: 100vh;
@@ -154,6 +158,17 @@ a {
   -webkit-text-fill-color: transparent;
 }
 
+#description {
+  font-family: Nexa-Light, "Segoe UI Light", Arial, sans-serif;
+  color: #515657;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  font-size: 36px;
+  position: fixed;
+  left: 55px;
+  visibility: hidden;
+}
+
 @media only screen and (max-width: 230px) {
   #icons {
     display: none;
@@ -169,6 +184,9 @@ a {
   }
   #name {
     left: 15px;
+  }
+  #description {
+    left: 25px;
   }
 }
 /*# sourceMappingURL=style.css.map */
