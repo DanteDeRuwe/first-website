@@ -4,14 +4,14 @@ function hamburgerClicked(hamburger) {
   }
 }
 
-function onLoadorResize() {
+function resizeText(urlbaroffset) {
   //Scale some elements on the page. Done by using formulas that originated from messing around ¯\_(ツ)_/¯
   let name_element = document.getElementById("name");
   let desc_element = document.getElementById("description");
 
   //get width, height, and aspect ratio
   let vw = window.innerWidth;
-  let vh = window.innerHeight;
+  let vh = window.innerHeight - urlbaroffset;
   let ratio = vw / vh;
 
   //set cutoff ratios for calculations
@@ -37,5 +37,14 @@ function onLoadorResize() {
   desc_element.style.visibility = "visible";
 }
 
-window.onload = onLoadorResize;
-window.onresize = onLoadorResize;
+function onLoadOrResize() {
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    //urlbar support
+    resizeText(56);
+  } else {
+    resizeText(0);
+  }
+}
+
+window.onload = onLoadOrResize;
+window.onresize = onLoadOrResize;
