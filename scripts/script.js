@@ -4,7 +4,7 @@ function hamburgerClicked(hamburger) {
   }
 }
 
-function resizeText(urlbaroffset) {
+function resizeText() {
   //Scale some elements on the page. Done by using formulas that originated from messing around ¯\_(ツ)_/¯
   let name_element = document.getElementById("name");
   let desc_element = document.getElementById("description");
@@ -29,7 +29,6 @@ function resizeText(urlbaroffset) {
   //calculate bottom "margin" and apply to elements
   let bottom = (1.8 / ratio + 0.9) * fontSize;
   bottom = vw < 230 ? (1 / 2) * vh : bottom;
-  bottom -= urlbaroffset; //mobile -_-
   name_element.style.bottom = bottom + "px";
   desc_element.style.bottom = bottom - 0.6 * fontSize + "px";
 
@@ -39,12 +38,7 @@ function resizeText(urlbaroffset) {
 }
 
 function onLoadOrResize() {
-  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    //urlbar support
-    resizeText(56);
-  } else {
-    resizeText(0);
-  }
+  resizeText();
 }
 
 window.onload = onLoadOrResize;
