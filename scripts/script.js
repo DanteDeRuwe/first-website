@@ -19,7 +19,7 @@ function resizeText() {
   ratio = ratio < 1 / 2.35 ? 1 / 2.35 : ratio;
 
   //calculate fontsizes and apply to elements
-  let fontSize = 0.09 * vh + 0.03 * vw + 10;
+  let fontSize = 0.08 * vh + 0.03 * vw + 10;
   fontSize = vw < 230 || vw * vh < 800 ? 24 : fontSize;
 
   name_element.style.fontSize = fontSize + "px";
