@@ -1,4 +1,10 @@
-@import "palette";
+//colors
+
+$color1: rgba(234, 138, 78, 1);
+$color2: rgba(182, 100, 80, 1);
+$color3: rgba(237, 237, 239, 1);
+$color4: rgba(81, 86, 87, 1);
+$color5: rgba(70, 110, 153, 1);
 
 // Bootstrap Size Guide
 $xs_min: 0;
@@ -53,6 +59,9 @@ a {
   background-color: $color3;
   background-repeat: no-repeat;
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-position: right bottom;
   position: absolute;
   z-index: -999;
@@ -78,14 +87,14 @@ a {
 
 .rotate_hamburger_bar {
   &#hamburger-bar1 {
-    //-webkit-transform:
+    -webkit-transform: rotate(-45deg) translate(-7px, 5px);
     transform: rotate(-45deg) translate(-7px, 5px);
   }
   &#hamburger-bar2 {
     opacity: 0;
   }
   &#hamburger-bar3 {
-    //-webkit-transform:
+    -webkit-transform: rotate(45deg) translate(-7px, -5px);
     transform: rotate(45deg) translate(-7px, -5px);
   }
 }
@@ -138,6 +147,7 @@ a {
 }
 
 #name {
+  @include unselect();
   font-family: Pier-Sans-Bold, "Segoe UI", Arial, sans-serif;
   font-weight: bold;
 
@@ -155,6 +165,7 @@ a {
   background: linear-gradient(-37deg, #cc7a61 0%, #f2925a 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc7a61', endColorstr='#f2925a',GradientType=1 );
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 

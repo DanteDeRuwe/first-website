@@ -1,5 +1,3 @@
-/* Coolors Exported Palette - coolors.co/ea8a4e-b66450-ededef-515657-466e99 */
-/* RGB */
 @font-face {
   font-family: "Code-Light";
   src: url("../fonts/Code Light/Code-Light.eot");
@@ -43,6 +41,9 @@ a {
   background-color: #ededef;
   background-repeat: no-repeat;
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-position: right bottom;
   position: absolute;
   z-index: -999;
@@ -69,7 +70,7 @@ a {
 
 .rotate_hamburger_bar#hamburger-bar1 {
   -webkit-transform: rotate(-45deg) translate(-7px, 5px);
-          transform: rotate(-45deg) translate(-7px, 5px);
+  transform: rotate(-45deg) translate(-7px, 5px);
 }
 
 .rotate_hamburger_bar#hamburger-bar2 {
@@ -78,7 +79,7 @@ a {
 
 .rotate_hamburger_bar#hamburger-bar3 {
   -webkit-transform: rotate(45deg) translate(-7px, -5px);
-          transform: rotate(45deg) translate(-7px, -5px);
+  transform: rotate(45deg) translate(-7px, -5px);
 }
 
 #nav li {
@@ -135,6 +136,10 @@ a {
 }
 
 #name {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   font-family: Pier-Sans-Bold, "Segoe UI", Arial, sans-serif;
   font-weight: bold;
   position: fixed;
@@ -146,6 +151,7 @@ a {
   background: linear-gradient(-37deg, #cc7a61 0%, #f2925a 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc7a61', endColorstr='#f2925a',GradientType=1 );
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
