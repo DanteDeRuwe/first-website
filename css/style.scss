@@ -180,9 +180,9 @@ a {
 
 //SMALL
 @media only screen and (max-width: $sm-min) {
-  #bg {
-    background-image: url(../img/bg-tiny.jpg);
-  }
+  // #bg {
+  //   background-image: url(../img/bg-tiny.jpg);
+  // }
   #hamburger {
     display: inline-block;
   }
