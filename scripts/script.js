@@ -39,6 +39,7 @@ function resizeText() {
 
 function onLoadOrResize() {
   resizeText();
+  window.scrollTo(0, 1); //fake scroll to hide adressbar on chrome mobile
 }
 
 window.onload = onLoadOrResize;
