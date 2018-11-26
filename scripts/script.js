@@ -7,31 +7,33 @@ function hamburgerClicked(hamburger) {
 function onLoadorResize() {
   //Scale some elements on the page. Done by using formulas that originated from messing around ¯\_(ツ)_/¯
   let name_element = document.getElementById("name");
+  let desc_element = document.getElementById("description");
 
+  //get width, height, and aspect ratio
   let vw = window.innerWidth;
   let vh = window.innerHeight;
-
-  let fontSize = 0.1 * vh + 0.033 * vw + 12;
-  fontSize = vw < 230 ? 50 : fontSize;
-
-  name_element.style.fontSize = fontSize + "px";
-  name_element.style.lineHeight = 0.9 * fontSize + "px";
-
   let ratio = vw / vh;
 
-  //set cutoff ratios
+  //set cutoff ratios for calculations
   ratio = ratio > 2.35 ? 2.35 : ratio;
   ratio = ratio < 1 / 2.35 ? 1 / 2.35 : ratio;
 
-  let bottom = (1.2 / ratio + 1.3) * fontSize;
+  //calculate fontsizes and apply to elements
+  let fontSize = 0.09 * vh + 0.03 * vw + 10;
+  fontSize = vw < 230 || vw * vh < 800 ? 24 : fontSize;
+
+  name_element.style.fontSize = fontSize + "px";
+  name_element.style.lineHeight = 0.9 * fontSize + "px";
+  desc_element.style.fontSize = 0.25 * fontSize + "px";
+
+  //calculate bottom "margin" and apply to elements
+  let bottom = (1.8 / ratio + 0.9) * fontSize;
   bottom = vw < 230 ? (1 / 2) * vh : bottom;
   name_element.style.bottom = bottom + "px";
-
-  name_element.style.visibility = "visible";
-
-  let desc_element = document.getElementById("description");
   desc_element.style.bottom = bottom - 0.6 * fontSize + "px";
-  desc_element.style.fontSize = 0.25 * fontSize + "px";
+
+  //Show the elements once calculated
+  name_element.style.visibility = "visible";
   desc_element.style.visibility = "visible";
 }
 
