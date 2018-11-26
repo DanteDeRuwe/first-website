@@ -11,7 +11,7 @@ function resizeText(urlbaroffset) {
 
   //get width, height, and aspect ratio
   let vw = window.innerWidth;
-  let vh = window.innerHeight - urlbaroffset;
+  let vh = window.innerHeight;
   let ratio = vw / vh;
 
   //set cutoff ratios for calculations
@@ -29,6 +29,7 @@ function resizeText(urlbaroffset) {
   //calculate bottom "margin" and apply to elements
   let bottom = (1.8 / ratio + 0.9) * fontSize;
   bottom = vw < 230 ? (1 / 2) * vh : bottom;
+  bottom -= urlbaroffset; //mobile -_-
   name_element.style.bottom = bottom + "px";
   desc_element.style.bottom = bottom - 0.6 * fontSize + "px";
 
