@@ -40,7 +40,6 @@ a {
   background-image: url(../img/bg-small.jpg);
   background-color: #ededef;
   background-repeat: no-repeat;
-  background-position: right bottom;
   position: absolute;
   z-index: -999;
   height: 100vh;
