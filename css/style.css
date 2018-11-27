@@ -60,6 +60,12 @@ a {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 576px) {
+  #hamburger {
+    display: inline-block;
+  }
+}
+
 .hamburger-bar {
   width: 30px;
   height: 1px;
@@ -84,27 +90,7 @@ a {
   transform: rotate(45deg) translate(-7px, -5px);
 }
 
-.nav li {
-  display: inline-block;
-  padding: 10px;
-  margin-top: 15px;
-  font-family: Nexa-Light, "Segoe UI Light", Arial, sans-serif;
-  color: black;
-  text-transform: lowercase;
-  font-variant: small-caps;
-  font-size: 22px;
-}
-
-.nav li a {
-  color: black;
-}
-
-.nav li a:hover {
-  color: #ea8a4e;
-  font-weight: bold;
-}
-
-.nav ul {
+#nav-ul {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -115,6 +101,61 @@ a {
   user-select: none;
 }
 
+#nav-ul li {
+  display: inline-block;
+  padding: 10px;
+  margin-top: 15px;
+  font-family: Nexa-Light, "Segoe UI Light", Arial, sans-serif;
+  color: black;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  font-size: 22px;
+}
+
+#nav-ul a {
+  color: black;
+}
+
+#nav-ul a:hover {
+  color: #ea8a4e;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 576px) {
+  #nav-ul {
+    background: rgba(245, 245, 245, 0.9);
+    padding: 20px;
+    padding-left: 45px;
+    width: 100vw;
+    margin-top: 6px;
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+  }
+  #nav-ul.mobile-nav-visible {
+    visibility: visible;
+    opacity: 1;
+    height: 190px;
+    overflow: hidden;
+    -webkit-transition: height 400ms ease, visibility 0s, opacity 300ms ease;
+    transition: height 400ms ease, visibility 0s, opacity 300ms ease;
+  }
+  #nav-ul.mobile-nav-invisible {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: height 600ms ease, opacity 400ms ease, visibility 0s 1s;
+    transition: height 600ms ease, opacity 400ms ease, visibility 0s 1s;
+  }
+  #nav-ul li {
+    font-size: 1.2rem;
+    display: block;
+    margin: -0.6rem;
+  }
+}
+
 .icons {
   position: fixed;
   right: 10px;
@@ -123,6 +164,12 @@ a {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+@media only screen and (max-width: 230px) {
+  .icons {
+    display: none;
+  }
 }
 
 .icons i {
@@ -159,6 +206,12 @@ a {
   visibility: hidden;
 }
 
+@media only screen and (max-width: 576px) {
+  #name {
+    left: 15px;
+  }
+}
+
 #description {
   font-family: Nexa-Light, "Segoe UI Light", Arial, sans-serif;
   color: #515657;
@@ -168,50 +221,13 @@ a {
   position: fixed;
   left: 55px;
   visibility: hidden;
-}
-
-@media only screen and (max-width: 230px) {
-  .icons {
-    display: none;
-  }
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 @media only screen and (max-width: 576px) {
-  #hamburger {
-    display: inline-block;
-  }
-  #nav-ul {
-    background: rgba(245, 245, 245, 0.9);
-    padding: 20px;
-    padding-left: 45px;
-    width: 100vw;
-    margin-top: 6px;
-    z-index: 999;
-  }
-  #nav-ul li {
-    font-size: 1.2rem;
-    display: block;
-    margin: -0.6rem;
-  }
-  #nav-ul:not(.mobile-nav-visible) {
-    visibility: hidden;
-    opacity: 0;
-    height: 0;
-    overflow: hidden;
-    -webkit-transition: height 600ms ease, opacity 400ms ease, visibility 0s 1s;
-    transition: height 600ms ease, opacity 400ms ease, visibility 0s 1s;
-  }
-  #nav-ul.mobile-nav-visible {
-    visibility: visible;
-    opacity: 1;
-    height: 190px;
-    overflow: hidden;
-    -webkit-transition: height 400ms ease, visibility 0s, opacity 300ms ease;
-    transition: height 400ms ease, visibility 0s, opacity 300ms ease;
-  }
-  #name {
-    left: 15px;
-  }
   #description {
     left: 25px;
   }

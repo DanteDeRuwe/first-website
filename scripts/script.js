@@ -1,10 +1,30 @@
-function hamburgerClicked(hamburger) {
-  for (child of hamburger.children) {
-    child.classList.toggle("rotate_hamburger_bar");
-  }
+function hamburgerClicked() {
+  let hamburger = document.getElementById("hamburger");
+  if (window.getComputedStyle(hamburger).display !== "none") {
+    //only do this if hamburger is there
+    for (child of hamburger.children) {
+      child.classList.toggle("rotate_hamburger_bar");
+    }
 
-  let ul = document.getElementById("nav-ul");
-  ul.classList.toggle("mobile-nav-visible");
+    let ul = document.getElementById("nav-ul");
+
+    /*
+    Following code to prevent triggering nav on resize
+    (previously when only toggling visible, specifying no class would mean a disappear animation)
+    if no class: nothing
+    if visible: transition to make appear
+    invisible: transition to dissapear, after 1 sec go back to no class
+    */
+    if (ul.classList.contains("mobile-nav-visible")) {
+      ul.classList.remove("mobile-nav-visible");
+      ul.classList.add("mobile-nav-invisible");
+      setTimeout(() => {
+        ul.classList.remove("mobile-nav-invisible");
+      }, 600);
+    } else {
+      ul.classList.add("mobile-nav-visible");
+    }
+  }
 }
 
 function resizeHomepageText() {

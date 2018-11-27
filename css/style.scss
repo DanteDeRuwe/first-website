@@ -17,6 +17,19 @@ $md_min: 768px;
 $lg_min: 992px;
 $xl_min: 1200px;
 
+// MEDIA QUERIES
+@mixin TinyDevice {
+  @media only screen and (max-width: 230px) {
+    @content;
+  }
+}
+
+@mixin SmallDevice {
+  @media only screen and (max-width: $sm-min) {
+    @content;
+  }
+}
+
 // Unselectableness
 @mixin unselect() {
   -webkit-user-select: none;
@@ -99,6 +112,9 @@ a {
   margin: 15px;
   margin-top: 35px;
   cursor: pointer;
+  @include SmallDevice {
+    display: inline-block;
+  }
 }
 
 .hamburger-bar {
@@ -124,7 +140,11 @@ a {
   }
 }
 
-.nav {
+#nav-ul {
+  width: fit-content;
+  display: inline-block;
+  @include unselect();
+
   & li {
     display: inline-block;
     padding: 10px;
@@ -134,20 +154,50 @@ a {
     text-transform: lowercase;
     font-variant: small-caps;
     font-size: 22px;
-
-    & a {
-      color: black;
-    }
-
-    & a:hover {
-      color: $color1;
-      font-weight: bold;
-    }
   }
-  & ul {
-    width: fit-content;
-    display: inline-block;
-    @include unselect();
+
+  & a {
+    color: black;
+  }
+
+  & a:hover {
+    color: $color1;
+    font-weight: bold;
+  }
+
+  @include SmallDevice {
+    background: rgba(245, 245, 245, 0.9);
+    padding: 20px;
+    padding-left: 45px;
+    width: 100vw;
+    margin-top: 6px;
+    z-index: 999;
+
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+
+    &.mobile-nav-visible {
+      visibility: visible;
+      opacity: 1;
+      height: 190px;
+      overflow: hidden;
+      transition: height 400ms ease, visibility 0s, opacity 300ms ease; //appear
+    }
+
+    &.mobile-nav-invisible {
+      visibility: hidden;
+      opacity: 0;
+      height: 0;
+      overflow: hidden;
+      transition: height 600ms ease, opacity 400ms ease, visibility 0s 1s; //disappear
+    }
+
+    & li {
+      font-size: 1.2rem;
+      display: block;
+      margin: -0.6rem;
+    }
   }
 }
 
@@ -157,6 +207,10 @@ a {
   margin: 25px 20px;
 
   @include unselect();
+
+  @include TinyDevice {
+    display: none;
+  }
 
   & i {
     color: black;
@@ -181,6 +235,10 @@ a {
   //Will be overwritten by js, along with fontsze and lineheight
   bottom: 0;
   visibility: hidden;
+
+  @include SmallDevice {
+    left: 15px;
+  }
 }
 
 #description {
@@ -192,54 +250,8 @@ a {
   position: fixed;
   left: 55px;
   visibility: hidden;
-}
-
-//TOO TINY
-@media only screen and (max-width: 230px) {
-  .icons {
-    display: none;
-  }
-}
-
-//SMALL
-@media only screen and (max-width: $sm-min) {
-  #hamburger {
-    display: inline-block;
-  }
-  #nav-ul {
-    background: rgba(245, 245, 245, 0.9);
-    padding: 20px;
-    padding-left: 45px;
-    width: 100vw;
-    margin-top: 6px;
-    z-index: 999;
-
-    li {
-      font-size: 1.2rem;
-      display: block;
-      margin: -0.6rem;
-    }
-
-    &:not(.mobile-nav-visible) {
-      visibility: hidden;
-      opacity: 0;
-      height: 0;
-      overflow: hidden;
-      transition: height 600ms ease, opacity 400ms ease, visibility 0s 1s; //disappear
-    }
-
-    &.mobile-nav-visible {
-      visibility: visible;
-      opacity: 1;
-      height: 190px;
-      overflow: hidden;
-      transition: height 400ms ease, visibility 0s, opacity 300ms ease; //appear
-    }
-  }
-  #name {
-    left: 15px;
-  }
-  #description {
+  @include unselect();
+  @include SmallDevice {
     left: 25px;
   }
 }
