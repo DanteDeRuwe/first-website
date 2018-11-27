@@ -2,9 +2,12 @@ function hamburgerClicked(hamburger) {
   for (child of hamburger.children) {
     child.classList.toggle("rotate_hamburger_bar");
   }
+
+  let ul = document.getElementById("nav-ul");
+  ul.classList.toggle("mobile-nav-visible");
 }
 
-function resizeText() {
+function resizeHomepageText() {
   //Scale some elements on the page. Done by using formulas that originated from messing around ¯\_(ツ)_/¯
   let name_element = document.getElementById("name");
   let desc_element = document.getElementById("description");
@@ -38,8 +41,12 @@ function resizeText() {
 }
 
 function onLoadOrResize() {
-  resizeText();
-  window.scrollTo(0, 1); //fake scroll to hide adressbar on chrome mobile
+  /*HOME*/
+  if (document.location.pathname in { "/index.html": 0, "/index": 0, "/": 0 }) {
+    resizeHomepageText();
+  }
+
+  /*ABOUT*/
 }
 
 window.onload = onLoadOrResize;
