@@ -71,3 +71,10 @@ function onLoadOrResize() {
 
 window.onload = onLoadOrResize;
 window.onresize = onLoadOrResize;
+
+//Age changer
+let dob = new Date("June 2, 1998 00:00:00");
+let age = Date.now() - dob;
+age = new Date(age);
+age = age.getFullYear() - 1970;
+document.getElementById("age").innerHTML = age;

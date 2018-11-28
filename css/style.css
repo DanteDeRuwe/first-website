@@ -22,6 +22,33 @@
   font-style: normal;
 }
 
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+::-webkit-scrollbar:vertical {
+  width: 8px;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  border: 2px solid transparent;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
 li {
   list-style: none;
 }
@@ -192,8 +219,8 @@ a {
   user-select: none;
   font-family: Pier-Sans-Bold, "Segoe UI", Arial, sans-serif;
   font-weight: bold;
-  font-size: 40px;
-  line-height: 36px;
+  font-size: calc(1vw + 4vh);
+  margin-bottom: 0;
   background: #d45839;
   background: linear-gradient(-37deg, #d45839 0%, #f2925a 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d45839', endColorstr='#f2925a',GradientType=1 );
@@ -263,7 +290,7 @@ all styles relative to body tag
 #about-page #pic1 {
   background-image: url(../img/main-img.jpg);
   width: 30vw;
-  height: 40vh;
+  height: 60vh;
   position: absolute;
   background-repeat: no-repeat;
   background-size: cover;
@@ -273,31 +300,89 @@ all styles relative to body tag
 #about-page #about-me-text {
   display: block;
   margin-left: 30vw;
-  width: 70vw;
-  height: 40vh;
-  padding: 5vh 2vw 1vh 4vw;
   background-color: white;
+  width: 70vw;
+  height: 60vh;
+  padding: 5vh 2vw 6vh 4vw;
   overflow: hidden;
   overflow-y: scroll;
+}
+
+#about-page #about-me-text .row {
+  margin-top: 1vh;
 }
 
 #about-page #about-me-text .title {
   font-family: Pier-Sans-Bold, "Segoe UI", Arial, sans-serif;
   font-weight: bold;
-  font-size: 40px;
-  line-height: 36px;
+  font-size: calc(1vw + 4vh);
+  margin-bottom: 0;
   background: #d45839;
   background: linear-gradient(-37deg, #d45839 0%, #f2925a 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d45839', endColorstr='#f2925a',GradientType=1 );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 25px;
-  white-space: nowrap;
 }
 
 #about-page #about-me-text .text {
+  text-align: justify;
   color: #515657;
   font-size: 1rem;
+}
+
+#about-page #about-me-text .text span.heading {
+  text-align: center;
+  display: inline-block;
+  font-family: Code-Light, "Helvetica Neue", "Segoe UI Light", Arial, sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: bolder;
+  letter-spacing: 0.15rem;
+  margin: 2rem 0 1rem 0;
+}
+
+#about-page #about-me-text .text span.bold {
+  font-weight: 500;
+}
+
+#about-page #about-me-text .text a {
+  font-weight: 400;
+  color: #ea8a4e;
+}
+
+#about-page #about-me-text .text a:hover {
+  text-decoration: underline !important;
+}
+
+#about-page #social-banner {
+  display: none;
+  width: 100vw;
+  height: 15vh;
+  padding: 10px;
+  margin: 0;
+  background-color: #303030;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow: inset 0 0 10px #000000;
+}
+
+#about-page #social-banner #icontable {
+  width: 100%;
+  height: 100%;
+  table-layout: fixed;
+}
+
+#about-page #social-banner #icontable td {
+  text-align: center;
+}
+
+#about-page #social-banner #icontable td i:before {
+  font-size: 50px;
+  font-weight: 100;
+  color: white !important;
+}
+
+#about-page #social-banner #icontable td i:hover:before {
+  color: #ea8a4e !important;
 }
 /*# sourceMappingURL=style.css.map */

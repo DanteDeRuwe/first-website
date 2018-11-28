@@ -11,7 +11,7 @@ all styles relative to body tag
 .nav {
   width: 100vw;
   height: 80px;
-  background-color: $color3;
+  background-color: $smokeGray;
   position: fixed;
   top: 0;
   margin-bottom: 10px;
@@ -26,31 +26,87 @@ all styles relative to body tag
 #pic1 {
   background-image: url(../img/main-img.jpg);
   width: 30vw;
-  height: 40vh;
+  height: 60vh;
   position: absolute;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 53% 33%;
+  // @include xlDevice {
+  //   width: 500px;
+  // }
 }
 
 #about-me-text {
   display: block;
   margin-left: 30vw;
-
-  width: 70vw;
-  height: 40vh;
-
-  padding: 5vh 2vw 1vh 4vw;
   background-color: white;
+  width: 70vw;
+  height: 60vh;
+  padding: 5vh 2vw 6vh 4vw;
   overflow: hidden;
+
   overflow-y: scroll;
+
+  .row {
+    margin-top: 1vh;
+  }
   .title {
     @include title_text();
-    margin-bottom: 25px;
-    white-space: nowrap;
   }
   .text {
-    color: $color4;
+    text-align: justify;
+    color: $textGray;
     font-size: 1rem;
+    & span.heading {
+      text-align: center;
+      display: inline-block;
+      font-family: Code-Light, "Helvetica Neue", "Segoe UI Light", Arial, sans-serif;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      font-weight: bolder;
+      letter-spacing: 0.15rem;
+      margin: 2rem 0 1rem 0;
+    }
+    & span.bold {
+      font-weight: 500;
+    }
+    & a {
+      font-weight: 400;
+      color: $mainOrange;
+
+      &:hover {
+        text-decoration: underline !important;
+      }
+    }
+  }
+}
+
+#social-banner {
+  //DEV MODE
+  display: none;
+  //---
+
+  width: 100vw;
+  height: 15vh;
+  padding: 10px;
+  margin: 0;
+  background-color: #303030;
+  @include innerShadow;
+
+  #icontable {
+    width: 100%;
+    height: 100%;
+    table-layout: fixed;
+    td {
+      text-align: center;
+      & i:before {
+        font-size: 50px;
+        font-weight: 100;
+        color: white !important;
+      }
+      & i:hover:before {
+        color: $mainOrange !important;
+      }
+    }
   }
 }
