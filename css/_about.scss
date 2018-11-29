@@ -6,6 +6,9 @@ all styles relative to body tag
 //body itself
 & {
   background-color: whitesmoke;
+  overflow-x: hidden;
+  height: auto;
+  //overflow-y: scroll;
 }
 
 .nav {
@@ -23,89 +26,169 @@ all styles relative to body tag
   margin-top: 80px;
 }
 
-#pic1 {
-  background-image: url(../img/main-img.jpg);
-  width: 30vw;
-  height: 60vh;
-  position: absolute;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 53% 33%;
-  // @include xlDevice {
-  //   width: 500px;
-  // }
+#main-banner {
+  #profile-pic {
+    background-image: url(../img/main-img.jpg);
+    width: 30vw;
+    height: 0; //will be overwritten by js
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 53% 33%;
+  }
+  #about-me-text {
+    display: block;
+    margin-left: 30vw;
+    background-color: white;
+    width: 70vw;
+    height: fit-content;
+    max-height: 60vh;
+    padding: 3vh 2vw 4vh 4vw;
+
+    @include ScrollY;
+    .row {
+      margin-top: 1vh;
+    }
+    .title {
+      @include title_text();
+    }
+    .text {
+      text-align: justify;
+      color: $textGray;
+      font-size: 1rem;
+      @include Phone {
+        padding-right: 0.3rem;
+        font-size: 0.9rem;
+      }
+      & span.heading {
+        text-align: center;
+        display: inline-block;
+        font-family: Code-Light, "Helvetica Neue", "Segoe UI Light", Arial, sans-serif;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        font-weight: bolder;
+        letter-spacing: 0.15rem;
+        margin: 2rem 0 1rem 0;
+        @include Phone {
+          text-align: left;
+        }
+      }
+      & span.bold {
+        font-weight: 500;
+      }
+      & a {
+        font-weight: 400;
+        color: $mainOrange;
+
+        &:hover {
+          text-decoration: underline !important;
+        }
+      }
+    }
+  }
 }
 
-#about-me-text {
-  display: block;
-  margin-left: 30vw;
-  background-color: white;
-  width: 70vw;
-  height: 60vh;
-  padding: 5vh 2vw 6vh 4vw;
-  overflow: hidden;
+#skills-banner {
+  #skills-text {
+    @include ScrollY;
+    display: block;
+    background-color: whitesmoke;
 
-  overflow-y: scroll;
+    //width: 70vw;
+    width: 100vw;
+    height: fit-content;
+    min-height: 30vh;
+    max-height: 60vh;
+    padding: 3vh 2vw 4vh 4vw;
 
-  .row {
-    margin-top: 1vh;
-  }
-  .title {
-    @include title_text();
-  }
-  .text {
-    text-align: justify;
-    color: $textGray;
-    font-size: 1rem;
-    & span.heading {
-      text-align: center;
-      display: inline-block;
-      font-family: Code-Light, "Helvetica Neue", "Segoe UI Light", Arial, sans-serif;
-      font-size: 1.2rem;
-      text-transform: uppercase;
-      font-weight: bolder;
-      letter-spacing: 0.15rem;
-      margin: 2rem 0 1rem 0;
+    .row {
+      margin-top: 1vh;
+      & .has-inner-cols {
+        margin: 0;
+        padding: 0;
+      }
     }
-    & span.bold {
-      font-weight: 500;
+    .title {
+      @include title_text();
     }
-    & a {
-      font-weight: 400;
-      color: $mainOrange;
+    .text {
+      text-align: justify;
+      color: $textGray;
+      font-size: 1rem;
+      @include Phone {
+        padding-right: 0.3rem;
+        font-size: 0.9rem;
+      }
+      span.heading {
+        text-align: center;
+        display: inline-block;
+        font-family: Code-Light, "Helvetica Neue", "Segoe UI Light", Arial, sans-serif;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        font-weight: bolder;
+        letter-spacing: 0.15rem;
+        margin: 2rem 0 1rem 0;
+        @include Phone {
+          text-align: left;
+        }
+      }
+      & span.bold {
+        font-weight: 500;
+      }
+      & a {
+        font-weight: 400;
+        color: $mainOrange;
 
-      &:hover {
-        text-decoration: underline !important;
+        &:hover {
+          text-decoration: underline !important;
+        }
       }
     }
   }
 }
 
 #social-banner {
-  //DEV MODE
-  display: none;
-  //---
-
+  display: block;
   width: 100vw;
-  height: 15vh;
+  height: 10vh;
+  @include Phone {
+    height: 12vh;
+  }
   padding: 10px;
   margin: 0;
-  background-color: #303030;
+  background-color: $dark;
   @include innerShadow;
 
-  #icontable {
+  #icondiv {
     width: 100%;
     height: 100%;
-    table-layout: fixed;
-    td {
-      text-align: center;
-      & i:before {
-        font-size: 50px;
-        font-weight: 100;
-        color: white !important;
-      }
-      & i:hover:before {
-        color: $mainOrange !important;
+    display: flex;
+    justify-content: space-between;
+
+    .row {
+      margin: auto;
+      width: 80%;
+      height: 100%;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+
+      div {
+        text-align: center;
+        & i {
+          font-size: 3rem;
+          border-radius: 50%;
+          @include Phone {
+            font-size: 1.5rem;
+          }
+          color: $darker !important;
+          background-color: transparent;
+          transition: all 100ms 100ms ease-in-out;
+        }
+        & i:hover {
+          transition: all 100ms ease-in-out;
+          color: $smokeGray !important;
+        }
       }
     }
   }

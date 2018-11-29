@@ -64,9 +64,13 @@ function onLoadOrResize() {
   /*HOME*/
   if (document.location.pathname in { "/index.html": 0, "/index": 0, "/": 0 }) {
     resizeHomepageText();
+  } else if (document.location.pathname in { "/about.html": 0, "/about": 0 }) {
+    /*ABOUT*/
+    //resize profile pic height
+    let pic = document.getElementById("profile-pic");
+    let about_me_text = document.getElementById("about-me-text");
+    pic.style.height = window.getComputedStyle(about_me_text).height;
   }
-
-  /*ABOUT*/
 }
 
 window.onload = onLoadOrResize;

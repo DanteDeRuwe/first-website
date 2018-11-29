@@ -1,16 +1,21 @@
 //colors
 
-$mainOrange: rgba(234, 138, 78, 1);
+$mainOrange: #ea8a4e;
 $smokeGray: #e2e3e5;
 $textGray: #515657;
 $darkOrange: #d45839;
+$someBlue: #34608f;
+
+$dark: #313131;
+$darker: #212121;
+$darkest: #111111;
 
 $shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 
 @mixin innerShadow {
-  -moz-box-shadow: inset 0 0 10px #000000;
-  -webkit-box-shadow: inset 0 0 10px #000000;
-  box-shadow: inset 0 0 10px #000000;
+  -moz-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6);
 }
 
 // Bootstrap Size Guide
@@ -32,6 +37,12 @@ $tablet_max: 768px;
 
 @mixin Phone {
   @media only screen and (max-width: $phone_max) {
+    @content;
+  }
+}
+
+@mixin NotPhone {
+  @media only screen and (min-width: $tablet-min) {
     @content;
   }
 }
@@ -81,7 +92,8 @@ $tablet_max: 768px;
 @mixin title_text() {
   font-family: Pier-Sans-Bold, "Segoe UI", Arial, sans-serif;
   font-weight: bold;
-  font-size: calc(1vw + 4vh);
+  //font-size: calc(1vw + 4vh);
+  font-size: 2rem;
   margin-bottom: 0;
 
   background: $darkOrange;
@@ -97,23 +109,48 @@ $tablet_max: 768px;
 // General
 
 //Scrollbar
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
 ::-webkit-scrollbar {
-  -webkit-appearance: none;
+  width: 0px; /* remove scrollbar space */
+  background: transparent; /* optional: just make scrollbar invisible */
 }
-::-webkit-scrollbar:vertical {
-  width: 8px;
-}
-::-webkit-scrollbar:horizontal {
-  height: 8px;
-}
+/* optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  border: 2px solid transparent;
+  background: #ff0000;
 }
-::-webkit-scrollbar-track {
-  border-radius: 10px;
-  background-color: transparent;
+
+@mixin ScrollY {
+  overflow: hidden;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+  &::-webkit-scrollbar:vertical {
+    width: 6px;
+    @include Phone {
+      width: 4px;
+    }
+  }
+  &::-webkit-scrollbar:horizontal {
+    height: 8px;
+    @include Phone {
+      width: 4px;
+    }
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    border: 2px solid transparent;
+  }
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: transparent;
+  }
 }
 
 body {
