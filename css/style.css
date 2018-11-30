@@ -111,7 +111,7 @@ a {
   transform: rotate(45deg) translate(-7px, -5px);
 }
 
-#nav-ul {
+.nav #nav-ul {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -122,7 +122,7 @@ a {
   user-select: none;
 }
 
-#nav-ul li {
+.nav #nav-ul li {
   display: inline-block;
   padding: 10px;
   margin-top: 15px;
@@ -130,20 +130,20 @@ a {
   color: black;
   text-transform: lowercase;
   font-variant: small-caps;
-  font-size: 22px;
+  font-size: 1.5rem;
 }
 
-#nav-ul a {
+.nav #nav-ul a {
   color: black;
 }
 
-#nav-ul a:hover {
+.nav #nav-ul a:hover {
   color: #ea8a4e;
   font-weight: bold;
 }
 
 @media only screen and (max-width: 576px) {
-  #nav-ul {
+  .nav #nav-ul {
     background: rgba(245, 245, 245, 0.9);
     padding: 20px;
     padding-left: 45px;
@@ -154,7 +154,7 @@ a {
     opacity: 0;
     height: 0;
   }
-  #nav-ul.mobile-nav-visible {
+  .nav #nav-ul.mobile-nav-visible {
     visibility: visible;
     opacity: 1;
     height: 190px;
@@ -162,7 +162,7 @@ a {
     -webkit-transition: height 400ms ease, visibility 0s, opacity 300ms ease;
     transition: height 400ms ease, visibility 0s, opacity 300ms ease;
   }
-  #nav-ul.mobile-nav-invisible {
+  .nav #nav-ul.mobile-nav-invisible {
     visibility: hidden;
     opacity: 0;
     height: 0;
@@ -170,7 +170,7 @@ a {
     -webkit-transition: height 600ms ease, opacity 400ms ease, visibility 0s 1s;
     transition: height 600ms ease, opacity 400ms ease, visibility 0s 1s;
   }
-  #nav-ul li {
+  .nav #nav-ul li {
     font-size: 1.2rem;
     display: block;
     margin: -0.6rem;
@@ -227,6 +227,12 @@ a {
   visibility: hidden;
 }
 
+@media only screen and (min-width: 1200px) {
+  #name {
+    font-size: 2.4rem;
+  }
+}
+
 @media only screen and (max-width: 576px) {
   #name {
     left: 15px;
@@ -264,7 +270,6 @@ all styles relative to body tag
 #about-page {
   background-color: whitesmoke;
   overflow-x: hidden;
-  height: auto;
 }
 
 #about-page .nav {
@@ -290,7 +295,7 @@ all styles relative to body tag
   position: absolute;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 53% 33%;
+  background-position: 53% 30%;
 }
 
 #about-page #main-banner #about-me-text {
@@ -302,9 +307,15 @@ all styles relative to body tag
   height: -moz-fit-content;
   height: fit-content;
   max-height: 60vh;
-  padding: 3vh 2vw 4vh 4vw;
+  padding: 3.5vh 2vw 1.5vh 3vw;
   overflow: hidden;
   overflow-y: auto;
+}
+
+@media only screen and (min-width: 1200px) {
+  #about-page #main-banner #about-me-text {
+    min-height: 45vh;
+  }
 }
 
 #about-page #main-banner #about-me-text::-webkit-scrollbar {
@@ -359,6 +370,18 @@ all styles relative to body tag
   -webkit-text-fill-color: transparent;
 }
 
+@media only screen and (min-width: 1200px) {
+  #about-page #main-banner #about-me-text .title {
+    font-size: 2.4rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #about-page #main-banner #about-me-text .title {
+    margin-top: 0;
+  }
+}
+
 #about-page #main-banner #about-me-text .text {
   text-align: justify;
   color: #515657;
@@ -380,7 +403,7 @@ all styles relative to body tag
   text-transform: uppercase;
   font-weight: bolder;
   letter-spacing: 0.15rem;
-  margin: 2rem 0 1rem 0;
+  margin: 1rem 0 1rem 0;
 }
 
 @media only screen and (max-width: 576px) {
@@ -411,9 +434,7 @@ all styles relative to body tag
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  min-height: 30vh;
-  max-height: 60vh;
-  padding: 3vh 2vw 4vh 4vw;
+  padding: 3vh 2vw 2vh 4vw;
 }
 
 #about-page #skills-banner #skills-text::-webkit-scrollbar {
@@ -473,6 +494,12 @@ all styles relative to body tag
   -webkit-text-fill-color: transparent;
 }
 
+@media only screen and (min-width: 1200px) {
+  #about-page #skills-banner #skills-text .title {
+    font-size: 2.4rem;
+  }
+}
+
 #about-page #skills-banner #skills-text .text {
   text-align: justify;
   color: #515657;
@@ -494,7 +521,7 @@ all styles relative to body tag
   text-transform: uppercase;
   font-weight: bolder;
   letter-spacing: 0.15rem;
-  margin: 2rem 0 1rem 0;
+  margin: 1rem 0 1rem 0;
 }
 
 @media only screen and (max-width: 576px) {

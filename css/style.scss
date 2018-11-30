@@ -92,8 +92,10 @@ $tablet_max: 768px;
 @mixin title_text() {
   font-family: Pier-Sans-Bold, "Segoe UI", Arial, sans-serif;
   font-weight: bold;
-  //font-size: calc(1vw + 4vh);
   font-size: 2rem;
+  @include xlDevice {
+    font-size: 2.4rem;
+  }
   margin-bottom: 0;
 
   background: $darkOrange;
@@ -226,67 +228,68 @@ a {
   }
 }
 
-#nav-ul {
-  width: fit-content;
-  display: inline-block;
-  @include unselect();
-
-  & li {
+.nav {
+  #nav-ul {
+    width: fit-content;
     display: inline-block;
-    padding: 10px;
-    margin-top: 15px;
-    font-family: Nexa-Light, "Segoe UI Light", Arial, sans-serif;
-    color: black;
-    text-transform: lowercase;
-    font-variant: small-caps;
-    font-size: 22px;
-  }
+    @include unselect();
 
-  & a {
-    color: black;
-  }
-
-  & a:hover {
-    color: $mainOrange;
-    font-weight: bold;
-  }
-
-  @include Phone {
-    background: rgba(245, 245, 245, 0.9);
-    padding: 20px;
-    padding-left: 45px;
-    width: 100vw;
-    margin-top: 6px;
-    z-index: 999;
-
-    visibility: hidden;
-    opacity: 0;
-    height: 0;
-
-    &.mobile-nav-visible {
-      visibility: visible;
-      opacity: 1;
-      height: 190px;
-      overflow: hidden;
-      transition: height 400ms ease, visibility 0s, opacity 300ms ease; //appear
+    & li {
+      display: inline-block;
+      padding: 10px;
+      margin-top: 15px;
+      font-family: Nexa-Light, "Segoe UI Light", Arial, sans-serif;
+      color: black;
+      text-transform: lowercase;
+      font-variant: small-caps;
+      font-size: 1.5rem;
     }
 
-    &.mobile-nav-invisible {
+    & a {
+      color: black;
+    }
+
+    & a:hover {
+      color: $mainOrange;
+      font-weight: bold;
+    }
+
+    @include Phone {
+      background: rgba(245, 245, 245, 0.9);
+      padding: 20px;
+      padding-left: 45px;
+      width: 100vw;
+      margin-top: 6px;
+      z-index: 999;
+
       visibility: hidden;
       opacity: 0;
       height: 0;
-      overflow: hidden;
-      transition: height 600ms ease, opacity 400ms ease, visibility 0s 1s; //disappear
-    }
 
-    & li {
-      font-size: 1.2rem;
-      display: block;
-      margin: -0.6rem;
+      &.mobile-nav-visible {
+        visibility: visible;
+        opacity: 1;
+        height: 190px;
+        overflow: hidden;
+        transition: height 400ms ease, visibility 0s, opacity 300ms ease; //appear
+      }
+
+      &.mobile-nav-invisible {
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+        transition: height 600ms ease, opacity 400ms ease, visibility 0s 1s; //disappear
+      }
+
+      & li {
+        font-size: 1.2rem;
+        display: block;
+        margin: -0.6rem;
+      }
     }
   }
 }
-
 .icons {
   position: fixed;
   right: 10px;

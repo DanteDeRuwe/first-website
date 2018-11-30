@@ -7,8 +7,6 @@ all styles relative to body tag
 & {
   background-color: whitesmoke;
   overflow-x: hidden;
-  height: auto;
-  //overflow-y: scroll;
 }
 
 .nav {
@@ -34,7 +32,7 @@ all styles relative to body tag
     position: absolute;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 53% 33%;
+    background-position: 53% 30%;
   }
   #about-me-text {
     display: block;
@@ -42,8 +40,11 @@ all styles relative to body tag
     background-color: white;
     width: 70vw;
     height: fit-content;
-    max-height: 60vh;
-    padding: 3vh 2vw 4vh 4vw;
+    @include xlDevice {
+      min-height: 45vh;
+    }
+    max-height: 60vh; //For the pic
+    padding: 3.5vh 2vw 1.5vh 3vw;
 
     @include ScrollY;
     .row {
@@ -51,6 +52,9 @@ all styles relative to body tag
     }
     .title {
       @include title_text();
+      @include Phone {
+        margin-top: 0;
+      }
     }
     .text {
       text-align: justify;
@@ -68,7 +72,7 @@ all styles relative to body tag
         text-transform: uppercase;
         font-weight: bolder;
         letter-spacing: 0.15rem;
-        margin: 2rem 0 1rem 0;
+        margin: 1rem 0 1rem 0;
         @include Phone {
           text-align: left;
         }
@@ -97,9 +101,7 @@ all styles relative to body tag
     //width: 70vw;
     width: 100vw;
     height: fit-content;
-    min-height: 30vh;
-    max-height: 60vh;
-    padding: 3vh 2vw 4vh 4vw;
+    padding: 3vh 2vw 2vh 4vw;
 
     .row {
       margin-top: 1vh;
@@ -127,7 +129,7 @@ all styles relative to body tag
         text-transform: uppercase;
         font-weight: bolder;
         letter-spacing: 0.15rem;
-        margin: 2rem 0 1rem 0;
+        margin: 1rem 0 1rem 0;
         @include Phone {
           text-align: left;
         }
