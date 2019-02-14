@@ -500,6 +500,30 @@ all styles relative to body tag
   }
 }
 
+#about-page #skills-banner #skills-text .skillbuttons {
+  display: inline-block;
+  line-height: 3rem;
+  margin-top: -1rem;
+  margin-bottom: 1.5rem;
+}
+
+#about-page #skills-banner #skills-text .skill {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border-radius: 0.5rem;
+  border: 1px solid #d45839;
+  margin-right: 10px;
+  color: #d45839;
+}
+
+#about-page #skills-banner #skills-text .skill:hover {
+  color: white;
+  background-color: #d45839;
+}
+
 #about-page #skills-banner #skills-text .text {
   text-align: justify;
   color: #515657;
@@ -521,7 +545,7 @@ all styles relative to body tag
   text-transform: uppercase;
   font-weight: bolder;
   letter-spacing: 0.15rem;
-  margin: 1rem 0 1rem 0;
+  margin: 1rem 0 0.3rem 0;
 }
 
 @media only screen and (max-width: 576px) {
@@ -543,6 +567,13 @@ all styles relative to body tag
   text-decoration: underline !important;
 }
 
+#about-page #skills-banner #skills-text .text .moreinfo {
+  display: inline-block;
+  color: gray;
+  font-size: 0.7rem;
+  margin-bottom: 1rem;
+}
+
 #about-page #social-banner {
   display: block;
   width: 100vw;
@@ -551,7 +582,7 @@ all styles relative to body tag
   margin: 0;
   background-color: #313131;
   -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6);
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6);
+          box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6);
 }
 
 @media only screen and (max-width: 576px) {

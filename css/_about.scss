@@ -113,6 +113,28 @@ all styles relative to body tag
     .title {
       @include title_text();
     }
+
+    .skillbuttons {
+      display: inline-block;
+      line-height: 3rem;
+      margin-top: -1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .skill {
+      @include unselect();
+      background-color: transparent;
+      border-radius: 0.5rem;
+      border: 1px solid $darkOrange;
+      margin-right: 10px;
+      color: $darkOrange;
+
+      &:hover {
+        color: white;
+        background-color: $darkOrange;
+      }
+    }
+
     .text {
       text-align: justify;
       color: $textGray;
@@ -129,7 +151,7 @@ all styles relative to body tag
         text-transform: uppercase;
         font-weight: bolder;
         letter-spacing: 0.15rem;
-        margin: 1rem 0 1rem 0;
+        margin: 1rem 0 0.3rem 0;
         @include Phone {
           text-align: left;
         }
@@ -144,6 +166,13 @@ all styles relative to body tag
         &:hover {
           text-decoration: underline !important;
         }
+      }
+
+      .moreinfo {
+        display: inline-block;
+        color: gray;
+        font-size: 0.7rem;
+        margin-bottom: 1rem;
       }
     }
   }

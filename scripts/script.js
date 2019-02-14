@@ -1,3 +1,7 @@
+$(function() {
+  $('[data-toggle="tooltip"]').tooltip({ animated: "fade" });
+});
+
 function hamburgerClicked() {
   let hamburger = document.getElementById("hamburger");
   if (window.getComputedStyle(hamburger).display !== "none") {
