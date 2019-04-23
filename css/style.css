@@ -39,10 +39,6 @@ html {
   background: #ff0000;
 }
 
-body {
-  font-family: "Segoe UI", Arial, sans-serif;
-}
-
 li {
   list-style: none;
 }
@@ -55,13 +51,173 @@ a {
   color: #ea8a4e !important;
 }
 
-#bodycontainer {
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
   width: 100vw;
   height: 100vh;
   position: absolute;
 }
 
-#bg {
+nav {
+  z-index: 999;
+  width: 100vw;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  margin-bottom: 10px;
+  background-color: #e2e3e5;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+nav #hamburger {
+  display: none;
+  margin: 15px;
+  margin-top: 35px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 576px) {
+  nav #hamburger {
+    display: inline-block;
+  }
+}
+
+nav .hamburger-bar {
+  width: 30px;
+  height: 1px;
+  background-color: black;
+  margin-bottom: 7px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  display: block;
+}
+
+nav .rotate_hamburger_bar#hamburger-bar1 {
+  -webkit-transform: rotate(-45deg) translate(-7px, 5px);
+  transform: rotate(-45deg) translate(-7px, 5px);
+}
+
+nav .rotate_hamburger_bar#hamburger-bar2 {
+  opacity: 0;
+}
+
+nav .rotate_hamburger_bar#hamburger-bar3 {
+  -webkit-transform: rotate(45deg) translate(-7px, -5px);
+  transform: rotate(45deg) translate(-7px, -5px);
+}
+
+nav #nav-ul {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+nav #nav-ul li {
+  display: inline-block;
+  padding: 10px;
+  margin-top: 15px;
+  font-family: Nexa-Light, "Segoe UI Light", Arial, sans-serif;
+  color: black;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  font-size: 1.5rem;
+}
+
+nav #nav-ul a {
+  color: black;
+}
+
+nav #nav-ul a:hover {
+  color: #ea8a4e;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 576px) {
+  nav #nav-ul {
+    background: rgba(245, 245, 245, 0.9);
+    padding: 20px;
+    padding-left: 45px;
+    width: 100vw;
+    margin-top: 5px;
+    z-index: 999999;
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+  }
+  nav #nav-ul.mobile-nav-visible {
+    visibility: visible;
+    opacity: 1;
+    height: 190px;
+    overflow: hidden;
+    -webkit-transition: height 400ms ease, visibility 0s, opacity 300ms ease;
+    transition: height 400ms ease, visibility 0s, opacity 300ms ease;
+  }
+  nav #nav-ul.mobile-nav-invisible {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: height 600ms ease, opacity 400ms ease, visibility 0s 1s;
+    transition: height 600ms ease, opacity 400ms ease, visibility 0s 1s;
+  }
+  nav #nav-ul li {
+    font-size: 1.2rem;
+    display: block;
+    margin: -0.6rem;
+  }
+}
+
+nav .icons {
+  position: fixed;
+  top: 0;
+  right: 10px;
+  margin: 25px 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media only screen and (max-width: 230px) {
+  nav .icons {
+    display: none;
+  }
+}
+
+nav .icons i {
+  color: black;
+}
+
+nav .icons i:hover {
+  color: #ea8a4e !important;
+  cursor: pointer;
+  text-decoration: none !important;
+}
+
+nav .icons #tw-icon {
+  vertical-align: -3px;
+}
+
+#home {
+  /*
+SCSS STYLES FOR THE INDEX PAGE
+all styles relative to body tag 
+*/
+}
+
+#home nav {
+  background-color: transparent !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+#home #bg {
   background-image: url(../img/bg-small.jpg);
   background-color: #e2e3e5;
   background-repeat: no-repeat;
@@ -74,7 +230,19 @@ a {
   width: 100vw;
 }
 
-#hamburger {
+#home nav {
+  z-index: 999;
+  width: 100vw;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  margin-bottom: 10px;
+  background-color: #e2e3e5;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+#home nav #hamburger {
   display: none;
   margin: 15px;
   margin-top: 35px;
@@ -82,12 +250,12 @@ a {
 }
 
 @media only screen and (max-width: 576px) {
-  #hamburger {
+  #home nav #hamburger {
     display: inline-block;
   }
 }
 
-.hamburger-bar {
+#home nav .hamburger-bar {
   width: 30px;
   height: 1px;
   background-color: black;
@@ -97,21 +265,21 @@ a {
   display: block;
 }
 
-.rotate_hamburger_bar#hamburger-bar1 {
+#home nav .rotate_hamburger_bar#hamburger-bar1 {
   -webkit-transform: rotate(-45deg) translate(-7px, 5px);
   transform: rotate(-45deg) translate(-7px, 5px);
 }
 
-.rotate_hamburger_bar#hamburger-bar2 {
+#home nav .rotate_hamburger_bar#hamburger-bar2 {
   opacity: 0;
 }
 
-.rotate_hamburger_bar#hamburger-bar3 {
+#home nav .rotate_hamburger_bar#hamburger-bar3 {
   -webkit-transform: rotate(45deg) translate(-7px, -5px);
   transform: rotate(45deg) translate(-7px, -5px);
 }
 
-.nav #nav-ul {
+#home nav #nav-ul {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -122,7 +290,7 @@ a {
   user-select: none;
 }
 
-.nav #nav-ul li {
+#home nav #nav-ul li {
   display: inline-block;
   padding: 10px;
   margin-top: 15px;
@@ -133,28 +301,28 @@ a {
   font-size: 1.5rem;
 }
 
-.nav #nav-ul a {
+#home nav #nav-ul a {
   color: black;
 }
 
-.nav #nav-ul a:hover {
+#home nav #nav-ul a:hover {
   color: #ea8a4e;
   font-weight: bold;
 }
 
 @media only screen and (max-width: 576px) {
-  .nav #nav-ul {
+  #home nav #nav-ul {
     background: rgba(245, 245, 245, 0.9);
     padding: 20px;
     padding-left: 45px;
     width: 100vw;
-    margin-top: 6px;
-    z-index: 999;
+    margin-top: 5px;
+    z-index: 999999;
     visibility: hidden;
     opacity: 0;
     height: 0;
   }
-  .nav #nav-ul.mobile-nav-visible {
+  #home nav #nav-ul.mobile-nav-visible {
     visibility: visible;
     opacity: 1;
     height: 190px;
@@ -162,7 +330,7 @@ a {
     -webkit-transition: height 400ms ease, visibility 0s, opacity 300ms ease;
     transition: height 400ms ease, visibility 0s, opacity 300ms ease;
   }
-  .nav #nav-ul.mobile-nav-invisible {
+  #home nav #nav-ul.mobile-nav-invisible {
     visibility: hidden;
     opacity: 0;
     height: 0;
@@ -170,15 +338,16 @@ a {
     -webkit-transition: height 600ms ease, opacity 400ms ease, visibility 0s 1s;
     transition: height 600ms ease, opacity 400ms ease, visibility 0s 1s;
   }
-  .nav #nav-ul li {
+  #home nav #nav-ul li {
     font-size: 1.2rem;
     display: block;
     margin: -0.6rem;
   }
 }
 
-.icons {
+#home nav .icons {
   position: fixed;
+  top: 0;
   right: 10px;
   margin: 25px 20px;
   -webkit-user-select: none;
@@ -188,25 +357,30 @@ a {
 }
 
 @media only screen and (max-width: 230px) {
-  .icons {
+  #home nav .icons {
     display: none;
   }
 }
 
-.icons i {
+#home nav .icons i {
   color: black;
 }
 
-.icons i:hover {
+#home nav .icons i:hover {
   color: #ea8a4e !important;
   cursor: pointer;
+  text-decoration: none !important;
 }
 
-.icons #tw-icon {
+#home nav .icons #tw-icon {
   vertical-align: -3px;
 }
 
-#name {
+#home main {
+  z-index: 0;
+}
+
+#home main #name {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -228,18 +402,18 @@ a {
 }
 
 @media only screen and (min-width: 1200px) {
-  #name {
+  #home main #name {
     font-size: 2.4rem;
   }
 }
 
 @media only screen and (max-width: 576px) {
-  #name {
+  #home main #name {
     left: 15px;
   }
 }
 
-#description {
+#home main #description {
   font-family: Nexa-Light, "Segoe UI Light", Arial, sans-serif;
   color: #515657;
   text-transform: lowercase;
@@ -255,40 +429,110 @@ a {
 }
 
 @media only screen and (max-width: 576px) {
-  #description {
+  #home main #description {
     left: 25px;
   }
 }
 
-#about-page {
-  /*
-SCSS STYLES FOR THE ABOUT PAGE
-all styles relative to body tag 
-*/
+@media only screen and (max-width: 230px) {
+  #home main #description {
+    left: 16px;
+  }
 }
 
-#about-page {
+#about {
   background-color: whitesmoke;
-  overflow-x: hidden;
 }
 
-#about-page .nav {
-  width: 100vw;
-  height: 80px;
-  background-color: #e2e3e5;
-  position: fixed;
-  top: 0;
-  margin-bottom: 10px;
-  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-  z-index: 999;
+#about header.heading {
+  text-align: center;
+  display: inline-block;
+  font-family: Code-Light, "Helvetica Neue", "Segoe UI Light", Arial, sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: bolder;
+  letter-spacing: 0.15rem;
+  margin-top: 1rem;
 }
 
-#about-page .undernav {
+@media only screen and (max-width: 576px) {
+  #about header.heading {
+    text-align: left;
+  }
+}
+
+#about header.title {
+  font-family: Pier-Sans-Bold, "Segoe UI", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 0;
+  background: #d45839;
+  background: linear-gradient(-37deg, #d45839 0%, #f2925a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d45839', endColorstr='#f2925a',GradientType=1 );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media only screen and (min-width: 1200px) {
+  #about header.title {
+    font-size: 2.4rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #about header.title {
+    margin-top: 0;
+  }
+}
+
+#about p.text {
+  text-align: justify;
+  color: #515657;
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 576px) {
+  #about p.text {
+    padding-right: 0.3rem;
+    font-size: 0.9rem;
+  }
+}
+
+#about span.bold {
+  font-weight: 500;
+}
+
+#about p.text > a {
+  font-weight: 400;
+  color: #ea8a4e;
+}
+
+#about p.text > a:hover {
+  text-decoration: underline !important;
+}
+
+#about .row {
+  margin-top: 1vh;
+}
+
+#about .row .has-inner-cols {
+  margin: 0;
+  padding: 0;
+}
+
+#about p.more-info {
+  font-style: italic;
+  color: gray;
+  font-size: 0.7rem;
+  margin-bottom: 1rem;
+}
+
+#about main {
   margin-top: 80px;
 }
 
-#about-page #main-banner #profile-pic {
+#about main #main-banner #profile-pic {
   background-image: url(../img/main-img.jpg);
   width: 30vw;
   height: 0;
@@ -298,7 +542,7 @@ all styles relative to body tag
   background-position: 53% 30%;
 }
 
-#about-page #main-banner #about-me-text {
+#about main #main-banner #about-me-text {
   display: block;
   margin-left: 30vw;
   background-color: white;
@@ -313,119 +557,47 @@ all styles relative to body tag
 }
 
 @media only screen and (min-width: 1200px) {
-  #about-page #main-banner #about-me-text {
+  #about main #main-banner #about-me-text {
     min-height: 45vh;
   }
 }
 
-#about-page #main-banner #about-me-text::-webkit-scrollbar {
+#about main #main-banner #about-me-text::-webkit-scrollbar {
   -webkit-appearance: none;
 }
 
-#about-page #main-banner #about-me-text::-webkit-scrollbar:vertical {
+#about main #main-banner #about-me-text::-webkit-scrollbar:vertical {
   width: 6px;
 }
 
 @media only screen and (max-width: 576px) {
-  #about-page #main-banner #about-me-text::-webkit-scrollbar:vertical {
+  #about main #main-banner #about-me-text::-webkit-scrollbar:vertical {
     width: 4px;
   }
 }
 
-#about-page #main-banner #about-me-text::-webkit-scrollbar:horizontal {
+#about main #main-banner #about-me-text::-webkit-scrollbar:horizontal {
   height: 8px;
 }
 
 @media only screen and (max-width: 576px) {
-  #about-page #main-banner #about-me-text::-webkit-scrollbar:horizontal {
+  #about main #main-banner #about-me-text::-webkit-scrollbar:horizontal {
     width: 4px;
   }
 }
 
-#about-page #main-banner #about-me-text::-webkit-scrollbar-thumb {
+#about main #main-banner #about-me-text::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   border: 2px solid transparent;
 }
 
-#about-page #main-banner #about-me-text::-webkit-scrollbar-track {
+#about main #main-banner #about-me-text::-webkit-scrollbar-track {
   border-radius: 10px;
   background-color: transparent;
 }
 
-#about-page #main-banner #about-me-text .row {
-  margin-top: 1vh;
-}
-
-#about-page #main-banner #about-me-text .title {
-  font-family: Pier-Sans-Bold, "Segoe UI", Arial, sans-serif;
-  font-weight: bold;
-  font-size: 2rem;
-  margin-bottom: 0;
-  background: #d45839;
-  background: linear-gradient(-37deg, #d45839 0%, #f2925a 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d45839', endColorstr='#f2925a',GradientType=1 );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-@media only screen and (min-width: 1200px) {
-  #about-page #main-banner #about-me-text .title {
-    font-size: 2.4rem;
-  }
-}
-
-@media only screen and (max-width: 576px) {
-  #about-page #main-banner #about-me-text .title {
-    margin-top: 0;
-  }
-}
-
-#about-page #main-banner #about-me-text .text {
-  text-align: justify;
-  color: #515657;
-  font-size: 1rem;
-}
-
-@media only screen and (max-width: 576px) {
-  #about-page #main-banner #about-me-text .text {
-    padding-right: 0.3rem;
-    font-size: 0.9rem;
-  }
-}
-
-#about-page #main-banner #about-me-text .text span.heading {
-  text-align: center;
-  display: inline-block;
-  font-family: Code-Light, "Helvetica Neue", "Segoe UI Light", Arial, sans-serif;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  font-weight: bolder;
-  letter-spacing: 0.15rem;
-  margin: 1rem 0 1rem 0;
-}
-
-@media only screen and (max-width: 576px) {
-  #about-page #main-banner #about-me-text .text span.heading {
-    text-align: left;
-  }
-}
-
-#about-page #main-banner #about-me-text .text span.bold {
-  font-weight: 500;
-}
-
-#about-page #main-banner #about-me-text .text a {
-  font-weight: 400;
-  color: #ea8a4e;
-}
-
-#about-page #main-banner #about-me-text .text a:hover {
-  text-decoration: underline !important;
-}
-
-#about-page #skills-banner #skills-text {
+#about main #skills-banner #skills-text {
   overflow: hidden;
   overflow-y: auto;
   display: block;
@@ -437,77 +609,49 @@ all styles relative to body tag
   padding: 3vh 2vw 2vh 4vw;
 }
 
-#about-page #skills-banner #skills-text::-webkit-scrollbar {
+#about main #skills-banner #skills-text::-webkit-scrollbar {
   -webkit-appearance: none;
 }
 
-#about-page #skills-banner #skills-text::-webkit-scrollbar:vertical {
+#about main #skills-banner #skills-text::-webkit-scrollbar:vertical {
   width: 6px;
 }
 
 @media only screen and (max-width: 576px) {
-  #about-page #skills-banner #skills-text::-webkit-scrollbar:vertical {
+  #about main #skills-banner #skills-text::-webkit-scrollbar:vertical {
     width: 4px;
   }
 }
 
-#about-page #skills-banner #skills-text::-webkit-scrollbar:horizontal {
+#about main #skills-banner #skills-text::-webkit-scrollbar:horizontal {
   height: 8px;
 }
 
 @media only screen and (max-width: 576px) {
-  #about-page #skills-banner #skills-text::-webkit-scrollbar:horizontal {
+  #about main #skills-banner #skills-text::-webkit-scrollbar:horizontal {
     width: 4px;
   }
 }
 
-#about-page #skills-banner #skills-text::-webkit-scrollbar-thumb {
+#about main #skills-banner #skills-text::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   border: 2px solid transparent;
 }
 
-#about-page #skills-banner #skills-text::-webkit-scrollbar-track {
+#about main #skills-banner #skills-text::-webkit-scrollbar-track {
   border-radius: 10px;
   background-color: transparent;
 }
 
-#about-page #skills-banner #skills-text .row {
-  margin-top: 1vh;
-}
-
-#about-page #skills-banner #skills-text .row .has-inner-cols {
-  margin: 0;
-  padding: 0;
-}
-
-#about-page #skills-banner #skills-text .title {
-  font-family: Pier-Sans-Bold, "Segoe UI", Arial, sans-serif;
-  font-weight: bold;
-  font-size: 2rem;
-  margin-bottom: 0;
-  background: #d45839;
-  background: linear-gradient(-37deg, #d45839 0%, #f2925a 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d45839', endColorstr='#f2925a',GradientType=1 );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-@media only screen and (min-width: 1200px) {
-  #about-page #skills-banner #skills-text .title {
-    font-size: 2.4rem;
-  }
-}
-
-#about-page #skills-banner #skills-text .skillbuttons {
+#about main #skills-banner #skills-text #skillbuttons {
   display: inline-block;
   line-height: 3rem;
   margin-top: -1rem;
   margin-bottom: 1.5rem;
 }
 
-#about-page #skills-banner #skills-text .skill {
+#about main #skills-banner #skills-text .skill {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -519,62 +663,12 @@ all styles relative to body tag
   color: #d45839;
 }
 
-#about-page #skills-banner #skills-text .skill:hover {
+#about main #skills-banner #skills-text .skill:hover {
   color: white;
   background-color: #d45839;
 }
 
-#about-page #skills-banner #skills-text .text {
-  text-align: justify;
-  color: #515657;
-  font-size: 1rem;
-}
-
-@media only screen and (max-width: 576px) {
-  #about-page #skills-banner #skills-text .text {
-    padding-right: 0.3rem;
-    font-size: 0.9rem;
-  }
-}
-
-#about-page #skills-banner #skills-text .text span.heading {
-  text-align: center;
-  display: inline-block;
-  font-family: Code-Light, "Helvetica Neue", "Segoe UI Light", Arial, sans-serif;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  font-weight: bolder;
-  letter-spacing: 0.15rem;
-  margin: 1rem 0 0.3rem 0;
-}
-
-@media only screen and (max-width: 576px) {
-  #about-page #skills-banner #skills-text .text span.heading {
-    text-align: left;
-  }
-}
-
-#about-page #skills-banner #skills-text .text span.bold {
-  font-weight: 500;
-}
-
-#about-page #skills-banner #skills-text .text a {
-  font-weight: 400;
-  color: #ea8a4e;
-}
-
-#about-page #skills-banner #skills-text .text a:hover {
-  text-decoration: underline !important;
-}
-
-#about-page #skills-banner #skills-text .text .moreinfo {
-  display: inline-block;
-  color: gray;
-  font-size: 0.7rem;
-  margin-bottom: 1rem;
-}
-
-#about-page #social-banner {
+#about main #social-banner {
   display: block;
   width: 100vw;
   height: 10vh;
@@ -586,12 +680,12 @@ all styles relative to body tag
 }
 
 @media only screen and (max-width: 576px) {
-  #about-page #social-banner {
+  #about main #social-banner {
     height: 12vh;
   }
 }
 
-#about-page #social-banner #icondiv {
+#about main #social-banner #icondiv {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -602,7 +696,7 @@ all styles relative to body tag
           justify-content: space-between;
 }
 
-#about-page #social-banner #icondiv .row {
+#about main #social-banner #icondiv .row {
   margin: auto;
   width: 80%;
   height: 100%;
@@ -615,11 +709,11 @@ all styles relative to body tag
           align-items: center;
 }
 
-#about-page #social-banner #icondiv .row div {
+#about main #social-banner #icondiv .row div {
   text-align: center;
 }
 
-#about-page #social-banner #icondiv .row div i {
+#about main #social-banner #icondiv .row div i {
   font-size: 3rem;
   border-radius: 50%;
   color: #212121 !important;
@@ -629,12 +723,12 @@ all styles relative to body tag
 }
 
 @media only screen and (max-width: 576px) {
-  #about-page #social-banner #icondiv .row div i {
+  #about main #social-banner #icondiv .row div i {
     font-size: 1.5rem;
   }
 }
 
-#about-page #social-banner #icondiv .row div i:hover {
+#about main #social-banner #icondiv .row div i:hover {
   -webkit-transition: all 100ms ease-in-out;
   transition: all 100ms ease-in-out;
   color: #e2e3e5 !important;

@@ -1,224 +1,173 @@
-/*
-SCSS STYLES FOR THE ABOUT PAGE
-all styles relative to body tag 
-*/
-
 //body itself
 & {
   background-color: whitesmoke;
-  overflow-x: hidden;
 }
 
-.nav {
-  width: 100vw;
-  height: 80px;
-  background-color: $smokeGray;
-  position: fixed;
-  top: 0;
-  margin-bottom: 10px;
-  box-shadow: $shadow;
-  z-index: 999;
-}
-
-.undernav {
-  margin-top: 80px;
-}
-
-#main-banner {
-  #profile-pic {
-    background-image: url(../img/main-img.jpg);
-    width: 30vw;
-    height: 0; //will be overwritten by js
-    position: absolute;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 53% 30%;
-  }
-  #about-me-text {
-    display: block;
-    margin-left: 30vw;
-    background-color: white;
-    width: 70vw;
-    height: fit-content;
-    @include xlDevice {
-      min-height: 45vh;
-    }
-    max-height: 60vh; //For the pic
-    padding: 3.5vh 2vw 1.5vh 3vw;
-
-    @include ScrollY;
-    .row {
-      margin-top: 1vh;
-    }
-    .title {
-      @include title_text();
-      @include Phone {
-        margin-top: 0;
-      }
-    }
-    .text {
-      text-align: justify;
-      color: $textGray;
-      font-size: 1rem;
-      @include Phone {
-        padding-right: 0.3rem;
-        font-size: 0.9rem;
-      }
-      & span.heading {
-        text-align: center;
-        display: inline-block;
-        font-family: Code-Light, "Helvetica Neue", "Segoe UI Light", Arial, sans-serif;
-        font-size: 1.2rem;
-        text-transform: uppercase;
-        font-weight: bolder;
-        letter-spacing: 0.15rem;
-        margin: 1rem 0 1rem 0;
-        @include Phone {
-          text-align: left;
-        }
-      }
-      & span.bold {
-        font-weight: 500;
-      }
-      & a {
-        font-weight: 400;
-        color: $mainOrange;
-
-        &:hover {
-          text-decoration: underline !important;
-        }
-      }
-    }
-  }
-}
-
-#skills-banner {
-  #skills-text {
-    @include ScrollY;
-    display: block;
-    background-color: whitesmoke;
-
-    //width: 70vw;
-    width: 100vw;
-    height: fit-content;
-    padding: 3vh 2vw 2vh 4vw;
-
-    .row {
-      margin-top: 1vh;
-      & .has-inner-cols {
-        margin: 0;
-        padding: 0;
-      }
-    }
-    .title {
-      @include title_text();
-    }
-
-    .skillbuttons {
-      display: inline-block;
-      line-height: 3rem;
-      margin-top: -1rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .skill {
-      @include unselect();
-      background-color: transparent;
-      border-radius: 0.5rem;
-      border: 1px solid $darkOrange;
-      margin-right: 10px;
-      color: $darkOrange;
-
-      &:hover {
-        color: white;
-        background-color: $darkOrange;
-      }
-    }
-
-    .text {
-      text-align: justify;
-      color: $textGray;
-      font-size: 1rem;
-      @include Phone {
-        padding-right: 0.3rem;
-        font-size: 0.9rem;
-      }
-      span.heading {
-        text-align: center;
-        display: inline-block;
-        font-family: Code-Light, "Helvetica Neue", "Segoe UI Light", Arial, sans-serif;
-        font-size: 1.2rem;
-        text-transform: uppercase;
-        font-weight: bolder;
-        letter-spacing: 0.15rem;
-        margin: 1rem 0 0.3rem 0;
-        @include Phone {
-          text-align: left;
-        }
-      }
-      & span.bold {
-        font-weight: 500;
-      }
-      & a {
-        font-weight: 400;
-        color: $mainOrange;
-
-        &:hover {
-          text-decoration: underline !important;
-        }
-      }
-
-      .moreinfo {
-        display: inline-block;
-        color: gray;
-        font-size: 0.7rem;
-        margin-bottom: 1rem;
-      }
-    }
-  }
-}
-
-#social-banner {
-  display: block;
-  width: 100vw;
-  height: 10vh;
+//general styles for about page
+header.heading {
+  text-align: center;
+  display: inline-block;
+  font-family: Code-Light, "Helvetica Neue", "Segoe UI Light", Arial, sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: bolder;
+  letter-spacing: 0.15rem;
+  margin-top: 1rem;
   @include Phone {
-    height: 12vh;
+    text-align: left;
   }
-  padding: 10px;
-  margin: 0;
-  background-color: $dark;
-  @include innerShadow;
+}
 
-  #icondiv {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
+header.title {
+  @include title_text();
+  @include Phone {
+    margin-top: 0;
+  }
+}
 
-    .row {
-      margin: auto;
-      width: 80%;
-      height: 100%;
-      padding: 10px;
-      display: flex;
-      align-items: center;
+p.text {
+  text-align: justify;
+  color: $textGray;
+  font-size: 1rem;
+  @include Phone {
+    padding-right: 0.3rem;
+    font-size: 0.9rem;
+  }
+}
 
-      div {
-        text-align: center;
-        & i {
-          font-size: 3rem;
-          border-radius: 50%;
-          @include Phone {
-            font-size: 1.5rem;
-          }
-          color: $darker !important;
-          background-color: transparent;
-          transition: all 100ms 100ms ease-in-out;
+span.bold {
+  font-weight: 500;
+}
+
+p.text > a {
+  font-weight: 400;
+  color: $mainOrange;
+
+  &:hover {
+    text-decoration: underline !important;
+  }
+}
+
+.row {
+  margin-top: 1vh;
+  & .has-inner-cols {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+p.more-info {
+  font-style: italic;
+  color: gray;
+  font-size: 0.7rem;
+  margin-bottom: 1rem;
+}
+
+//Specific styling
+main {
+  margin-top: 80px;
+
+  #main-banner {
+    #profile-pic {
+      background-image: url(../img/main-img.jpg);
+      width: 30vw;
+      height: 0; //will be overwritten by js
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 53% 30%;
+    }
+
+    #about-me-text {
+      display: block;
+      margin-left: 30vw;
+      background-color: white;
+      width: 70vw;
+      height: fit-content;
+      @include xlDevice {
+        min-height: 45vh;
+      }
+      max-height: 60vh; //For the pic
+      padding: 3.5vh 2vw 1.5vh 3vw;
+
+      @include ScrollY;
+    }
+  }
+
+  #skills-banner {
+    #skills-text {
+      @include ScrollY;
+      display: block;
+      background-color: whitesmoke;
+      width: 100vw;
+      height: fit-content;
+      padding: 3vh 2vw 2vh 4vw;
+
+      #skillbuttons {
+        display: inline-block;
+        line-height: 3rem;
+        margin-top: -1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .skill {
+        @include unselect();
+        background-color: transparent;
+        border-radius: 0.5rem;
+        border: 1px solid $darkOrange;
+        margin-right: 10px;
+        color: $darkOrange;
+
+        &:hover {
+          color: white;
+          background-color: $darkOrange;
         }
-        & i:hover {
-          transition: all 100ms ease-in-out;
-          color: $smokeGray !important;
+      }
+    }
+  }
+
+  #social-banner {
+    display: block;
+    width: 100vw;
+    height: 10vh;
+    @include Phone {
+      height: 12vh;
+    }
+    padding: 10px;
+    margin: 0;
+    background-color: $dark;
+    @include innerShadow;
+
+    #icondiv {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      .row {
+        margin: auto;
+        width: 80%;
+        height: 100%;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+
+        div {
+          text-align: center;
+          & i {
+            font-size: 3rem;
+            border-radius: 50%;
+            @include Phone {
+              font-size: 1.5rem;
+            }
+            color: $darker !important;
+            background-color: transparent;
+            transition: all 100ms 100ms ease-in-out;
+          }
+          & i:hover {
+            transition: all 100ms ease-in-out;
+            color: $smokeGray !important;
+          }
         }
       }
     }

@@ -9,239 +9,204 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no maximum-scale=1.0, user-scalable=0" />
 
     <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
 
     <!-- icons -->
     <link rel="stylesheet" type="text/css" href="/img/icons/social/font/flaticon.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
+
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
   </head>
 
-  <body id="about-page">
-    <div id="bodycontainer">
-      <div class="nav">
-        <div id="hamburger" onclick="hamburgerClicked()">
-          <div class="hamburger-bar" id="hamburger-bar1"></div>
-          <div class="hamburger-bar" id="hamburger-bar2"></div>
-          <div class="hamburger-bar" id="hamburger-bar3"></div>
-        </div>
-
-        <ul id="nav-ul">
-          <li><a href="/">Home</a></li>
-          <li><a href="javascript:void(0)" class="orange">About Me</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-
-        <div class="icons">
-          <a href="https://linkedin.com/in/dantederuwe" target="_blank"><i id="li-icon" class="flaticon-015-linkedin"></i></a>
-          <a href="https://twitter.com/dantederuwe" target="_blank"><i id="tw-icon" class="flaticon-004-twitter"></i></a>
-          <a href="https://m.me/dantederuwe" target="_blank"><i id="msg-icon" class="flaticon-019-messenger"></i></a>
-        </div>
+  <body id="about">
+    <nav>
+      <div id="hamburger" onclick="hamburgerClicked()">
+        <div class="hamburger-bar" id="hamburger-bar1"></div>
+        <div class="hamburger-bar" id="hamburger-bar2"></div>
+        <div class="hamburger-bar" id="hamburger-bar3"></div>
       </div>
-      <div class="undernav">
-        <!-- MAIN BANNER -->
-        <div id="main-banner">
-          <div id="profile-pic"></div>
-          <div id="about-me-text">
-            <h1 class="title">Who is Dante De Ruwe?</h1>
 
-            <div class="row">
-              <div class="col-12 col-lg-4">
-                <p class="text">
-                  <span class="heading">A <span id="age">20</span> year old Belgian Student</span><br />
-                  <!-- STUDENT -->
-                  I study in the city of Ghent, Belgium. A passion for science is what brought me here, to Ghent University, where
-                  I studied physics and astronomy for 2 years. Yet; the IT virus had bitten me since my first ever programming
-                  class and had taken me over by the end of 2017. I made the decision to change plans and went on to persue a
-                  degree in <span class="bold">applied information technology</span> at
-                  <a href="https://hogent.be/en" target="_blank">Ghent University College</a><br />
-                  <!---->
-                </p>
-              </div>
-              <div class="col-12 col-md-6 col-lg-4">
-                <p class="text">
-                  <span class="heading">A Passionate Developer</span><br />
-                  <!-- DEVELOPER -->
-                  I enjoy experimenting, tinkering and just making things work. Often this means teaching myself a whole bunch of
-                  new stuff, just as I need them; this has always been my favorite way to learn about new technologies. In my
-                  <span class="bold">web development</span> I try to make aestheticly pleasing websites, or random fun projects.
-                  In Python and Java thinking outside the box to come up with creative
-                  <span class="bold">software solutions</span> for real world problems is my absolute favorite thing to do.
-                  <!---->
-                </p>
-              </div>
-              <div class="col-12 col-md-6 col-lg-4">
-                <p class="text">
-                  <span class="heading">An enthusiastic guy</span><br />
-                  <!-- PERSON -->
-                  Enthusiastic, eager to learn and always looking for a challenge; this sums me up quite well. I like to engage in
-                  a whole bunch of different activities and projects. I always used to be part of the student council at my school
-                  and am still part of physics association <a href="https://vvn.ugent.be" target="_blank">VVN</a> where I am a
-                  board member &amp; <span class="bold">coördinator of communications and PR</span>. This includes social media
-                  management, the graphic design and distribution of promotional material and reaching out to students
-                  face-to-face.
-                  <!---->
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+      <ul id="nav-ul">
+        <li><a href="/">Home</a></li>
+        <li><a href="javascript:void(0)" class="orange">About Me</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
 
-        <!-- SKILLS BANNER -->
-        <div id="skills-banner">
-          <div id="skills-text">
-            <h1 class="title">What is he capable of?</h1>
-
-            <div class="row">
-              <div class="col-12 col-lg-4">
-                <p class="text">
-                  <span class="heading">Skills & Technologies</span><br /><em class="moreinfo"
-                    >Click/hover the buttons for more information<br
-                  /></em>
-                </p>
-                <div class="skillbuttons">
-                  <!-- SKILLS -->
-                  <button
-                    type="button"
-                    class="btn btn-primary skill"
-                    data-toggle="tooltip"
-                    data-placement="bottom"
-                    data-html="true"
-                    title="Java SE 10<br>-<br><em>Can use the basics of Java to construct an object ori&euml;nted application</em>"
-                  >
-                    Java
-                  </button>
-
-                  <button
-                    type="button"
-                    class="btn btn-primary skill"
-                    data-toggle="tooltip"
-                    data-placement="bottom"
-                    data-html="true"
-                    title="Python 3.7<br>-<br><em>Familiar with lots of applications for the Python programming language, e.g. data science, web scraping, automation-scripts, and other functional, procedural or object ori&euml;nted applications </em>"
-                  >
-                    Python
-                  </button>
-
-                  <button
-                    type="button"
-                    class="btn btn-primary skill"
-                    data-toggle="tooltip"
-                    data-placement="bottom"
-                    data-html="true"
-                    title="Javascript ES6<br>-<br><em>Use of js in conjunction with HTML and CSS for web development, as well as using various libraries for fun projects"
-                  >
-                    Javascript
-                  </button>
-
-                  <button
-                    type="button"
-                    class="btn btn-primary skill"
-                    data-toggle="tooltip"
-                    data-placement="bottom"
-                    data-html="true"
-                    title="HTML5 &amp; CSS3 <br>-<br><em>For web development</em>"
-                  >
-                    HTML &amp; CSS
-                  </button>
-
-                  <button
-                    type="button"
-                    class="btn btn-primary skill"
-                    data-toggle="tooltip"
-                    data-placement="bottom"
-                    data-html="true"
-                    title="<em>Can perform basic queries and edit structure and data in a database.</em>"
-                  >
-                    SQL
-                  </button>
-                  <!---->
-                </div>
-              </div>
-
-              <div class="col-12 col-lg-8 has-inner-cols">
-                <div class="col-12">
-                  <p class="text">
-                    <span class="heading">To Do</span><br />
-                    <!-- TODO -->
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem asperiores ducimus porro neque, ipsum tenetur
-                    eos eaque doloribus, quas repellendus libero quasi quisquam, inventore delectus. Non natus exercitationem
-                    harum enim, culpa iusto dolorum ad vero nemo eaque doloremque quidem molestiae numquam autem dolorem, ullam
-                    vel aliquam doloribus libero! Reiciendis, necessitatibus.
-                    <!---->
-                  </p>
-                </div>
-                <div class="col-12">
-                  <p class="text">
-                    <span class="heading">To Do</span><br />
-                    <!-- TODO -->
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae nam corporis iure molestias, quibusdam
-                    pariatur veritatis repellendus laudantium praesentium doloribus perspiciatis voluptate officiis autem totam
-                    cum at assumenda iusto et, nemo illum obcaecati? In assumenda esse, error inventore hic omnis minima molestias
-                    debitis nesciunt eius quisquam corrupti impedit officiis ipsum.
-                    <!---->
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- SOCIAL LINKS -->
-        <div id="social-banner">
-          <div id="icondiv">
-            <div class="row">
-              <div class="col-4 col-sm-2">
-                <a href="https://linkedin.com/in/dantederuwe" target="_blank"><i class="fab fa-linkedin"></i></a>
-              </div>
-              <div class="col-4 col-sm-2">
-                <a href="https://twitter.com/dantederuwe" target="_blank"><i class="fab fa-twitter-square"></i></a>
-              </div>
-              <div class="col-4 col-sm-2">
-                <a href="https://facebook.com/dantederuwe" target="_blank"><i class="fab fa-facebook-square"></i></a>
-              </div>
-              <div class="col-4 col-sm-2">
-                <a href="https://github.com/dantederuwe" target="_blank"><i class="fab fa-github-square"></i></a>
-              </div>
-              <div class="col-4 col-sm-2">
-                <a href="https://instagram.com/dantederuwe" target="_blank"><i class="fab fa-instagram"></i></a>
-              </div>
-              <div class="col-4 col-sm-2">
-                <a href="https://open.spotify.com/user/1110047932" target="_blank"><i class="fab fa-spotify"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="icons">
+        <a href="https://linkedin.com/in/dantederuwe" target="_blank"><i id="li-icon" class="flaticon-015-linkedin"></i></a>
+        <a href="https://twitter.com/dantederuwe" target="_blank"><i id="tw-icon" class="flaticon-004-twitter"></i></a>
+        <a href="https://m.me/dantederuwe" target="_blank"><i id="msg-icon" class="flaticon-019-messenger"></i></a>
       </div>
-    </div>
+    </nav>
 
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-      crossorigin="anonymous"
-    ></script>
+    <main>
+      <!-- WHO IS DANTE DE RUWE? -->
+      <section id="main-banner">
+        <div id="profile-pic"></div>
+        <div id="about-me-text">
+          <header class="title">Who is Dante De Ruwe?</header>
+
+          <div class="row">
+            <div class="col-12 col-lg-4">
+              <header class="heading">A <span id="age">20</span> year old Belgian Student</header>
+              <br />
+              <!-- STUDENT -->
+              <p class="text">
+                I study in the city of Ghent, Belgium. A passion for science is what brought me here, to Ghent University, where I studied physics and
+                astronomy for 2 years. Yet; the IT virus had bitten me since my first ever programming class and had taken me over by the end of 2017.
+                I made the decision to change plans and went on to persue a degree in
+                <span class="bold">applied information technology</span> at
+                <a href="https://hogent.be/en" target="_blank">Ghent University College</a>.<br />
+              </p>
+              <!---->
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+              <header class="heading">A Passionate Developer</header>
+              <br />
+              <!-- DEVELOPER -->
+              <p class="text">
+                I enjoy experimenting, tinkering and just making things work. Often this means teaching myself a whole bunch of new stuff, just as I
+                need them; this has always been my favorite way to learn about new technologies. In my
+                <span class="bold">web development</span> I try to make aestheticly pleasing websites, or random fun projects. In Python and Java
+                thinking outside the box to come up with creative <span class="bold">software solutions</span> for real world problems is my absolute
+                favorite thing to do.
+              </p>
+              <!---->
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <header class="heading">An enthusiastic guy</header>
+              <br />
+              <!-- PERSON -->
+              <p class="text">
+                Enthusiastic, eager to learn and always looking for a challenge; this sums me up quite well. I like to engage in a whole bunch of
+                different activities and projects. I always used to be part of the student council at my school and am still part of physics
+                association <a href="https://vvn.ugent.be" target="_blank">VVN</a> where I am a board member &amp;
+                <span class="bold">coördinator of communications and PR</span>. This includes social media management, the graphic design and
+                distribution of promotional material and reaching out to students face-to-face.
+              </p>
+              <!---->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHAT IS HE CAPAPLE OF? -->
+      <section id="skills-banner">
+        <div id="skills-text">
+          <header class="title">What is he capable of?</header>
+
+          <div class="row">
+            <div class="col-12 col-lg-4">
+              <header class="heading">Technologies</header>
+              <p class="more-info">Click/hover the buttons for more information<br /></p>
+              <div id="skillbuttons">
+                <!-- SKILLS -->
+                <button
+                  class="btn btn-primary skill"
+                  data-toggle="tooltip"
+                  title="Java SE 10<br>-<br><em>Can use the basics of Java to construct an object ori&euml;nted application</em>"
+                >
+                  Java
+                </button>
+
+                <button
+                  class="btn btn-primary skill"
+                  data-toggle="tooltip"
+                  title="Python 3.7<br>-<br><em>Familiar with lots of applications for the Python programming language, e.g. data science, web scraping, automation and other functional, procedural or object ori&euml;nted applications </em>"
+                >
+                  Python
+                </button>
+
+                <button
+                  class="btn btn-primary skill"
+                  data-toggle="tooltip"
+                  title="Javascript ES6<br>-<br><em>Use of js in conjunction with HTML and CSS for web development, as well as using various libraries for fun projects"
+                >
+                  Javascript
+                </button>
+
+                <button
+                  class="btn btn-primary skill"
+                  data-toggle="tooltip"
+                  title="HTML5 &amp; CSS3 <br>-<br><em>For web development and web based applications</em>"
+                >
+                  HTML &amp; CSS
+                </button>
+
+                <button
+                  class="btn btn-primary skill"
+                  data-toggle="tooltip"
+                  title="<em>Can perform basic queries and edit structure and data in a database.</em>"
+                >
+                  SQL
+                </button>
+
+                <!---->
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-8 has-inner-cols">
+              <div class="col-12">
+                <header class="heading">Skills</header>
+                <p class="text">
+                  <!-- TODO -->
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae nam corporis iure molestias, quibusdam pariatur veritatis
+                  repellendus laudantium praesentium doloribus perspiciatis voluptate officiis autem totam cum at assumenda iusto et, nemo illum
+                  obcaecati? In assumenda esse, error inventore hic omnis minima molestias debitis nesciunt eius quisquam corrupti impedit officiis
+                  ipsum.
+                  <!---->
+                </p>
+              </div>
+              <div class="col-12">
+                <header class="heading">Goals</header>
+                <p class="text">
+                  <!-- TODO -->
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae nam corporis iure molestias, quibusdam pariatur veritatis
+                  repellendus laudantium praesentium doloribus perspiciatis voluptate officiis autem totam cum at assumenda iusto et, nemo illum
+                  obcaecati? In assumenda esse, error inventore hic omnis minima molestias debitis nesciunt eius quisquam corrupti impedit officiis
+                  ipsum.
+                  <!---->
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SOCIAL LINKS -->
+      <footer id="social-banner">
+        <div id="icondiv">
+          <div class="row">
+            <div class="col-4 col-sm-2">
+              <a href="https://linkedin.com/in/dantederuwe" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="col-4 col-sm-2">
+              <a href="https://twitter.com/dantederuwe" target="_blank"><i class="fab fa-twitter-square"></i></a>
+            </div>
+            <div class="col-4 col-sm-2">
+              <a href="https://facebook.com/dantederuwe" target="_blank"><i class="fab fa-facebook-square"></i></a>
+            </div>
+            <div class="col-4 col-sm-2">
+              <a href="https://github.com/dantederuwe" target="_blank"><i class="fab fa-github-square"></i></a>
+            </div>
+            <div class="col-4 col-sm-2">
+              <a href="https://instagram.com/dantederuwe" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="col-4 col-sm-2">
+              <a href="https://open.spotify.com/user/1110047932" target="_blank"><i class="fab fa-spotify"></i></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- script tags -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
     <script src="./scripts/script.js"></script>
   </body>
 </html>

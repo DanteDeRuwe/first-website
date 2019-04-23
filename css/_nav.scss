@@ -1,0 +1,132 @@
+nav {
+  z-index: 999;
+  width: 100vw;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  margin-bottom: 10px;
+
+  background-color: $smokeGray;
+  box-shadow: $shadow;
+
+  #hamburger {
+    display: none;
+    margin: 15px;
+    margin-top: 35px;
+    cursor: pointer;
+    @include Phone {
+      display: inline-block;
+    }
+  }
+
+  .hamburger-bar {
+    width: 30px;
+    height: 1px;
+    background-color: black;
+    margin-bottom: 7px;
+    transition: 0.4s;
+    display: block;
+  }
+
+  .rotate_hamburger_bar {
+    &#hamburger-bar1 {
+      -webkit-transform: rotate(-45deg) translate(-7px, 5px);
+      transform: rotate(-45deg) translate(-7px, 5px);
+    }
+    &#hamburger-bar2 {
+      opacity: 0;
+    }
+    &#hamburger-bar3 {
+      -webkit-transform: rotate(45deg) translate(-7px, -5px);
+      transform: rotate(45deg) translate(-7px, -5px);
+    }
+  }
+
+  #nav-ul {
+    width: fit-content;
+    display: inline-block;
+    @include unselect();
+
+    & li {
+      display: inline-block;
+      padding: 10px;
+      margin-top: 15px;
+      font-family: Nexa-Light, "Segoe UI Light", Arial, sans-serif;
+      color: black;
+      text-transform: lowercase;
+      font-variant: small-caps;
+      font-size: 1.5rem;
+    }
+
+    & a {
+      color: black;
+    }
+
+    & a:hover {
+      color: $mainOrange;
+      font-weight: bold;
+    }
+
+    @include Phone {
+      background: rgba(245, 245, 245, 0.9);
+      padding: 20px;
+      padding-left: 45px;
+      width: 100vw;
+      margin-top: 5px;
+      z-index: 999999;
+
+      visibility: hidden;
+      opacity: 0;
+      height: 0;
+
+      &.mobile-nav-visible {
+        visibility: visible;
+        opacity: 1;
+        height: 190px;
+        overflow: hidden;
+        transition: height 400ms ease, visibility 0s, opacity 300ms ease; //appear
+      }
+
+      &.mobile-nav-invisible {
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+        transition: height 600ms ease, opacity 400ms ease, visibility 0s 1s; //disappear
+      }
+
+      & li {
+        font-size: 1.2rem;
+        display: block;
+        margin: -0.6rem;
+      }
+    }
+  }
+
+  .icons {
+    position: fixed;
+    top: 0;
+    right: 10px;
+    margin: 25px 20px;
+
+    @include unselect();
+
+    @include TinyDevice {
+      display: none;
+    }
+
+    & i {
+      color: black;
+    }
+
+    & i:hover {
+      color: $mainOrange !important;
+      cursor: pointer;
+      text-decoration: none !important;
+    }
+
+    & #tw-icon {
+      vertical-align: -3px;
+    }
+  }
+}

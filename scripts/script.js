@@ -1,5 +1,5 @@
 $(function() {
-  $('[data-toggle="tooltip"]').tooltip({ animated: "fade" });
+  $('[data-toggle="tooltip"]').tooltip({ animated: "fade", placement: "auto", html: true });
 });
 
 function hamburgerClicked() {
@@ -57,7 +57,7 @@ function resizeHomepageText() {
   let bottom = (1.8 / ratio + 0.9) * fontSize;
   bottom = vw < 230 ? (1 / 2) * vh : bottom;
   name_element.style.bottom = bottom + "px";
-  desc_element.style.bottom = bottom - 0.6 * fontSize + "px";
+  desc_element.style.bottom = vw < 230 ? bottom - 1.1 * fontSize + "px" : bottom - 0.6 * fontSize + "px";
 
   //Show the elements once calculated
   name_element.style.visibility = "visible";
@@ -81,8 +81,11 @@ window.onload = onLoadOrResize;
 window.onresize = onLoadOrResize;
 
 //Age changer
-let dob = new Date("June 2, 1998 00:00:00");
-let age = Date.now() - dob;
-age = new Date(age);
-age = age.getFullYear() - 1970;
-document.getElementById("age").innerHTML = age;
+
+if (document.location.pathname in { "/about.html": 0, "/about": 0 }) {
+  let dob = new Date("June 2, 1998 00:00:00");
+  let age = Date.now() - dob;
+  age = new Date(age);
+  age = age.getFullYear() - 1970;
+  document.getElementById("age").innerHTML = age;
+}

@@ -1,115 +1,13 @@
-//colors
-
-$mainOrange: #ea8a4e;
-$smokeGray: #e2e3e5;
-$textGray: #515657;
-$darkOrange: #d45839;
-$someBlue: #34608f;
-
-$dark: #313131;
-$darker: #212121;
-$darkest: #111111;
-
-$shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-
-@mixin innerShadow {
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6);
-}
-
-// Bootstrap Size Guide
-$phone_min: 0;
-$tablet_min: 576px;
-$desktop_min: 768px;
-$lg_min: 992px;
-$xl_min: 1200px;
-
-$phone_max: 576px;
-$tablet_max: 768px;
-
-// MEDIA QUERIES
-@mixin TinyDevice {
-  @media only screen and (max-width: 230px) {
-    @content;
-  }
-}
-
-@mixin Phone {
-  @media only screen and (max-width: $phone_max) {
-    @content;
-  }
-}
-
-@mixin NotPhone {
-  @media only screen and (min-width: $tablet-min) {
-    @content;
-  }
-}
-
-@mixin Tablet {
-  @media only screen and (max-width: $tablet_max) and (min-width: $phone_min) {
-    @content;
-  }
-}
-
-@mixin PhoneOrTablet {
-  @media only screen and (max-width: $tablet_max) {
-    @content;
-  }
-}
-
-@mixin xlDevice {
-  @media only screen and (min-width: $xl_min) {
-    @content;
-  }
-}
-
-// Unselectableness
-@mixin unselect() {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-// FONTS
-@mixin font($font-family, $font-file) {
-  @font-face {
-    font-family: $font-family;
-    src: url($font-file+".eot");
-    src: url($font-file+".eot?#iefix") format("embedded-opentype"), url($font-file+".woff") format("woff"),
-      url($font-file+".ttf") format("truetype"), url($font-file+".svg#aller") format("svg");
-    font-weight: normal;
-    font-style: normal;
-  }
-}
+@import "variables";
+@import "mixins";
 
 @include font("Code-Light", "../fonts/Code Light/Code-Light");
 @include font("Pier-Sans-Bold", "../fonts/Pier Sans Bold/PierSans-Bold");
 @include font("Nexa-Light", "../fonts/Nexa Light/NexaLight");
 
-@mixin title_text() {
-  font-family: Pier-Sans-Bold, "Segoe UI", Arial, sans-serif;
-  font-weight: bold;
-  font-size: 2rem;
-  @include xlDevice {
-    font-size: 2.4rem;
-  }
-  margin-bottom: 0;
-
-  background: $darkOrange;
-  background: -moz-linear-gradient(127deg, $darkOrange 0%, #f2925a 100%);
-  background: -webkit-linear-gradient(127deg, $darkOrange 0%, #f2925a 100%);
-  background: linear-gradient(-37deg, $darkOrange 0%, #f2925a 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d45839', endColorstr='#f2925a',GradientType=1 );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 // General
 
 //Scrollbar
-
 html {
   overflow: scroll;
   overflow-x: hidden;
@@ -123,40 +21,7 @@ html {
   background: #ff0000;
 }
 
-@mixin ScrollY {
-  overflow: hidden;
-  overflow-y: auto;
-
-  &::-webkit-scrollbar {
-    -webkit-appearance: none;
-  }
-  &::-webkit-scrollbar:vertical {
-    width: 6px;
-    @include Phone {
-      width: 4px;
-    }
-  }
-  &::-webkit-scrollbar:horizontal {
-    height: 8px;
-    @include Phone {
-      width: 4px;
-    }
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    border: 2px solid transparent;
-  }
-  &::-webkit-scrollbar-track {
-    border-radius: 10px;
-    background-color: transparent;
-  }
-}
-
-body {
-  font-family: "Segoe UI", Arial, sans-serif;
-}
-
+//general styles
 li {
   list-style: none;
 }
@@ -169,181 +34,21 @@ a {
   color: $mainOrange !important;
 }
 
-//Homepage
-
-#bodycontainer {
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
   width: 100vw;
   height: 100vh;
   position: absolute;
 }
 
-#bg {
-  background-image: url(../img/bg-small.jpg);
-  background-color: $smokeGray;
-  background-repeat: no-repeat;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-position: right bottom;
-  position: absolute;
-  z-index: -999;
-  height: 100vh;
-  width: 100vw;
-}
+@import "nav";
 
-#hamburger {
-  display: none;
-  margin: 15px;
-  margin-top: 35px;
-  cursor: pointer;
-  @include Phone {
-    display: inline-block;
-  }
-}
-
-.hamburger-bar {
-  width: 30px;
-  height: 1px;
-  background-color: black;
-  margin-bottom: 7px;
-  transition: 0.4s;
-  display: block;
-}
-
-.rotate_hamburger_bar {
-  &#hamburger-bar1 {
-    -webkit-transform: rotate(-45deg) translate(-7px, 5px);
-    transform: rotate(-45deg) translate(-7px, 5px);
-  }
-  &#hamburger-bar2 {
-    opacity: 0;
-  }
-  &#hamburger-bar3 {
-    -webkit-transform: rotate(45deg) translate(-7px, -5px);
-    transform: rotate(45deg) translate(-7px, -5px);
-  }
-}
-
-.nav {
-  #nav-ul {
-    width: fit-content;
-    display: inline-block;
-    @include unselect();
-
-    & li {
-      display: inline-block;
-      padding: 10px;
-      margin-top: 15px;
-      font-family: Nexa-Light, "Segoe UI Light", Arial, sans-serif;
-      color: black;
-      text-transform: lowercase;
-      font-variant: small-caps;
-      font-size: 1.5rem;
-    }
-
-    & a {
-      color: black;
-    }
-
-    & a:hover {
-      color: $mainOrange;
-      font-weight: bold;
-    }
-
-    @include Phone {
-      background: rgba(245, 245, 245, 0.9);
-      padding: 20px;
-      padding-left: 45px;
-      width: 100vw;
-      margin-top: 6px;
-      z-index: 999;
-
-      visibility: hidden;
-      opacity: 0;
-      height: 0;
-
-      &.mobile-nav-visible {
-        visibility: visible;
-        opacity: 1;
-        height: 190px;
-        overflow: hidden;
-        transition: height 400ms ease, visibility 0s, opacity 300ms ease; //appear
-      }
-
-      &.mobile-nav-invisible {
-        visibility: hidden;
-        opacity: 0;
-        height: 0;
-        overflow: hidden;
-        transition: height 600ms ease, opacity 400ms ease, visibility 0s 1s; //disappear
-      }
-
-      & li {
-        font-size: 1.2rem;
-        display: block;
-        margin: -0.6rem;
-      }
-    }
-  }
-}
-.icons {
-  position: fixed;
-  right: 10px;
-  margin: 25px 20px;
-
-  @include unselect();
-
-  @include TinyDevice {
-    display: none;
-  }
-
-  & i {
-    color: black;
-  }
-
-  & i:hover {
-    color: $mainOrange !important;
-    cursor: pointer;
-  }
-
-  & #tw-icon {
-    vertical-align: -3px;
-  }
-}
-
-#name {
-  @include unselect();
-  @include title_text();
-  position: fixed;
-  left: 45px;
-
-  //Will be overwritten by js, along with fontsze and lineheight
-  bottom: 0;
-  visibility: hidden;
-
-  @include Phone {
-    left: 15px;
-  }
-}
-
-#description {
-  font-family: Nexa-Light, "Segoe UI Light", Arial, sans-serif;
-  color: $textGray;
-  text-transform: lowercase;
-  font-variant: small-caps;
-  font-size: 36px;
-  position: fixed;
-  left: 55px;
-  visibility: hidden;
-  @include unselect();
-  @include Phone {
-    left: 25px;
-  }
+//INDEX
+#home {
+  @import "index";
 }
 
 // ABOUT
-#about-page {
+#about {
   @import "about";
 }
