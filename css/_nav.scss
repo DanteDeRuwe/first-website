@@ -45,7 +45,6 @@ nav {
   #nav-ul {
     width: fit-content;
     display: inline-block;
-    @include unselect();
 
     & li {
       display: inline-block;
@@ -108,8 +107,6 @@ nav {
     top: 0;
     right: 10px;
     margin: 25px 20px;
-
-    @include unselect();
 
     @include TinyDevice {
       display: none;

@@ -56,6 +56,10 @@ body {
   width: 100vw;
   height: 100vh;
   position: absolute;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 nav {
@@ -112,10 +116,6 @@ nav #nav-ul {
   width: -moz-fit-content;
   width: fit-content;
   display: inline-block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
 nav #nav-ul li {
@@ -178,10 +178,6 @@ nav .icons {
   top: 0;
   right: 10px;
   margin: 25px 20px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
 @media only screen and (max-width: 230px) {
@@ -284,10 +280,6 @@ all styles relative to body tag
   width: -moz-fit-content;
   width: fit-content;
   display: inline-block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
 #home nav #nav-ul li {
@@ -350,10 +342,6 @@ all styles relative to body tag
   top: 0;
   right: 10px;
   margin: 25px 20px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
 @media only screen and (max-width: 230px) {
@@ -381,10 +369,6 @@ all styles relative to body tag
 }
 
 #home main #name {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   font-family: Pier-Sans-Bold, "Segoe UI", Arial, sans-serif;
   font-weight: bold;
   font-size: 2rem;
@@ -422,10 +406,6 @@ all styles relative to body tag
   position: fixed;
   left: 55px;
   visibility: hidden;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
 @media only screen and (max-width: 576px) {
@@ -444,24 +424,7 @@ all styles relative to body tag
   background-color: whitesmoke;
 }
 
-#about header.heading {
-  text-align: center;
-  display: inline-block;
-  font-family: Code-Light, "Helvetica Neue", "Segoe UI Light", Arial, sans-serif;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  font-weight: bolder;
-  letter-spacing: 0.15rem;
-  margin-top: 1rem;
-}
-
-@media only screen and (max-width: 576px) {
-  #about header.heading {
-    text-align: left;
-  }
-}
-
-#about header.title {
+#about header > h1 {
   font-family: Pier-Sans-Bold, "Segoe UI", Arial, sans-serif;
   font-weight: bold;
   font-size: 2rem;
@@ -475,15 +438,26 @@ all styles relative to body tag
 }
 
 @media only screen and (min-width: 1200px) {
-  #about header.title {
+  #about header > h1 {
     font-size: 2.4rem;
   }
 }
 
 @media only screen and (max-width: 576px) {
-  #about header.title {
+  #about header > h1 {
     margin-top: 0;
   }
+}
+
+#about header > h2 {
+  text-align: left;
+  display: inline-block;
+  font-family: Code-Light, "Helvetica Neue", "Segoe UI Light", Arial, sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: bolder;
+  letter-spacing: 0.15rem;
+  margin: 1rem 0;
 }
 
 #about p.text {
@@ -652,10 +626,6 @@ all styles relative to body tag
 }
 
 #about main #skills-banner #skills-text .skill {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   background-color: transparent;
   border-radius: 0.5rem;
   border: 1px solid #d45839;
@@ -668,7 +638,7 @@ all styles relative to body tag
   background-color: #d45839;
 }
 
-#about main #social-banner {
+#about main footer#social-banner {
   display: block;
   width: 100vw;
   height: 10vh;
@@ -680,12 +650,12 @@ all styles relative to body tag
 }
 
 @media only screen and (max-width: 576px) {
-  #about main #social-banner {
+  #about main footer#social-banner {
     height: 12vh;
   }
 }
 
-#about main #social-banner #icondiv {
+#about main footer#social-banner #icondiv {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -696,7 +666,7 @@ all styles relative to body tag
           justify-content: space-between;
 }
 
-#about main #social-banner #icondiv .row {
+#about main footer#social-banner #icondiv .row {
   margin: auto;
   width: 80%;
   height: 100%;
@@ -709,11 +679,11 @@ all styles relative to body tag
           align-items: center;
 }
 
-#about main #social-banner #icondiv .row div {
+#about main footer#social-banner #icondiv .row div {
   text-align: center;
 }
 
-#about main #social-banner #icondiv .row div i {
+#about main footer#social-banner #icondiv .row div i {
   font-size: 3rem;
   border-radius: 50%;
   color: #212121 !important;
@@ -723,12 +693,12 @@ all styles relative to body tag
 }
 
 @media only screen and (max-width: 576px) {
-  #about main #social-banner #icondiv .row div i {
+  #about main footer#social-banner #icondiv .row div i {
     font-size: 1.5rem;
   }
 }
 
-#about main #social-banner #icondiv .row div i:hover {
+#about main footer#social-banner #icondiv .row div i:hover {
   -webkit-transition: all 100ms ease-in-out;
   transition: all 100ms ease-in-out;
   color: #e2e3e5 !important;

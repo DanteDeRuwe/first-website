@@ -4,25 +4,23 @@
 }
 
 //general styles for about page
-header.heading {
-  text-align: center;
+
+header > h1 {
+  @include title_text();
+  @include Phone {
+    margin-top: 0;
+  }
+}
+
+header > h2 {
+  text-align: left;
   display: inline-block;
   font-family: Code-Light, "Helvetica Neue", "Segoe UI Light", Arial, sans-serif;
   font-size: 1.2rem;
   text-transform: uppercase;
   font-weight: bolder;
   letter-spacing: 0.15rem;
-  margin-top: 1rem;
-  @include Phone {
-    text-align: left;
-  }
-}
-
-header.title {
-  @include title_text();
-  @include Phone {
-    margin-top: 0;
-  }
+  margin: 1rem 0;
 }
 
 p.text {
@@ -111,7 +109,6 @@ main {
       }
 
       .skill {
-        @include unselect();
         background-color: transparent;
         border-radius: 0.5rem;
         border: 1px solid $darkOrange;
@@ -126,7 +123,7 @@ main {
     }
   }
 
-  #social-banner {
+  footer#social-banner {
     display: block;
     width: 100vw;
     height: 10vh;
@@ -136,6 +133,7 @@ main {
     padding: 10px;
     margin: 0;
     background-color: $dark;
+
     @include innerShadow;
 
     #icondiv {

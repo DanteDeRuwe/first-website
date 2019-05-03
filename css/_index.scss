@@ -31,7 +31,6 @@ nav {
 main {
   z-index: 0;
   #name {
-    @include unselect();
     @include title_text();
     position: fixed;
     left: 45px;
@@ -54,7 +53,7 @@ main {
     position: fixed;
     left: 55px;
     visibility: hidden;
-    @include unselect();
+
     @include Phone {
       left: 25px;
     }
