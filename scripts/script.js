@@ -6,25 +6,20 @@ function hamburgerClicked() {
   let hamburger = document.getElementById("hamburger");
   if (window.getComputedStyle(hamburger).display !== "none") {
     //only do this if hamburger is there
-    for (child of hamburger.children) {
-      child.classList.toggle("rotate_hamburger_bar");
-    }
-
-    let ul = document.getElementById("nav-ul");
+    hamburger.children.forEach(c => c.classList.toggle("rotate_hamburger_bar"));
 
     /*
     Following code to prevent triggering nav on resize
     (previously when only toggling visible, specifying no class would mean a disappear animation)
     if no class: nothing
     if visible: transition to make appear
-    invisible: transition to dissapear, after 1 sec go back to no class
+    invisible: transition to dissapear, after 600ms go back to no class
     */
+    let ul = document.getElementById("nav-ul");
     if (ul.classList.contains("mobile-nav-visible")) {
       ul.classList.remove("mobile-nav-visible");
       ul.classList.add("mobile-nav-invisible");
-      setTimeout(() => {
-        ul.classList.remove("mobile-nav-invisible");
-      }, 600);
+      setTimeout(() => ul.classList.remove("mobile-nav-invisible"), 600);
     } else {
       ul.classList.add("mobile-nav-visible");
     }
@@ -57,7 +52,8 @@ function resizeHomepageText() {
   let bottom = (1.8 / ratio + 0.9) * fontSize;
   bottom = vw < 230 ? (1 / 2) * vh : bottom;
   name_element.style.bottom = bottom + "px";
-  desc_element.style.bottom = vw < 230 ? bottom - 1.1 * fontSize + "px" : bottom - 0.6 * fontSize + "px";
+  desc_element.style.bottom =
+    vw < 230 ? bottom - 1.1 * fontSize + "px" : bottom - 0.6 * fontSize + "px";
 
   //Show the elements once calculated
   name_element.style.visibility = "visible";
