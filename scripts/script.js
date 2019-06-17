@@ -18,7 +18,7 @@ document.getElementById("hamburger").onclick = () => {
     if visible: transition to make appear
     invisible: transition to dissapear, after 600ms go back to no class
     */
-    let ul = document.getElementById("nav-ul");
+    let ul = document.querySelector("nav>ul");
     if (ul.classList.contains("mobile-nav-visible")) {
       ul.classList.remove("mobile-nav-visible");
       ul.classList.add("mobile-nav-invisible");
