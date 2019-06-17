@@ -6,7 +6,10 @@ function hamburgerClicked() {
   let hamburger = document.getElementById("hamburger");
   if (window.getComputedStyle(hamburger).display !== "none") {
     //only do this if hamburger is there
-    hamburger.children.forEach(c => c.classList.toggle("rotate_hamburger_bar"));
+
+    for (let c of hamburger.children) {
+      c.classList.toggle("rotate_hamburger_bar");
+    }
 
     /*
     Following code to prevent triggering nav on resize
