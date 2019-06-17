@@ -5,6 +5,10 @@
 
 //general styles for about page
 
+section:nth-child(odd) {
+  background: white;
+}
+
 header > h1 {
   @include title_text();
   @include Phone {
@@ -37,15 +41,6 @@ span.bold {
   font-weight: 500;
 }
 
-p.text > a {
-  font-weight: 400;
-  color: $mainOrange;
-
-  &:hover {
-    text-decoration: underline !important;
-  }
-}
-
 .row {
   margin-top: 1vh;
   & .has-inner-cols {
@@ -65,7 +60,7 @@ p.more-info {
 main {
   margin-top: 80px;
 
-  #main-banner {
+  section#main-banner {
     #profile-pic {
       background-image: url(../img/main-img.jpg);
       width: 30vw;
@@ -79,7 +74,6 @@ main {
     #about-me-text {
       display: block;
       margin-left: 30vw;
-      background-color: white;
       width: 70vw;
       height: fit-content;
       @include xlDevice {
@@ -92,11 +86,10 @@ main {
     }
   }
 
-  #skills-banner {
+  section#skills-banner {
     #skills-text {
       @include ScrollY;
       display: block;
-      background-color: whitesmoke;
       width: 100vw;
       height: fit-content;
       padding: 3vh 2vw 2vh 4vw;
@@ -118,54 +111,6 @@ main {
         &:hover {
           color: white;
           background-color: $darkOrange;
-        }
-      }
-    }
-  }
-
-  footer#social-banner {
-    display: block;
-    width: 100vw;
-    height: 10vh;
-    @include Phone {
-      height: 12vh;
-    }
-    padding: 10px;
-    margin: 0;
-    background-color: $dark;
-
-    @include innerShadow;
-
-    #icondiv {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: space-between;
-
-      .row {
-        margin: auto;
-        width: 80%;
-        height: 100%;
-        padding: 10px;
-        display: flex;
-        align-items: center;
-
-        div {
-          text-align: center;
-          & i {
-            font-size: 3rem;
-            border-radius: 50%;
-            @include Phone {
-              font-size: 1.5rem;
-            }
-            color: $darker !important;
-            background-color: transparent;
-            transition: all 100ms 100ms ease-in-out;
-          }
-          & i:hover {
-            transition: all 100ms ease-in-out;
-            color: $smokeGray !important;
-          }
         }
       }
     }

@@ -17,32 +17,31 @@ nav {
     @include Phone {
       display: inline-block;
     }
-  }
-
-  .hamburger-bar {
-    width: 30px;
-    height: 1px;
-    background-color: black;
-    margin-bottom: 7px;
-    transition: 0.4s;
-    display: block;
+    & > div {
+      width: 30px;
+      height: 1px;
+      background-color: black;
+      margin-bottom: 7px;
+      transition: 0.4s;
+      display: block;
+    }
   }
 
   .rotate_hamburger_bar {
-    &#hamburger-bar1 {
+    &:nth-child(1) {
       -webkit-transform: rotate(-45deg) translate(-7px, 5px);
       transform: rotate(-45deg) translate(-7px, 5px);
     }
-    &#hamburger-bar2 {
+    &:nth-child(2) {
       opacity: 0;
     }
-    &#hamburger-bar3 {
+    &:nth-child(3) {
       -webkit-transform: rotate(45deg) translate(-7px, -5px);
       transform: rotate(45deg) translate(-7px, -5px);
     }
   }
 
-  #nav-ul {
+  ul {
     width: fit-content;
     display: inline-block;
 
@@ -102,7 +101,7 @@ nav {
     }
   }
 
-  .icons {
+  #icons {
     position: fixed;
     top: 0;
     right: 10px;
@@ -114,12 +113,11 @@ nav {
 
     & i {
       color: black;
-    }
-
-    & i:hover {
-      color: $mainOrange !important;
-      cursor: pointer;
-      text-decoration: none !important;
+      &:hover {
+        color: $mainOrange !important;
+        cursor: pointer;
+        text-decoration: none !important;
+      }
     }
 
     & #tw-icon {

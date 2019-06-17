@@ -2,7 +2,7 @@ $(function() {
   $('[data-toggle="tooltip"]').tooltip({ animated: "fade", placement: "auto", html: true });
 });
 
-function hamburgerClicked() {
+document.getElementById("hamburger").onclick = () => {
   let hamburger = document.getElementById("hamburger");
   if (window.getComputedStyle(hamburger).display !== "none") {
     //only do this if hamburger is there
@@ -27,7 +27,7 @@ function hamburgerClicked() {
       ul.classList.add("mobile-nav-visible");
     }
   }
-}
+};
 
 function resizeHomepageText() {
   //Scale some elements on the page. Done by using formulas that originated from messing around ¯\_(ツ)_/¯
@@ -73,6 +73,8 @@ function onLoadOrResize() {
     let pic = document.getElementById("profile-pic");
     let about_me_text = document.getElementById("about-me-text");
     pic.style.height = window.getComputedStyle(about_me_text).height;
+  } else if (document.location.pathname in { "/contact.html": 0, "/contact": 0 }) {
+    /*CONTACT*/
   }
 }
 

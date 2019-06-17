@@ -47,6 +47,15 @@ a {
   text-decoration: none !important;
 }
 
+p > a {
+  font-weight: 400;
+  color: #ea8a4e;
+}
+
+p > a:hover {
+  text-decoration: underline !important;
+}
+
 .orange {
   color: #ea8a4e !important;
 }
@@ -87,7 +96,7 @@ nav #hamburger {
   }
 }
 
-nav .hamburger-bar {
+nav #hamburger > div {
   width: 30px;
   height: 1px;
   background-color: black;
@@ -97,28 +106,28 @@ nav .hamburger-bar {
   display: block;
 }
 
-nav .rotate_hamburger_bar#hamburger-bar1 {
+nav .rotate_hamburger_bar:nth-child(1) {
   -webkit-transform: rotate(-45deg) translate(-7px, 5px);
   transform: rotate(-45deg) translate(-7px, 5px);
 }
 
-nav .rotate_hamburger_bar#hamburger-bar2 {
+nav .rotate_hamburger_bar:nth-child(2) {
   opacity: 0;
 }
 
-nav .rotate_hamburger_bar#hamburger-bar3 {
+nav .rotate_hamburger_bar:nth-child(3) {
   -webkit-transform: rotate(45deg) translate(-7px, -5px);
   transform: rotate(45deg) translate(-7px, -5px);
 }
 
-nav #nav-ul {
+nav ul {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   display: inline-block;
 }
 
-nav #nav-ul li {
+nav ul li {
   display: inline-block;
   padding: 10px;
   margin-top: 15px;
@@ -129,17 +138,17 @@ nav #nav-ul li {
   font-size: 1.5rem;
 }
 
-nav #nav-ul a {
+nav ul a {
   color: black;
 }
 
-nav #nav-ul a:hover {
+nav ul a:hover {
   color: #ea8a4e;
   font-weight: bold;
 }
 
 @media only screen and (max-width: 576px) {
-  nav #nav-ul {
+  nav ul {
     background: rgba(245, 245, 245, 0.9);
     padding: 20px;
     padding-left: 45px;
@@ -150,7 +159,7 @@ nav #nav-ul a:hover {
     opacity: 0;
     height: 0;
   }
-  nav #nav-ul.mobile-nav-visible {
+  nav ul.mobile-nav-visible {
     visibility: visible;
     opacity: 1;
     height: 190px;
@@ -158,7 +167,7 @@ nav #nav-ul a:hover {
     -webkit-transition: height 400ms ease, visibility 0s, opacity 300ms ease;
     transition: height 400ms ease, visibility 0s, opacity 300ms ease;
   }
-  nav #nav-ul.mobile-nav-invisible {
+  nav ul.mobile-nav-invisible {
     visibility: hidden;
     opacity: 0;
     height: 0;
@@ -166,14 +175,14 @@ nav #nav-ul a:hover {
     -webkit-transition: height 600ms ease, opacity 400ms ease, visibility 0s 1s;
     transition: height 600ms ease, opacity 400ms ease, visibility 0s 1s;
   }
-  nav #nav-ul li {
+  nav ul li {
     font-size: 1.2rem;
     display: block;
     margin: -0.6rem;
   }
 }
 
-nav .icons {
+nav #icons {
   position: fixed;
   top: 0;
   right: 10px;
@@ -181,22 +190,22 @@ nav .icons {
 }
 
 @media only screen and (max-width: 230px) {
-  nav .icons {
+  nav #icons {
     display: none;
   }
 }
 
-nav .icons i {
+nav #icons i {
   color: black;
 }
 
-nav .icons i:hover {
+nav #icons i:hover {
   color: #ea8a4e !important;
   cursor: pointer;
   text-decoration: none !important;
 }
 
-nav .icons #tw-icon {
+nav #icons #tw-icon {
   vertical-align: -3px;
 }
 
@@ -251,7 +260,7 @@ all styles relative to body tag
   }
 }
 
-#home nav .hamburger-bar {
+#home nav #hamburger > div {
   width: 30px;
   height: 1px;
   background-color: black;
@@ -261,28 +270,28 @@ all styles relative to body tag
   display: block;
 }
 
-#home nav .rotate_hamburger_bar#hamburger-bar1 {
+#home nav .rotate_hamburger_bar:nth-child(1) {
   -webkit-transform: rotate(-45deg) translate(-7px, 5px);
   transform: rotate(-45deg) translate(-7px, 5px);
 }
 
-#home nav .rotate_hamburger_bar#hamburger-bar2 {
+#home nav .rotate_hamburger_bar:nth-child(2) {
   opacity: 0;
 }
 
-#home nav .rotate_hamburger_bar#hamburger-bar3 {
+#home nav .rotate_hamburger_bar:nth-child(3) {
   -webkit-transform: rotate(45deg) translate(-7px, -5px);
   transform: rotate(45deg) translate(-7px, -5px);
 }
 
-#home nav #nav-ul {
+#home nav ul {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   display: inline-block;
 }
 
-#home nav #nav-ul li {
+#home nav ul li {
   display: inline-block;
   padding: 10px;
   margin-top: 15px;
@@ -293,17 +302,17 @@ all styles relative to body tag
   font-size: 1.5rem;
 }
 
-#home nav #nav-ul a {
+#home nav ul a {
   color: black;
 }
 
-#home nav #nav-ul a:hover {
+#home nav ul a:hover {
   color: #ea8a4e;
   font-weight: bold;
 }
 
 @media only screen and (max-width: 576px) {
-  #home nav #nav-ul {
+  #home nav ul {
     background: rgba(245, 245, 245, 0.9);
     padding: 20px;
     padding-left: 45px;
@@ -314,7 +323,7 @@ all styles relative to body tag
     opacity: 0;
     height: 0;
   }
-  #home nav #nav-ul.mobile-nav-visible {
+  #home nav ul.mobile-nav-visible {
     visibility: visible;
     opacity: 1;
     height: 190px;
@@ -322,7 +331,7 @@ all styles relative to body tag
     -webkit-transition: height 400ms ease, visibility 0s, opacity 300ms ease;
     transition: height 400ms ease, visibility 0s, opacity 300ms ease;
   }
-  #home nav #nav-ul.mobile-nav-invisible {
+  #home nav ul.mobile-nav-invisible {
     visibility: hidden;
     opacity: 0;
     height: 0;
@@ -330,14 +339,14 @@ all styles relative to body tag
     -webkit-transition: height 600ms ease, opacity 400ms ease, visibility 0s 1s;
     transition: height 600ms ease, opacity 400ms ease, visibility 0s 1s;
   }
-  #home nav #nav-ul li {
+  #home nav ul li {
     font-size: 1.2rem;
     display: block;
     margin: -0.6rem;
   }
 }
 
-#home nav .icons {
+#home nav #icons {
   position: fixed;
   top: 0;
   right: 10px;
@@ -345,22 +354,22 @@ all styles relative to body tag
 }
 
 @media only screen and (max-width: 230px) {
-  #home nav .icons {
+  #home nav #icons {
     display: none;
   }
 }
 
-#home nav .icons i {
+#home nav #icons i {
   color: black;
 }
 
-#home nav .icons i:hover {
+#home nav #icons i:hover {
   color: #ea8a4e !important;
   cursor: pointer;
   text-decoration: none !important;
 }
 
-#home nav .icons #tw-icon {
+#home nav #icons #tw-icon {
   vertical-align: -3px;
 }
 
@@ -424,6 +433,10 @@ all styles relative to body tag
   background-color: whitesmoke;
 }
 
+#about section:nth-child(odd) {
+  background: white;
+}
+
 #about header > h1 {
   font-family: Pier-Sans-Bold, "Segoe UI", Arial, sans-serif;
   font-weight: bold;
@@ -477,15 +490,6 @@ all styles relative to body tag
   font-weight: 500;
 }
 
-#about p.text > a {
-  font-weight: 400;
-  color: #ea8a4e;
-}
-
-#about p.text > a:hover {
-  text-decoration: underline !important;
-}
-
 #about .row {
   margin-top: 1vh;
 }
@@ -506,7 +510,7 @@ all styles relative to body tag
   margin-top: 80px;
 }
 
-#about main #main-banner #profile-pic {
+#about main section#main-banner #profile-pic {
   background-image: url(../img/main-img.jpg);
   width: 30vw;
   height: 0;
@@ -516,10 +520,9 @@ all styles relative to body tag
   background-position: 53% 30%;
 }
 
-#about main #main-banner #about-me-text {
+#about main section#main-banner #about-me-text {
   display: block;
   margin-left: 30vw;
-  background-color: white;
   width: 70vw;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -531,51 +534,50 @@ all styles relative to body tag
 }
 
 @media only screen and (min-width: 1200px) {
-  #about main #main-banner #about-me-text {
+  #about main section#main-banner #about-me-text {
     min-height: 45vh;
   }
 }
 
-#about main #main-banner #about-me-text::-webkit-scrollbar {
+#about main section#main-banner #about-me-text::-webkit-scrollbar {
   -webkit-appearance: none;
 }
 
-#about main #main-banner #about-me-text::-webkit-scrollbar:vertical {
+#about main section#main-banner #about-me-text::-webkit-scrollbar:vertical {
   width: 6px;
 }
 
 @media only screen and (max-width: 576px) {
-  #about main #main-banner #about-me-text::-webkit-scrollbar:vertical {
+  #about main section#main-banner #about-me-text::-webkit-scrollbar:vertical {
     width: 4px;
   }
 }
 
-#about main #main-banner #about-me-text::-webkit-scrollbar:horizontal {
+#about main section#main-banner #about-me-text::-webkit-scrollbar:horizontal {
   height: 8px;
 }
 
 @media only screen and (max-width: 576px) {
-  #about main #main-banner #about-me-text::-webkit-scrollbar:horizontal {
+  #about main section#main-banner #about-me-text::-webkit-scrollbar:horizontal {
     width: 4px;
   }
 }
 
-#about main #main-banner #about-me-text::-webkit-scrollbar-thumb {
+#about main section#main-banner #about-me-text::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   border: 2px solid transparent;
 }
 
-#about main #main-banner #about-me-text::-webkit-scrollbar-track {
+#about main section#main-banner #about-me-text::-webkit-scrollbar-track {
   border-radius: 10px;
   background-color: transparent;
 }
 
-#about main #skills-banner #skills-text {
+#about main section#skills-banner #skills-text {
   overflow: hidden;
   overflow-y: auto;
   display: block;
-  background-color: whitesmoke;
   width: 100vw;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -583,49 +585,49 @@ all styles relative to body tag
   padding: 3vh 2vw 2vh 4vw;
 }
 
-#about main #skills-banner #skills-text::-webkit-scrollbar {
+#about main section#skills-banner #skills-text::-webkit-scrollbar {
   -webkit-appearance: none;
 }
 
-#about main #skills-banner #skills-text::-webkit-scrollbar:vertical {
+#about main section#skills-banner #skills-text::-webkit-scrollbar:vertical {
   width: 6px;
 }
 
 @media only screen and (max-width: 576px) {
-  #about main #skills-banner #skills-text::-webkit-scrollbar:vertical {
+  #about main section#skills-banner #skills-text::-webkit-scrollbar:vertical {
     width: 4px;
   }
 }
 
-#about main #skills-banner #skills-text::-webkit-scrollbar:horizontal {
+#about main section#skills-banner #skills-text::-webkit-scrollbar:horizontal {
   height: 8px;
 }
 
 @media only screen and (max-width: 576px) {
-  #about main #skills-banner #skills-text::-webkit-scrollbar:horizontal {
+  #about main section#skills-banner #skills-text::-webkit-scrollbar:horizontal {
     width: 4px;
   }
 }
 
-#about main #skills-banner #skills-text::-webkit-scrollbar-thumb {
+#about main section#skills-banner #skills-text::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   border: 2px solid transparent;
 }
 
-#about main #skills-banner #skills-text::-webkit-scrollbar-track {
+#about main section#skills-banner #skills-text::-webkit-scrollbar-track {
   border-radius: 10px;
   background-color: transparent;
 }
 
-#about main #skills-banner #skills-text #skillbuttons {
+#about main section#skills-banner #skills-text #skillbuttons {
   display: inline-block;
   line-height: 3rem;
   margin-top: -1rem;
   margin-bottom: 1.5rem;
 }
 
-#about main #skills-banner #skills-text .skill {
+#about main section#skills-banner #skills-text .skill {
   background-color: transparent;
   border-radius: 0.5rem;
   border: 1px solid #d45839;
@@ -633,29 +635,264 @@ all styles relative to body tag
   color: #d45839;
 }
 
-#about main #skills-banner #skills-text .skill:hover {
+#about main section#skills-banner #skills-text .skill:hover {
   color: white;
   background-color: #d45839;
 }
 
-#about main footer#social-banner {
+#projects {
+  background-color: whitesmoke;
+}
+
+#projects main {
+  margin-top: 80px;
+}
+
+#projects main section {
+  padding: 5rem;
+}
+
+#projects main section a {
+  color: #ea8a4e;
+}
+
+#projects main section a:hover {
+  text-decoration: underline !important;
+}
+
+#projects footer {
+  position: absolute;
+  bottom: 0;
+}
+
+#contact {
+  background-color: whitesmoke;
+}
+
+#contact section {
+  padding: 3rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+#contact section:nth-child(even) {
+  background: white;
+}
+
+#contact header > h1 {
+  font-family: Pier-Sans-Bold, "Segoe UI", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 0;
+  background: #d45839;
+  background: linear-gradient(-37deg, #d45839 0%, #f2925a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d45839', endColorstr='#f2925a',GradientType=1 );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+  margin-left: -0.2rem;
+}
+
+@media only screen and (min-width: 1200px) {
+  #contact header > h1 {
+    font-size: 2.4rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #contact header > h1 {
+    margin-top: 0;
+  }
+}
+
+#contact main {
+  margin-top: 80px;
+}
+
+#contact main section#social-banner {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+#contact main section#social-banner::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+#contact main section#social-banner::-webkit-scrollbar:vertical {
+  width: 6px;
+}
+
+@media only screen and (max-width: 576px) {
+  #contact main section#social-banner::-webkit-scrollbar:vertical {
+    width: 4px;
+  }
+}
+
+#contact main section#social-banner::-webkit-scrollbar:horizontal {
+  height: 8px;
+}
+
+@media only screen and (max-width: 576px) {
+  #contact main section#social-banner::-webkit-scrollbar:horizontal {
+    width: 4px;
+  }
+}
+
+#contact main section#social-banner::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  border: 2px solid transparent;
+}
+
+#contact main section#social-banner::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+#contact main section#social-banner #cards {
+  margin-left: 1rem;
+  max-width: 1920px;
+  margin: auto;
+}
+
+#contact main section#social-banner #cards div {
+  margin-top: 2rem;
+  max-width: 1000px;
+  min-width: 280px;
+  max-height: 500px;
+}
+
+#contact main section#social-banner #cards div article.social-card {
+  overflow: hidden;
+  overflow-y: auto;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  background: #fff;
+  height: 100%;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.01), 0 10px 10px rgba(0, 0, 0, 0.005);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.01), 0 10px 10px rgba(0, 0, 0, 0.005);
+}
+
+#contact main section#social-banner #cards div article.social-card::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+#contact main section#social-banner #cards div article.social-card::-webkit-scrollbar:vertical {
+  width: 6px;
+}
+
+@media only screen and (max-width: 576px) {
+  #contact main section#social-banner #cards div article.social-card::-webkit-scrollbar:vertical {
+    width: 4px;
+  }
+}
+
+#contact main section#social-banner #cards div article.social-card::-webkit-scrollbar:horizontal {
+  height: 8px;
+}
+
+@media only screen and (max-width: 576px) {
+  #contact main section#social-banner #cards div article.social-card::-webkit-scrollbar:horizontal {
+    width: 4px;
+  }
+}
+
+#contact main section#social-banner #cards div article.social-card::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  border: 2px solid transparent;
+}
+
+#contact main section#social-banner #cards div article.social-card::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+#contact main section#social-banner #cards div article.social-card:hover {
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.08);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+}
+
+#contact main section#social-banner #cards div header h3 {
+  color: black;
+}
+
+#contact main section#social-banner #cards div header h4 {
+  font-size: 1rem;
+  color: #515657;
+}
+
+#contact main section#social-banner #cards div p {
+  width: 75%;
+  max-width: 500px;
+  margin: auto;
+  margin-top: 1rem;
+  color: #515657;
+  text-align: center justify;
+  margin-bottom: 1rem;
+}
+
+#contact main section#social-banner #cards div p em {
+  display: inline-block;
+  font-size: 0.7rem;
+  line-height: 1rem !important;
+}
+
+#contact main section#social-banner #cards div i {
+  color: #337bc9;
+}
+
+#contact main section#social-banner #cards div i::before {
+  font-size: 4rem;
+  font-weight: 100;
+}
+
+#contact main section#social-banner #cards div .cta {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+}
+
+#contact main section#social-banner #cards div .cta > p {
+  background-color: #fff;
+  color: #337bc9;
+  border-bottom: 1px solid #337bc9;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+#contact main section#social-banner #cards div .cta > p:hover {
+  border-bottom: 0px;
+}
+
+footer#social-banner {
   display: block;
   width: 100vw;
   height: 10vh;
   padding: 10px;
   margin: 0;
-  background-color: #313131;
-  -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6);
-          box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6);
+  background-color: #212121;
 }
 
 @media only screen and (max-width: 576px) {
-  #about main footer#social-banner {
+  footer#social-banner {
     height: 12vh;
   }
 }
 
-#about main footer#social-banner #icondiv {
+footer#social-banner #icondiv {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -666,7 +903,7 @@ all styles relative to body tag
           justify-content: space-between;
 }
 
-#about main footer#social-banner #icondiv .row {
+footer#social-banner #icondiv .row {
   margin: auto;
   width: 80%;
   height: 100%;
@@ -679,26 +916,27 @@ all styles relative to body tag
           align-items: center;
 }
 
-#about main footer#social-banner #icondiv .row div {
+footer#social-banner #icondiv .row div {
   text-align: center;
 }
 
-#about main footer#social-banner #icondiv .row div i {
+footer#social-banner #icondiv .row div i {
   font-size: 3rem;
   border-radius: 50%;
-  color: #212121 !important;
+  color: black !important;
+  text-shadow: 0 0 100px rgba(255, 255, 255, 0.4);
   background-color: transparent;
   -webkit-transition: all 100ms 100ms ease-in-out;
   transition: all 100ms 100ms ease-in-out;
 }
 
 @media only screen and (max-width: 576px) {
-  #about main footer#social-banner #icondiv .row div i {
+  footer#social-banner #icondiv .row div i {
     font-size: 1.5rem;
   }
 }
 
-#about main footer#social-banner #icondiv .row div i:hover {
+footer#social-banner #icondiv .row div i:hover {
   -webkit-transition: all 100ms ease-in-out;
   transition: all 100ms ease-in-out;
   color: #e2e3e5 !important;

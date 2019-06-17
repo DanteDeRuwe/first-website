@@ -1,0 +1,24 @@
+//body itself
+& {
+  background-color: whitesmoke;
+}
+
+main {
+  margin-top: 80px;
+
+  section {
+    padding: 5rem;
+    a {
+      color: $mainOrange;
+
+      &:hover {
+        text-decoration: underline !important;
+      }
+    }
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}

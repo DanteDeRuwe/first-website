@@ -30,6 +30,15 @@ a {
   text-decoration: none !important;
 }
 
+p > a {
+  font-weight: 400;
+  color: $mainOrange;
+
+  &:hover {
+    text-decoration: underline !important;
+  }
+}
+
 .orange {
   color: $mainOrange !important;
 }
@@ -53,3 +62,15 @@ body {
 #about {
   @import "about";
 }
+
+//PROJECTS
+#projects {
+  @import "projects";
+}
+
+//CONTACT
+#contact {
+  @import "contact";
+}
+
+@import "footer";
