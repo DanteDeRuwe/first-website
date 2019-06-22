@@ -75,10 +75,11 @@ function onLoadOrResize() {
     pic.style.height = window.getComputedStyle(about_me_text).height;
   } else if (document.location.pathname in { "/contact.html": 0, "/contact": 0 }) {
     /*CONTACT*/
+    clickableArticlesContactPage();
   }
 }
 
-window.onload = onLoadOrResize;
+window.addEventListener("DOMContentLoaded", onLoadOrResize);
 window.onresize = onLoadOrResize;
 
 //Age changer
@@ -89,4 +90,15 @@ if (document.location.pathname in { "/about.html": 0, "/about": 0 }) {
   age = new Date(age);
   age = age.getFullYear() - 1970;
   document.getElementById("age").innerHTML = age;
+}
+
+function clickableArticlesContactPage() {
+  let [messenger, linkedin, twitter] = document.querySelectorAll("article.social-card");
+  messenger.onclick = () => window.open("https://m.me/DanteDeRuwe", "_blank");
+  linkedin.onclick = () => window.open("https://linkedin.com/in/dantederuwe", "_blank");
+  twitter.onclick = () => window.open("https://twitter.com/DanteDeRuwe", "_blank");
+
+  //make sure twitter cta works properly, as it differs from the rest
+  let twitterCta = twitter.querySelector(".cta");
+  twitterCta.onclick = () => window.open(twitterCta.children[0].href, "_blank");
 }

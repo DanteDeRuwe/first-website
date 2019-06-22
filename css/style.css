@@ -864,7 +864,7 @@ all styles relative to body tag
   bottom: 10px;
 }
 
-#contact main section#social-banner #cards div .cta > p {
+#contact main section#social-banner #cards div .cta > a {
   background-color: #fff;
   color: #337bc9;
   border-bottom: 1px solid #337bc9;
@@ -873,7 +873,7 @@ all styles relative to body tag
   width: fit-content;
 }
 
-#contact main section#social-banner #cards div .cta > p:hover {
+#contact main section#social-banner #cards div .cta > a:hover {
   border-bottom: 0px;
 }
 
