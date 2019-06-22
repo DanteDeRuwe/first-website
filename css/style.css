@@ -121,9 +121,7 @@ nav .rotate_hamburger_bar:nth-child(3) {
 }
 
 nav ul {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 100vw;
   display: inline-block;
 }
 
@@ -150,19 +148,19 @@ nav ul a:hover {
 @media only screen and (max-width: 576px) {
   nav ul {
     background: rgba(245, 245, 245, 0.9);
-    padding: 20px;
-    padding-left: 45px;
+    padding: 0;
     width: 100vw;
-    margin-top: 5px;
+    margin: 0;
     z-index: 999999;
     visibility: hidden;
     opacity: 0;
     height: 0;
+    border: 1px solid lightgray;
   }
   nav ul.mobile-nav-visible {
     visibility: visible;
     opacity: 1;
-    height: 190px;
+    height: 205px;
     overflow: hidden;
     -webkit-transition: height 400ms ease, visibility 0s, opacity 300ms ease;
     transition: height 400ms ease, visibility 0s, opacity 300ms ease;
@@ -176,9 +174,29 @@ nav ul a:hover {
     transition: height 600ms ease, opacity 400ms ease, visibility 0s 1s;
   }
   nav ul li {
+    width: 100vw;
     font-size: 1.2rem;
     display: block;
-    margin: -0.6rem;
+    margin: 0;
+    padding: 0;
+  }
+  nav ul li:hover {
+    background-color: #e2e3e5;
+  }
+  nav ul li > a {
+    font-size: 1.6rem;
+    padding: 0.4rem 1rem;
+    margin: 0;
+    display: inline-block;
+    width: 100vw;
+  }
+  nav ul li > a::before {
+    content: "";
+    margin-left: 0.6rem;
+  }
+  nav ul li > a:hover {
+    cursor: pointer;
+    background-color: #e2e3e5;
   }
 }
 
@@ -285,9 +303,7 @@ all styles relative to body tag
 }
 
 #home nav ul {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 100vw;
   display: inline-block;
 }
 
@@ -314,19 +330,19 @@ all styles relative to body tag
 @media only screen and (max-width: 576px) {
   #home nav ul {
     background: rgba(245, 245, 245, 0.9);
-    padding: 20px;
-    padding-left: 45px;
+    padding: 0;
     width: 100vw;
-    margin-top: 5px;
+    margin: 0;
     z-index: 999999;
     visibility: hidden;
     opacity: 0;
     height: 0;
+    border: 1px solid lightgray;
   }
   #home nav ul.mobile-nav-visible {
     visibility: visible;
     opacity: 1;
-    height: 190px;
+    height: 205px;
     overflow: hidden;
     -webkit-transition: height 400ms ease, visibility 0s, opacity 300ms ease;
     transition: height 400ms ease, visibility 0s, opacity 300ms ease;
@@ -340,9 +356,29 @@ all styles relative to body tag
     transition: height 600ms ease, opacity 400ms ease, visibility 0s 1s;
   }
   #home nav ul li {
+    width: 100vw;
     font-size: 1.2rem;
     display: block;
-    margin: -0.6rem;
+    margin: 0;
+    padding: 0;
+  }
+  #home nav ul li:hover {
+    background-color: #e2e3e5;
+  }
+  #home nav ul li > a {
+    font-size: 1.6rem;
+    padding: 0.4rem 1rem;
+    margin: 0;
+    display: inline-block;
+    width: 100vw;
+  }
+  #home nav ul li > a::before {
+    content: "";
+    margin-left: 0.6rem;
+  }
+  #home nav ul li > a:hover {
+    cursor: pointer;
+    background-color: #e2e3e5;
   }
 }
 
@@ -874,7 +910,8 @@ all styles relative to body tag
 }
 
 #contact main section#social-banner #cards div .cta > a:hover {
-  border-bottom: 0px;
+  border-bottom: 0;
+  text-decoration: none !important;
 }
 
 footer#social-banner {

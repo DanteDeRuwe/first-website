@@ -99,13 +99,13 @@ main {
 
           & > a {
             background-color: #fff;
-
             color: $someBlue;
             border-bottom: 1px solid $someBlue;
             width: fit-content;
 
             &:hover {
-              border-bottom: 0px;
+              border-bottom: 0;
+              text-decoration: none !important;
             }
           }
         }
