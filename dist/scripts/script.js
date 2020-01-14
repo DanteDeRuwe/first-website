@@ -66,7 +66,8 @@ function resizeHomepageText() {
 function onLoadOrResize() {
   /*HOME*/
   if (
-    document.location.pathname in { "/dist/index.html": 0, "/index.html": 0, "/index": 0, "/": 0 }
+    document.location.pathname in
+    { "/dist/index.html": 0, "/index.html": 0, "/index": 0, "/dist/": 0, "/": 0 }
   ) {
     resizeHomepageText();
   } else if (
