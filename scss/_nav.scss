@@ -1,0 +1,152 @@
+nav {
+  z-index: 999;
+  width: 100vw;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  margin-bottom: 10px;
+
+  background-color: $smokeGray;
+  box-shadow: $shadow;
+
+  #hamburger {
+    display: none;
+    margin: 15px;
+    margin-top: 35px;
+    cursor: pointer;
+    @include Phone {
+      display: inline-block;
+    }
+    & > div {
+      width: 30px;
+      height: 1px;
+      background-color: black;
+      margin-bottom: 7px;
+      transition: 0.4s;
+      display: block;
+    }
+  }
+
+  .rotate_hamburger_bar {
+    &:nth-child(1) {
+      -webkit-transform: rotate(-45deg) translate(-7px, 5px);
+      transform: rotate(-45deg) translate(-7px, 5px);
+    }
+    &:nth-child(2) {
+      opacity: 0;
+    }
+    &:nth-child(3) {
+      -webkit-transform: rotate(45deg) translate(-7px, -5px);
+      transform: rotate(45deg) translate(-7px, -5px);
+    }
+  }
+
+  ul {
+    width: 100vw;
+    display: inline-block;
+
+    & li {
+      display: inline-block;
+      padding: 10px;
+      margin-top: 15px;
+      font-family: Nexa-Light, "Segoe UI Light", Arial, sans-serif;
+      color: black;
+      text-transform: lowercase;
+      font-variant: small-caps;
+      font-size: 1.5rem;
+    }
+
+    & a {
+      color: black;
+    }
+
+    & a:hover {
+      color: $mainOrange;
+      font-weight: bold;
+    }
+
+    @include Phone {
+      background: rgba(245, 245, 245, 0.9);
+      padding: 0;
+      width: 100vw;
+      margin: 0;
+      z-index: 999999;
+
+      visibility: hidden;
+      opacity: 0;
+      height: 0;
+
+      border: 1px solid lightgray;
+
+      &.mobile-nav-visible {
+        visibility: visible;
+        opacity: 1;
+        height: 205px;
+
+        overflow: hidden;
+        transition: height 400ms ease, visibility 0s, opacity 300ms ease; //appear
+      }
+
+      &.mobile-nav-invisible {
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+        transition: height 600ms ease, opacity 400ms ease, visibility 0s 1s; //disappear
+      }
+
+      & li {
+        width: 100vw;
+        font-size: 1.2rem;
+        display: block;
+        margin: 0;
+        padding: 0;
+
+        &:hover {
+          background-color: $smokeGray;
+        }
+
+        & > a {
+          font-size: 1.6rem;
+          padding: 0.4rem 1rem;
+          margin: 0;
+          display: inline-block;
+          width: 100vw;
+
+          &::before {
+            content: "";
+            margin-left: 0.6rem;
+          }
+          &:hover {
+            cursor: pointer;
+            background-color: $smokeGray;
+          }
+        }
+      }
+    }
+  }
+
+  #icons {
+    position: fixed;
+    top: 0;
+    right: 10px;
+    margin: 25px 20px;
+
+    @include TinyDevice {
+      display: none;
+    }
+
+    & i {
+      color: black;
+      &:hover {
+        color: $mainOrange !important;
+        cursor: pointer;
+        text-decoration: none !important;
+      }
+    }
+
+    & #tw-icon {
+      vertical-align: -3px;
+    }
+  }
+}
