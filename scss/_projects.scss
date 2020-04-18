@@ -7,18 +7,24 @@ main {
   margin-top: 80px;
 
   section {
-    padding: 5rem;
+    padding: 2rem;
+    header {
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      font-weight: 500;
+    }
     a {
-      color: $mainOrange;
+      background-color: transparent;
+      border-radius: 0.5rem;
+      border: 1px solid $darkOrange;
+      margin-top: 1rem;
+      margin-right: 10px;
+      color: $darkOrange;
 
       &:hover {
-        text-decoration: underline !important;
+        color: white;
+        background-color: $darkOrange;
       }
     }
   }
-}
-
-footer {
-  position: absolute;
-  bottom: 0;
 }
