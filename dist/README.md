@@ -1,1 +1,1 @@
-dantederuwe.github.io
+Repository for my personal website at [dante.deruwe.me](https://dante.deruwe.me)
