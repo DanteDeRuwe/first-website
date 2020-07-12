@@ -59,8 +59,7 @@ function resizeHomepageText() {
   let bottom = (1.8 / ratio + 0.9) * fontSize;
   bottom = vw < 230 ? (1 / 2) * vh : bottom;
   name_element.style.bottom = bottom + "px";
-  desc_element.style.bottom =
-    vw < 230 ? bottom - 1.1 * fontSize + "px" : bottom - 0.6 * fontSize + "px";
+  desc_element.style.bottom = vw < 230 ? bottom - 1.1 * fontSize + "px" : bottom - 0.6 * fontSize + "px";
 
   //Show the elements once calculated
   name_element.style.visibility = "visible";
@@ -80,19 +79,13 @@ function onLoadOrResize() {
     }
   ) {
     resizeHomepageText();
-  } else if (
-    document.location.pathname in
-    { "/dist/about.html": 0, "/about.html": 0, "/about": 0 }
-  ) {
+  } else if (document.location.pathname in { "/dist/about.html": 0, "/about.html": 0, "/about": 0 }) {
     /*ABOUT*/
     //resize profile pic height
     let pic = document.getElementById("profile-pic");
     let about_me_text = document.getElementById("about-me-text");
     pic.style.height = window.getComputedStyle(about_me_text).height;
-  } else if (
-    document.location.pathname in
-    { "/dist/contact.html": 0, "/contact.html": 0, "/contact": 0 }
-  ) {
+  } else if (document.location.pathname in { "/dist/contact.html": 0, "/contact.html": 0, "/contact": 0 }) {
     /*CONTACT*/
     clickableArticlesContactPage();
   }
@@ -112,14 +105,10 @@ if (document.location.pathname in { "/about.html": 0, "/about": 0 }) {
 }
 
 function clickableArticlesContactPage() {
-  let [linkedin, messenger, twitter] = document.querySelectorAll(
-    "article.social-card"
-  );
+  let [linkedin, messenger, twitter] = document.querySelectorAll("article.social-card");
   messenger.onclick = () => window.open("https://m.me/DanteDeRuwe", "_blank");
-  linkedin.onclick = () =>
-    window.open("https://linkedin.com/in/dantederuwe", "_blank");
-  twitter.onclick = () =>
-    window.open("https://twitter.com/DanteDeRuwe", "_blank");
+  linkedin.onclick = () => window.open("https://linkedin.com/in/dantederuwe", "_blank");
+  twitter.onclick = () => window.open("https://twitter.com/DanteDeRuwe", "_blank");
 
   //make sure twitter cta works properly, as it differs from the rest
   let twitterCta = twitter.querySelector(".cta");

@@ -49,11 +49,9 @@ main {
           padding-bottom: 50px;
           background: #fff;
           height: 100%;
-          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.01),
-            0 10px 10px rgba(0, 0, 0, 0.005);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.01), 0 10px 10px rgba(0, 0, 0, 0.005);
           &:hover {
-            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1),
-              0 10px 10px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.08);
             transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
             cursor: pointer;
           }
